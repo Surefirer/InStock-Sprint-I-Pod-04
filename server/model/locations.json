@@ -1,11 +1,12 @@
 [{
-        "id": "1a4kjruuedd0",
+        "id": "w0",
         "name": "Warehouse No. 1",
         "address": "469 King St W, Toronto, ON",
         "contactName": "Mara Weinberg",
         "position": "Warehouse Manager",
         "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com"
+        "email": "weinberg@instack.com",
+        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
     },
     {
         "id": "1a4kjruuedd1",
@@ -14,7 +15,8 @@
         "contactName": "Mara Weinberg",
         "position": "Warehouse Manager",
         "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com"
+        "email": "weinberg@instack.com",
+        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
     },
     {
         "id": "1a4kjruuedd2",
@@ -23,7 +25,8 @@
         "contactName": "Mara Weinberg",
         "position": "Warehouse Manager",
         "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com"
+        "email": "weinberg@instack.com",
+        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
     },
     {
         "id": "1a4kjruuedd3",
@@ -32,7 +35,8 @@
         "contactName": "Mara Weinberg",
         "position": "Warehouse Manager",
         "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com"
+        "email": "weinberg@instack.com",
+        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
     },
     {
         "id": "1a4kjruuedd4",
@@ -41,7 +45,8 @@
         "contactName": "Mara Weinberg",
         "position": "Warehouse Manager",
         "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com"
+        "email": "weinberg@instack.com",
+        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
     },
     {
         "id": "1a4kjruuedd5",
@@ -50,7 +55,8 @@
         "contactName": "Mara Weinberg",
         "position": "Warehouse Manager",
         "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com"
+        "email": "weinberg@instack.com",
+        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
     },
     {
         "id": "1a4kjruuedd6",
@@ -59,7 +65,8 @@
         "contactName": "Mara Weinberg",
         "position": "Warehouse Manager",
         "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com"
+        "email": "weinberg@instack.com",
+        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
     },
     {
         "id": "1a4kjruuedd7",
@@ -68,7 +75,8 @@
         "contactName": "Mara Weinberg",
         "position": "Warehouse Manager",
         "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com"
+        "email": "weinberg@instack.com",
+        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
     },
     {
         "id": "1a4kjruuedd8",
@@ -77,7 +85,8 @@
         "contactName": "Mara Weinberg",
         "position": "Warehouse Manager",
         "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com"
+        "email": "weinberg@instack.com",
+        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
     },
     {
         "id": "1a4kjruuedd9",
@@ -86,6 +95,7 @@
         "contactName": "Mara Weinberg",
         "position": "Warehouse Manager",
         "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com"
+        "email": "weinberg@instack.com",
+        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
     }
 ]
