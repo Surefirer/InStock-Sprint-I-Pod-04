@@ -1,0 +1,201 @@
+.locations {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+
+  @include tablet {
+    margin: 0 1.5rem;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+    width: 67.5rem;
+  }
+
+  &__wrapper {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3rem;
+    }
+  }
+
+  &__header {
+    @include header;
+    margin: 2rem 0 1rem 0;
+
+    @include tablet {
+      @include headerOne-tablet;
+      margin: 0;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__search {
+    position: relative;
+    margin-bottom: 2rem;
+    width: 90%;
+
+    @include tablet {
+      width: 15.75rem;
+    }
+
+    &--input {
+      @extend .input;
+      padding: 0 0.75rem 0 2.5rem;
+      height: 3rem;
+    }
+
+    &--icon {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+  }
+
+  &__bodyMobile {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid $mercury;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__title {
+    @include label;
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      margin-bottom: 0.5rem;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__product {
+    @include paragraph-bold;
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      @include subheader-tablet;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__title1 {
+    @include paragraph-bold;
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      @include subheader-tablet;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__text {
+    @include paragraph;
+    margin: 0;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+      @include paragraph-tablet;
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      height: 22px;
+      overflow: hidden;
+    }
+  }
+
+  &__kebabIcon {
+    margin-left: auto;
+
+    @include tablet {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__button {
+    @extend .round-button;
+    width: 3.75rem;
+    height: 3.75rem;
+    position: absolute;
+    bottom: 5rem;
+    right: 1.5rem;
+
+    @include tablet {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    &--addIcon {
+      width: 1.25rem;
+
+      @include tablet {
+        width: 1.5rem;
+      }
+    }
+  }
+
+  &__bodyTablet {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__titleWrapper {
+    display: flex;
+
+    @include desktop {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__contentWrapper {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid $mercury;
+    height: 6.25rem;
+
+    @include desktop {
+      height: 5rem;
+    }
+  }
+
+  &__item {
+    width: 34.44%;
+    padding-right: 1.5rem;
+
+    @include tablet {
+      margin-bottom: 1.5rem;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__order {
+    width: 17.22%;
+  }
+
+  &__location {
+    width: 17.22%;
+  }
+
+  &__quantity {
+    width: 13.88%;
+  }
+}
