@@ -1,3 +1,62 @@
 .product {
-    display: block;
+    width: 90%;
+    margin: 0 auto;
+    &__name {
+        display: flex;
+        align-items: center;
+        h2 {
+            padding-left: 15px;
+            font-family: Avenir Bold;
+            padding-top: 5px;
+        }
+    }
+    &__status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 30px;
+        border-radius: 4px;
+        background-color: rgb(18, 184, 18);
+        color: white;
+        font-family: Avenir Bold Demi;
+        margin-bottom: 35px;
+    }
+    &__itemDesc,
+    &__lastOrder,
+    &__location,
+    &__quantity,
+    &__categories {
+        P {
+            font-size: 13px;
+            line-height: 18px;
+        }
+    }
+    &__itemDesc-title,
+    &__lastOrder-title,
+    &__location-title,
+    &__quantity-title,
+    &__categories-title {
+        font-size: 14px;
+        color: $silver;
+    }
+    &__btn {
+        width: 100%;
+        height: 50px;
+        margin: 20px 0;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background-color: $instock-blue-dark;
+        button {
+            outline: none;
+            border: none;
+            background-color: transparent;
+            color: $white;
+            font-size: 16px;
+            font-family: Avenir Bold Demi;
+        }
+    }
 }
