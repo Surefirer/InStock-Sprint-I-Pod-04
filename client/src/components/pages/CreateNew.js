@@ -1,4 +1,5 @@
 import React from "react";
+import Select from "react-select";
 // import Icons from "../assets";
 
 class CreateNew extends React.Component {
@@ -7,24 +8,67 @@ class CreateNew extends React.Component {
   };
   render() {
     return (
-      <div className="modal">
-        <div className="modal_content">
-          <span className="close" onClick={this.handleClick}>
-            &times;
-          </span>
-          <form>
-            <h3>Create New</h3>
-            <label>
+      <div className="createNew">
+        <form className="createNew__container">
+          <h1 className="createNew__header">Create New</h1>
+          <div className="createNew__wrapper">
+            <label className="createNew__label">
               PRODUCT
-              <input type="text" name="product" placeholder="Item Name" />
+              <input
+                className="createNew__input"
+                type="text"
+                name="product"
+                placeholder="Item Name"
+              />
             </label>
-            <label>
-              PRODUCT
-              <input type="text" name="product" placeholder="yyyy-mm-dd" />
+            <label className="createNew__label">
+              LAST ORDERED
+              <input
+                className="createNew__input"
+                type="date"
+                name="lastOrdered"
+                placeholder="yyyy-mm-dd"
+              />
             </label>
-            <input type="submit" />
-          </form>
-        </div>
+          </div>
+          <label className="createNew__label">
+            LOCATION
+            <Select
+              className="createNew__location"
+              classNamePrefix="Select"
+              name="location"
+            />
+          </label>
+          <div className="createNew__wrapper">
+            <label className="createNew__label">
+              QUANTITY
+              <input
+                className="createNew__input"
+                type="number"
+                name="quantity"
+                placeholder="0"
+              />
+            </label>
+            <label className="createNew__label">STATUS</label>
+          </div>
+          <label className="createNew__label">
+            ITEM DESCRIPTION
+            <textarea
+              className="createNew__descInput"
+              type="text"
+              name="description"
+              placeholder="(Optional)"
+            />
+          </label>
+          <div className="createNew__wrapper--btn">
+            <span className="createNew__cancel" onClick={this.handleClick}>
+              CANCEL
+            </span>
+            <button className="createNew__btn" type="submit" id="upload-btn">
+              SAVE
+            </button>
+          </div>
+        </form>
       </div>
     );
   }

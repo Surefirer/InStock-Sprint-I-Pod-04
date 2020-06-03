@@ -31,7 +31,7 @@
 /* ==========================================================================
        utility classes
     ========================================================================== */
-.input, .inventory__search--input {
+.input, .inventory__search--input, .createNew__input, .createNew__descInput {
   background-color: rgba(225, 225, 225, 0.5);
   width: 100%;
   border-radius: 0.25rem;
@@ -40,7 +40,7 @@
   transition: 0.2s ease-in-out;
 }
 
-.input:focus, .inventory__search--input:focus {
+.input:focus, .inventory__search--input:focus, .createNew__input:focus, .createNew__descInput:focus {
   border: 2px solid #323232;
 }
 
@@ -61,6 +61,34 @@
 }
 
 .round-button:hover, .inventory__button:hover {
+  background-color: #002f5f;
+}
+
+.button, .createNew__btn {
+  font-family: Avenir Bold Demi;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  background-color: #004892;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  letter-spacing: 0.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 3rem;
+  padding: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.button:hover, .createNew__btn:hover, .button:focus, .createNew__btn:focus {
   background-color: #002f5f;
 }
 
@@ -551,5 +579,106 @@ textarea::placeholder {
 
 .inventory__quantity {
   width: 13.88%;
+}
+
+.createNew {
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.createNew__container {
+  position: absolute;
+  padding: 0 3rem;
+  border-radius: 0.25rem;
+  top: 20%;
+  left: 20%;
+  width: 36rem;
+  height: 39rem;
+  background-color: #ffffff;
+}
+
+.createNew__header {
+  font-family: Avenir Bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@media (min-width: 768px) {
+  .createNew__header {
+    font-family: Avenir Bold;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin: 3.5rem 0 3rem 0;
+  }
+}
+
+.createNew__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.createNew__wrapper--btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.createNew__label {
+  font-family: Avenir Bold Demi;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.25px;
+  color: #afafaf;
+  width: 13.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.createNew__input {
+  height: 3rem;
+  width: 13.75rem;
+  padding: 0 0.75rem 0 0.75rem;
+}
+
+.createNew__descInput {
+  resize: none;
+  padding: 0.5rem 0 0 0.75rem;
+  height: 8.938rem;
+}
+
+@media (min-width: 768px) {
+  .createNew__descInput {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .createNew__descInput {
+    height: 5.875rem;
+  }
+}
+
+.createNew__cancel {
+  font-family: Avenir Bold Demi;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  color: #004892;
+  margin-right: 3rem;
+}
+
+.createNew__btn {
+  width: 10rem;
+  height: 3rem;
 }
 /*# sourceMappingURL=main.css.map */
