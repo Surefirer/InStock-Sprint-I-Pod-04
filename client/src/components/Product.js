@@ -23,11 +23,47 @@ export default class Product extends Component {
 
   render() {
     return (
-      <h1>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas magnam
-        ipsa at quos voluptatem in, reiciendis error dolores non illum possimus
-        sint qui eaque maxime odit expedita porro laborum tempore.
-      </h1>
+      <div className="product">
+        {this.state.product.map((item) => {
+          return (
+            <div className="product-container1" id={item.id}>
+              <div className="product__name">
+                <h2>{item.productName}</h2>
+              </div>
+              <div className="product__state">
+                <p>Instock State</p>
+              </div>
+              <div className="product-container2">
+                <div className="product__itemDesc">
+                  <h3>ITEM DESCRIPTION</h3>
+                  <p>{item.description}</p>
+                </div>
+                <div className="product__lastOrder">
+                  <h3>LAST ORDERED</h3>
+                  <p>{item.lastOrder}</p>
+                </div>
+                <div className="product__location">
+                  <h3>LOCATION</h3>
+                  <p>
+                    {item.city},{item.country}
+                  </p>
+                </div>
+                <div className="product__quantity">
+                  <h3>QUANTITY</h3>
+                  <p>{item.quantity}</p>
+                </div>
+                <div className="product__categories">
+                  <h3>CATEGORIES</h3>
+                  <p>{item.category}</p>
+                </div>
+              </div>
+              <div className="product__btn">
+                <button>EDIT</button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     );
   }
 }
