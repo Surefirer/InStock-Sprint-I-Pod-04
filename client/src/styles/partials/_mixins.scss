@@ -1,0 +1,130 @@
+/* ==========================================================================
+   mixins for screen sizes
+   ========================================================================== */
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1080px) {
+    @content;
+  }
+}
+
+/* ==========================================================================
+     mixins for mobile fonts
+    ========================================================================== */
+@mixin header {
+  font-family: Avenir Bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@mixin subheader {
+  font-family: Avenir Bold Demi;
+  font-size: 1rem;
+  line-height: 1.38rem;
+}
+
+@mixin paragraph {
+  font-family: Avenir Regular;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+
+@mixin paragraph-bold {
+  font-family: Avenir Bold Demi;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+
+@mixin label {
+  font-family: Avenir Bold Demi;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.25px;
+  color: $silver;
+}
+
+/* ==========================================================================
+       mixins for tablet and desktop fonts
+    ========================================================================== */
+@mixin hero-header-tablet {
+  font-family: Avenir Bold;
+  font-size: 3.75rem;
+  line-height: 5rem;
+}
+
+@mixin headerOne-tablet {
+  font-family: Avenir Bold;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+}
+
+@mixin headerTwo-tablet {
+  font-family: Avenir Bold Demi;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@mixin subheader-tablet {
+  font-family: Avenir Bold Demi;
+  font-size: 1rem;
+  line-height: 1.35rem;
+}
+
+@mixin paragraph-tablet {
+  font-family: Avenir Regular;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+@mixin paragraph-bold-tablet {
+  font-family: Avenir Bold Demi;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+@mixin contact-tablet {
+  font-family: Avenir Regular;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@mixin contact-bold-tablet {
+  font-family: Avenir Bold Demi;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+/* ==========================================================================
+       utility classes
+    ========================================================================== */
+// general input style
+.input {
+  background-color: $mercurylight;
+  width: 100%;
+  border-radius: 0.25rem;
+  border: 1px solid $mercury;
+  transition: 0.2s ease-in-out;
+
+  &:focus {
+    border: 2px solid $black;
+  }
+}
+
+// general button style
+.round-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $instock-blue;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $instock-blue-dark;
+  }
+}

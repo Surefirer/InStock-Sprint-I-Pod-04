@@ -1,14 +1,20 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./components/pages/Home";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import Header from "./components/Header";
 import Inventory from "./components/pages/Inventory";
 import Locations from "./components/pages/Locations";
 
 function App() {
   return (
     <Router>
+      <Header />
       <Switch>
-        <Route path="/" exact component={Home} />
+        <Redirect from="/" to="/inventory" exact />
         <Route path="/inventory" component={Inventory} />
         <Route path="/locations" component={Locations} />
       </Switch>
