@@ -5,7 +5,7 @@
   z-index: 99;
   background-color: rgba(0, 0, 0, 0.5);
 
-  &__container {
+  &__form {
     position: absolute;
     padding: 0 3rem;
     border-radius: 0.25rem;
@@ -47,6 +47,11 @@
     height: 3rem;
     width: 13.75rem;
     padding: 0 0.75rem 0 0.75rem;
+  }
+
+  &__location {
+    @extend .input;
+    margin-bottom: 1.5rem;
   }
 
   &__descInput {

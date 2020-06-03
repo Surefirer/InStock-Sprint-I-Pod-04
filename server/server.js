@@ -3,7 +3,7 @@ const cors = require("cors");
 const app = express();
 
 const getWarehouseList = require("./model/locations.json");
-const getItemList = require("./model/inventory.json");
+const getInventoryList = require("./controller/getInventoryList");
 
 // Middleware
 app.use(express.json());
@@ -20,7 +20,7 @@ app.get("/warehouse", (req, res) => {
 
 // api info endpoint for inventory item
 app.get("/inventory", (req, res) => {
-  res.json(getItemList);
+  res.json(getInventoryList());
 });
 
 const PORT = process.env.PORT || 5000;

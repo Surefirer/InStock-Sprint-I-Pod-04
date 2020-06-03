@@ -2,14 +2,22 @@ import React from "react";
 import Select from "react-select";
 // import Icons from "../assets";
 
+// need to be replaced with list of all warehouses from the back-end
+const options = [
+  { value: "Toronto, CAN", label: "Toronto, CAN" },
+  { value: "Toronto, CAN", label: "Toronto, CAN" },
+  { value: "Toronto, CAN", label: "Toronto, CAN" },
+];
+
 class CreateNew extends React.Component {
   handleClick = () => {
     this.props.toggle();
   };
+
   render() {
     return (
       <div className="createNew">
-        <form className="createNew__container">
+        <form className="createNew__form">
           <h1 className="createNew__header">Create New</h1>
           <div className="createNew__wrapper">
             <label className="createNew__label">
@@ -37,6 +45,7 @@ class CreateNew extends React.Component {
               className="createNew__location"
               classNamePrefix="Select"
               name="location"
+              options={options}
             />
           </label>
           <div className="createNew__wrapper">
