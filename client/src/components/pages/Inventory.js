@@ -1,7 +1,18 @@
 import React from "react";
 import Icons from "../assets";
+import CreateNew from "./CreateNew";
 
 class Inventory extends React.Component {
+  state = {
+    seen: false,
+  };
+
+  togglePop = () => {
+    this.setState({
+      seen: !this.state.seen,
+    });
+  };
+
   render() {
     return (
       <>
@@ -90,13 +101,16 @@ class Inventory extends React.Component {
             </div>
           </div>
         </section>
-        <button className="inventory__button">
-          <img
-            className="inventory__button--addIcon"
-            src={Icons.addIcon}
-            alt="create new inventory button"
-          />
-        </button>
+        <div onClick={this.togglePop}>
+          <button className="inventory__button">
+            <img
+              className="inventory__button--addIcon"
+              src={Icons.addIcon}
+              alt="create new inventory button"
+            />
+          </button>
+        </div>
+        {this.state.seen ? <CreateNew toggle={this.togglePop} /> : null}
       </>
     );
   }
