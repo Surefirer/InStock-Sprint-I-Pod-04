@@ -8,6 +8,7 @@ import {
 import Header from "./components/Header";
 import Inventory from "./components/pages/Inventory";
 import Locations from "./components/pages/Locations";
+import Product from "./components/Product";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Redirect from="/" to="/inventory" exact />
         <Route path="/inventory" component={Inventory} />
         <Route path="/locations" component={Locations} />
+        <Route path="/product/:id" component={Product} />
+        {/* <Redirect from="/product" to="/inventory" exact /> */}
       </Switch>
     </Router>
   );
