@@ -38,29 +38,35 @@ export default class Product extends Component {
                 </div>
               </div>
               <div className="product-container2">
-                <div className="product__itemDesc">
-                  <h3 className="product__itemDesc-title">ITEM DESCRIPTION</h3>
-                  <p>{item.detailDescription}</p>
-                </div>
-                <div className="product-wrapper">
-                  <div className="product__lastOrder">
-                    <h3 className="product__lastOrder-title">LAST ORDERED</h3>
-                    <p>{item.lastOrder}</p>
-                  </div>
-                  <div className="product__location">
-                    <h3 className="product__location-title">LOCATION</h3>
-                    <p>
-                      {item.city},{item.country}
-                    </p>
+                <div className="product__itemDesc-wrapper">
+                  <div className="product__itemDesc">
+                    <h3 className="product__itemDesc-title">
+                      ITEM DESCRIPTION
+                    </h3>
+                    <p>{item.detailDescription}</p>
                   </div>
                 </div>
-                <div className="product__quantity">
-                  <h3 className="product__quantity-title">QUANTITY</h3>
-                  <p>{item.quantity}</p>
-                </div>
-                <div className="product__categories">
-                  <h3 className="product__categories-title">CATEGORIES</h3>
-                  <p>{item.category}</p>
+                <div className="product__itemInfo-wrapper">
+                  <div className="product-wrapper">
+                    <div className="product__lastOrder">
+                      <h3 className="product__lastOrder-title">LAST ORDERED</h3>
+                      <p>{item.lastOrder}</p>
+                    </div>
+                    <div className="product__location">
+                      <h3 className="product__location-title">LOCATION</h3>
+                      <p>
+                        {item.city},{item.country}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="product__quantity">
+                    <h3 className="product__quantity-title">QUANTITY</h3>
+                    <p>{item.quantity}</p>
+                  </div>
+                  <div className="product__categories">
+                    <h3 className="product__categories-title">CATEGORIES</h3>
+                    <p>{item.category}</p>
+                  </div>
                 </div>
               </div>
               <div className="product__btn-container">
