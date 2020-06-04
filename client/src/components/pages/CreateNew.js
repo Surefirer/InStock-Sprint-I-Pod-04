@@ -1,6 +1,6 @@
 import React from "react";
 import Select from "react-select";
-// import Icons from "../assets";
+import Switch from "react-switch";
 
 // need to be replaced with list of all warehouses from the back-end
 const options = [
@@ -58,7 +58,24 @@ class CreateNew extends React.Component {
                 placeholder="0"
               />
             </label>
-            <label className="createNew__label">STATUS</label>
+            <label className="createNew__label">
+              STATUS
+              <div className="createNew__status">
+                <p className="createNew__status--text">In Stock</p>
+                <Switch
+                  className="createNew__status--toggle"
+                  onChange={this.props.onChange}
+                  checked={this.props.checked}
+                  uncheckedIcon={false}
+                  checkedIcon={false}
+                  offColor="#afafaf"
+                  onColor="#4fa72d"
+                  height={24}
+                  width={40}
+                  handleDiameter={26}
+                />
+              </div>
+            </label>
           </div>
           <label className="createNew__label">
             ITEM DESCRIPTION

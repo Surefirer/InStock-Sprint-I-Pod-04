@@ -7,12 +7,19 @@ import CreateNew from "./CreateNew";
 class Inventory extends React.Component {
   state = {
     inventoryList: [],
+    checked: false,
     seen: false,
   };
 
   togglePop = () => {
     this.setState({
       seen: !this.state.seen,
+    });
+  };
+
+  handleChange = (checked) => {
+    this.setState({
+      checked,
     });
   };
 
@@ -100,7 +107,13 @@ class Inventory extends React.Component {
             />
           </button>
         </div>
-        {this.state.seen ? <CreateNew toggle={this.togglePop} /> : null}
+        {this.state.seen ? (
+          <CreateNew
+            toggle={this.togglePop}
+            onChange={this.handleChange}
+            checked={this.state.checked}
+          />
+        ) : null}
       </>
     );
   }

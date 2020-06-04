@@ -54,6 +54,25 @@
     margin-bottom: 1.5rem;
   }
 
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--text {
+      @include paragraph;
+      color: $black;
+
+      @include tablet {
+        @include paragraph-tablet;
+      }
+    }
+
+    &--toggle {
+      margin-right: 1rem;
+    }
+  }
+
   &__descInput {
     @extend .input;
     resize: none;
@@ -62,10 +81,7 @@
 
     @include tablet {
       margin-bottom: 2.5rem;
-    }
-
-    @include desktop {
-      height: 5.875rem;
+      height: 5rem;
     }
   }
 

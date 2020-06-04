@@ -1,14 +1,15 @@
 .inventory {
   display: flex;
   flex-direction: column;
-  margin: 0 1rem;
+  margin: 0 1rem 3rem 1rem;
 
   @include tablet {
-    margin: 0 1.5rem;
+    margin: 0 1.5rem 3rem 1.5rem;
   }
 
   @include desktop {
     margin: 0 auto;
+    margin-bottom: 3rem;
     width: 67.5rem;
   }
 
@@ -158,10 +159,6 @@
 
   &__titleWrapper {
     display: flex;
-
-    @include desktop {
-      margin-bottom: 1.5rem;
-    }
   }
 
   &__contentWrapper {
