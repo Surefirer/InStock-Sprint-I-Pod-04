@@ -9,19 +9,26 @@ import axios from "axios";
 import Header from "./components/Header";
 import Inventory from "./components/pages/Inventory";
 import Locations from "./components/pages/Locations";
-import CreateNew from "./components/pages/CreateNew";
-import Icons from "./components/assets";
+import NewInventory from "./components/pages/NewInventory";
+import NewWarehouse from "./components/pages/NewWarehouse";
 
 class App extends React.Component {
   state = {
     inventoryList: [],
     checked: true,
-    seen: false,
+    newInventory: false,
+    newLocation: false,
   };
 
-  togglePop = () => {
+  inventoryTogglePop = () => {
     this.setState({
-      seen: !this.state.seen,
+      newInventory: !this.state.newInventory,
+    });
+  };
+
+  locationTogglePop = () => {
+    this.setState({
+      newLocation: !this.state.newLocation,
     });
   };
 
@@ -43,21 +50,16 @@ class App extends React.Component {
     const { inventoryList } = this.state;
     return (
       <Router>
-        <div onClick={this.togglePop}>
-          <button className="inventory__button">
-            <img
-              className="inventory__button--addIcon"
-              src={Icons.addIcon}
-              alt="create new inventory button"
-            />
-          </button>
-        </div>
-        {this.state.seen ? (
-          <CreateNew
-            toggle={this.togglePop}
+        {this.state.newInventory ? (
+          <NewInventory
+            toggle={this.inventoryTogglePop}
             onChange={this.handleChange}
             checked={this.state.checked}
+            inventoryList={inventoryList}
           />
+        ) : null}
+        {this.state.newLocation ? (
+          <NewWarehouse toggle={this.locationTogglePop} />
         ) : null}
         <Header />
         <Switch>
@@ -65,10 +67,23 @@ class App extends React.Component {
           <Route
             path="/inventory"
             render={(props) => (
-              <Inventory inventoryList={inventoryList} {...props} />
+              <Inventory
+                togglePop={this.inventoryTogglePop}
+                inventoryList={inventoryList}
+                {...props}
+              />
             )}
           />
-          <Route path="/locations" component={Locations} />
+          <Route
+            path="/locations"
+            render={(props) => (
+              <Locations
+                togglePop={this.locationTogglePop}
+                inventoryList={inventoryList}
+                {...props}
+              />
+            )}
+          />
         </Switch>
       </Router>
     );
