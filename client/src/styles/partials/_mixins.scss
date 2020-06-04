@@ -128,3 +128,24 @@
     background-color: $instock-blue-dark;
   }
 }
+
+// general button style
+.button {
+  @include paragraph-bold;
+  background-color: $instock-blue;
+  color: $white;
+  border-radius: 0.25rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 3rem;
+  padding: 0;
+  transition: 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: $instock-blue-dark;
+  }
+}
