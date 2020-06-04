@@ -508,13 +508,14 @@ textarea::placeholder {
   position: absolute;
   position: fixed;
   bottom: 5rem;
-  right: 1.5rem;
+  right: 2rem;
 }
 
 @media (min-width: 768px) {
   .inventory__button {
     width: 5rem;
     height: 5rem;
+    right: 3rem;
   }
 }
 
@@ -592,27 +593,42 @@ textarea::placeholder {
 }
 
 .createNew {
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: 99;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .createNew {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 }
 
 .createNew__form {
-  position: absolute;
-  padding: 0 3rem;
-  border-radius: 0.25rem;
-  top: 20%;
-  left: 20%;
-  width: 36rem;
-  height: 39rem;
-  background-color: #ffffff;
+  margin: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .createNew__form {
+    position: absolute;
+    padding: 0 3rem;
+    border-radius: 0.25rem;
+    top: 20%;
+    left: 30%;
+    width: 36rem;
+    height: 39rem;
+    background-color: #ffffff;
+    margin: 0;
+  }
 }
 
 .createNew__header {
   font-family: Avenir Bold;
   font-size: 1.5rem;
   line-height: 2rem;
+  margin: 2rem 0;
 }
 
 @media (min-width: 768px) {
@@ -620,7 +636,7 @@ textarea::placeholder {
     font-family: Avenir Bold;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    margin: 3.5rem 0 3rem 0;
+    margin: 3rem 0;
   }
 }
 
@@ -628,21 +644,57 @@ textarea::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .createNew__wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.createNew__wrapper--input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .createNew__wrapper--btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .createNew__wrapper--btn {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .createNew__label {
@@ -651,14 +703,26 @@ textarea::placeholder {
   line-height: 1.25rem;
   letter-spacing: 0.25px;
   color: #afafaf;
-  width: 13.75rem;
-  margin-bottom: 1.5rem;
+  width: 18rem;
+}
+
+@media (min-width: 768px) {
+  .createNew__label {
+    width: 13.75rem;
+  }
 }
 
 .createNew__input {
   height: 3rem;
-  width: 13.75rem;
-  padding: 0 0.75rem 0 0.75rem;
+  padding: 0 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .createNew__input {
+    width: 13.75rem;
+    padding-left: 1rem;
+  }
 }
 
 .createNew__location {
@@ -699,13 +763,20 @@ textarea::placeholder {
 .createNew__descInput {
   resize: none;
   padding: 0.5rem 0 0 0.75rem;
-  height: 8.938rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.createNew__btn {
+  margin: 2rem 0;
 }
 
 @media (min-width: 768px) {
-  .createNew__descInput {
-    margin-bottom: 2.5rem;
-    height: 5rem;
+  .createNew__btn {
+    width: 10rem;
+    height: 3rem;
   }
 }
 
@@ -714,11 +785,15 @@ textarea::placeholder {
   font-size: 0.813rem;
   line-height: 1.125rem;
   color: #004892;
-  margin-right: 3rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0;
 }
 
-.createNew__btn {
-  width: 10rem;
-  height: 3rem;
+@media (min-width: 768px) {
+  .createNew__cancel {
+    margin-right: 3rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

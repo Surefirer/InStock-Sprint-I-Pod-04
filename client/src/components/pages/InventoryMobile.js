@@ -5,8 +5,8 @@ function InventoryMobile(props) {
   return (
     <div className="inventory__bodyMobile">
       {props.inventoryList.map((inventory) => (
-        <div className="inventory__wrapperMobile">
-          <div className="inventory__container" key={inventory.id}>
+        <div className="inventory__wrapperMobile" key={inventory.id}>
+          <div className="inventory__container">
             <div className="inventory__container--item">
               <h3 className="inventory__title">ITEM</h3>
               <h2 className="inventory__product">{inventory.productName}</h2>
