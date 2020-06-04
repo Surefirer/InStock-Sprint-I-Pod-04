@@ -36,7 +36,13 @@ export default class Product extends Component {
                 </div>
 
                 <div className="product__status">
-                  <p>In Stock</p>
+                  <p>
+                    {item.inStock === true ? (
+                      <p>In Stock</p>
+                    ) : (
+                      <p>Out of Stock</p>
+                    )}
+                  </p>
                 </div>
               </div>
               <div className="product-container2">
