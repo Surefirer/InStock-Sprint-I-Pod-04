@@ -20,48 +20,58 @@ class CreateNew extends React.Component {
         <form className="createNew__form">
           <h1 className="createNew__header">Create New</h1>
           <div className="createNew__wrapper">
-            <label className="createNew__label">
-              PRODUCT
+            <div className="createNew__wrapper--input">
+              <label className="createNew__label" htmlFor="product">
+                PRODUCT
+              </label>
               <input
                 className="createNew__input"
                 type="text"
                 name="product"
                 placeholder="Item Name"
               />
-            </label>
-            <label className="createNew__label">
-              LAST ORDERED
+            </div>
+            <div className="createNew__wrapper--input">
+              <label className="createNew__label" htmlFor="lastOrdered">
+                LAST ORDERED
+              </label>
               <input
                 className="createNew__input"
                 type="date"
                 name="lastOrdered"
                 placeholder="yyyy-mm-dd"
               />
-            </label>
+            </div>
           </div>
-          <label className="createNew__label">
+          <label className="createNew__label" htmlFor="location">
             LOCATION
-            <Select
-              className="createNew__location"
-              classNamePrefix="Select"
-              name="location"
-              options={options}
-            />
           </label>
+          <Select
+            className="createNew__location"
+            classNamePrefix="Select"
+            name="location"
+            options={options}
+          />
           <div className="createNew__wrapper">
-            <label className="createNew__label">
-              QUANTITY
+            <div className="createNew__wrapper--input">
+              <label className="createNew__label" htmlFor="quantity">
+                QUANTITY
+              </label>
               <input
                 className="createNew__input"
                 type="number"
                 name="quantity"
                 placeholder="0"
               />
-            </label>
-            <label className="createNew__label">
-              STATUS
+            </div>
+            <div className="createNew__wrapper--input">
+              <label className="createNew__label">STATUS</label>
               <div className="createNew__status">
-                <p className="createNew__status--text">In Stock</p>
+                {this.props.checked === true ? (
+                  <p className="createNew__status--text">In Stock</p>
+                ) : (
+                  <p className="createNew__status--text">Out of Stock</p>
+                )}
                 <Switch
                   className="createNew__status--toggle"
                   onChange={this.props.onChange}
@@ -75,24 +85,24 @@ class CreateNew extends React.Component {
                   handleDiameter={26}
                 />
               </div>
-            </label>
+            </div>
           </div>
-          <label className="createNew__label">
+          <label className="createNew__label" htmlFor="description">
             ITEM DESCRIPTION
-            <textarea
-              className="createNew__descInput"
-              type="text"
-              name="description"
-              placeholder="(Optional)"
-            />
           </label>
+          <textarea
+            className="createNew__descInput"
+            type="text"
+            name="description"
+            placeholder="(Optional)"
+          />
           <div className="createNew__wrapper--btn">
-            <span className="createNew__cancel" onClick={this.handleClick}>
-              CANCEL
-            </span>
             <button className="createNew__btn" type="submit" id="upload-btn">
               SAVE
             </button>
+            <p className="createNew__cancel" onClick={this.handleClick}>
+              CANCEL
+            </p>
           </div>
         </form>
       </div>

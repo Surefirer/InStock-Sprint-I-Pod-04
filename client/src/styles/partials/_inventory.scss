@@ -132,11 +132,12 @@
     position: absolute;
     position: fixed;
     bottom: 5rem;
-    right: 1.5rem;
+    right: 2rem;
 
     @include tablet {
       width: 5rem;
       height: 5rem;
+      right: 3rem;
     }
 
     &--addIcon {
@@ -176,10 +177,6 @@
   &__item {
     width: 34.44%;
     padding-right: 1.5rem;
-
-    @include tablet {
-      // margin-bottom: 1.5rem;
-    }
 
     @include desktop {
       margin-bottom: 0;
