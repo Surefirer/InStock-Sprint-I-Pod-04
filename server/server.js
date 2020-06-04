@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-const getWarehouseList = require("./model/locations.json");
+const getWarehouseList = require("./controller/getWarehouseList");
 const getInventoryList = require("./controller/getInventoryList");
 const getProduct = require("./controller/getProduct");
 
@@ -15,8 +15,8 @@ app.get("/", (req, res) => {
 });
 
 // api info endpoint for warehouse
-app.get("/warehouse", (req, res) => {
-  res.json(getWarehouseList);
+app.get("/locations", (req, res) => {
+  res.json(getWarehouseList());
 });
 
 // api info endpoint for inventory item
