@@ -1243,4 +1243,210 @@ textarea::placeholder {
     margin-right: 3rem;
   }
 }
+
+.product {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.product__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product__name h2 {
+  padding-left: 15px;
+  font-family: Avenir Bold;
+  padding-top: 5px;
+}
+
+.product__status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 110px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: #12b812;
+  color: white;
+  font-family: Avenir Bold Demi;
+  margin-bottom: 35px;
+}
+
+.product__itemDesc P, .product__lastOrder P, .product__location P, .product__quantity P, .product__categories P {
+  font-family: Avenir Regular;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+
+.product__itemDesc-title, .product__lastOrder-title, .product__location-title, .product__quantity-title, .product__categories-title {
+  font-family: Avenir Bold Demi;
+  font-size: 1rem;
+  line-height: 1.38rem;
+  color: #afafaf;
+}
+
+.product__btn {
+  width: 100%;
+  height: 50px;
+  margin: 20px 0;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  background-color: #002f5f;
+}
+
+.product__btn button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Avenir Bold Demi;
+}
+
+@media (min-width: 768px) {
+  .product-container1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 2px solid #e1e1e1;
+  }
+  .product__name h2 {
+    font-family: Avenir Bold;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+  .product__status {
+    margin-bottom: 0;
+    margin-left: 35px;
+  }
+  .product__itemDesc-title {
+    font-family: Avenir Bold Demi;
+    font-size: 1rem;
+    line-height: 1.35rem;
+  }
+  .product__lastOrder-title, .product__location-title, .product__quantity-title, .product__categories-title {
+    font-family: Avenir Bold Demi;
+    font-size: 1rem;
+    line-height: 1.35rem;
+    color: #afafaf;
+  }
+  .product .product-container2 {
+    width: 95%;
+    margin: 0 auto;
+    border-bottom: 2px solid #e1e1e1;
+  }
+  .product__itemDesc {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .product__itemDesc P, .product__lastOrder P, .product__location P, .product__quantity P, .product__categories P {
+    font-family: Avenir Regular;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+  .product .product-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 70%;
+  }
+  .product__categories {
+    padding-bottom: 30px;
+  }
+  .product__btn {
+    width: 160px;
+    height: 48px;
+  }
+  .product__btn-container {
+    width: 95%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1080px) {
+  .product {
+    max-width: 1080px;
+  }
+  .product__itemInfo-wrapper {
+    width: 100%;
+  }
+  .product__name img {
+    width: 16px;
+    height: 24px;
+  }
+  .product__status {
+    width: 88px;
+    height: 24px;
+    margin-left: 24px;
+  }
+  .product__status p {
+    font-size: 12px;
+    padding-top: 4px;
+  }
+  .product__itemDesc-title {
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+  .product__itemDesc {
+    margin: 0;
+  }
+  .product__lastOrder-title, .product__location-title {
+    margin: 0;
+  }
+  .product__categories {
+    padding-top: 42px;
+    padding-bottom: 48px;
+  }
+  .product__itemDesc P, .product__lastOrder P, .product__location P, .product__quantity P, .product__categories P {
+    margin: 24px 0;
+  }
+  .product__itemInfo-wrapper {
+    padding-left: 40px;
+  }
+  .product__btn {
+    margin: 40px 0;
+  }
+  .product-container2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 2px solid #e1e1e1;
+  }
+  .product-wrapper {
+    margin-top: 40px;
+    margin-bottom: 56px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

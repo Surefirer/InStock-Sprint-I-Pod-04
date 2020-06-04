@@ -11,6 +11,7 @@ import Inventory from "./components/pages/Inventory";
 import Locations from "./components/pages/Locations";
 import NewInventory from "./components/pages/NewInventory";
 import NewWarehouse from "./components/pages/NewWarehouse";
+import Product from "./components/Product";
 
 class App extends React.Component {
   state = {
@@ -84,6 +85,8 @@ class App extends React.Component {
               />
             )}
           />
+          <Route path="/product/:id" component={Product} />
+          <Redirect from="/product" to="/inventory" exact />
         </Switch>
       </Router>
     );
