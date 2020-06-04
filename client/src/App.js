@@ -48,7 +48,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { inventoryList } = this.state;
+    const { inventoryList, warehouseList } = this.state;
     return (
       <Router>
         {this.state.newInventory ? (
@@ -80,7 +80,7 @@ class App extends React.Component {
             render={(props) => (
               <Locations
                 togglePop={this.locationTogglePop}
-                inventoryList={inventoryList}
+                warehouseList={warehouseList}
                 {...props}
               />
             )}

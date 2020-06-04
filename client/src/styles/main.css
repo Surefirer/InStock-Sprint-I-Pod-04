@@ -306,7 +306,7 @@ textarea::placeholder {
           justify-content: center;
 }
 
-.header__link:active, .header__link:hover {
+.header__link--active, .header__link:hover {
   color: #ffffff;
   font-family: Avenir Bold Demi;
   border-bottom: 0.25rem solid #ffffff;
