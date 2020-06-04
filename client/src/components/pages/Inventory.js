@@ -45,7 +45,7 @@ function Inventory(props) {
             <div className="inventory__contentWrapper" key={inventory.id}>
               <div className="inventory__item">
                 <h2 className="inventory__product">{inventory.productName}</h2>
-                <p className="inventory__text">{inventory.description}</p>
+                <p className="inventory__text">{inventory.briefDescription}</p>
               </div>
               <p className="inventory__text inventory__order">
                 {inventory.lastOrder}
