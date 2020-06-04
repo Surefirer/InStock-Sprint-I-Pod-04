@@ -5,6 +5,7 @@ const app = express();
 const getWarehouseList = require("./model/locations.json");
 const getItemList = require("./model/inventory.json");
 const getProduct = require("./controller/getProduct");
+const getInventoryList = require("./controller/getInventoryList");
 
 // Middleware
 app.use(express.json());
