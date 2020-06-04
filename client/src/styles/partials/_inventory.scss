@@ -1,22 +1,28 @@
 .inventory {
   display: flex;
   flex-direction: column;
-  margin: 0 1rem;
+  margin: 0 1rem 3rem 1rem;
 
   @include tablet {
-    margin: 0 1.5rem;
+    margin: 0 1.5rem 3rem 1.5rem;
   }
 
   @include desktop {
     margin: 0 auto;
+    margin-bottom: 3rem;
     width: 67.5rem;
   }
 
   &__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 8rem;
+
     @include tablet {
-      display: flex;
+      flex-direction: row;
       justify-content: space-between;
       margin-top: 3rem;
+      height: 6rem;
     }
   }
 
@@ -27,7 +33,7 @@
     @include tablet {
       @include headerOne-tablet;
       margin: 0;
-      margin-bottom: 3rem;
+      // margin-bottom: 3rem;
     }
   }
 
@@ -54,13 +60,20 @@
   }
 
   &__bodyMobile {
-    display: flex;
-    align-items: flex-start;
-    border-bottom: 1px solid $mercury;
-
     @include tablet {
       display: none;
     }
+  }
+
+  &__wrapperMobile {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid $mercury;
+    margin-top: 2rem;
+  }
+
+  &__container {
+    flex-direction: column;
   }
 
   &__title {
@@ -84,7 +97,7 @@
 
     @include tablet {
       @include subheader-tablet;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0;
     }
   }
 
@@ -117,6 +130,7 @@
     width: 3.75rem;
     height: 3.75rem;
     position: absolute;
+    position: fixed;
     bottom: 5rem;
     right: 1.5rem;
 
@@ -145,10 +159,6 @@
 
   &__titleWrapper {
     display: flex;
-
-    @include desktop {
-      margin-bottom: 1.5rem;
-    }
   }
 
   &__contentWrapper {
@@ -168,7 +178,7 @@
     padding-right: 1.5rem;
 
     @include tablet {
-      margin-bottom: 1.5rem;
+      // margin-bottom: 1.5rem;
     }
 
     @include desktop {
