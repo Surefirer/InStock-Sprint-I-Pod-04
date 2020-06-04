@@ -9,7 +9,8 @@ import axios from "axios";
 import Header from "./components/Header";
 import Inventory from "./components/pages/Inventory";
 import Locations from "./components/pages/Locations";
-import CreateNew from "./components/pages/CreateNew";
+import NewInventory from "./components/pages/NewInventory";
+import NewWarehouse from "./components/pages/NewWarehouse";
 import Icons from "./components/assets";
 
 class App extends React.Component {
@@ -53,7 +54,8 @@ class App extends React.Component {
           </button>
         </div>
         {this.state.seen ? (
-          <CreateNew
+          // <NewInventory
+          <NewWarehouse
             toggle={this.togglePop}
             onChange={this.handleChange}
             checked={this.state.checked}

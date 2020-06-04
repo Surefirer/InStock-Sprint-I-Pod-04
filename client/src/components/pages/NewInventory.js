@@ -9,7 +9,7 @@ const options = [
   { value: "Toronto, CAN", label: "Toronto, CAN" },
 ];
 
-class CreateNew extends React.Component {
+class NewInventory extends React.Component {
   handleClick = () => {
     this.props.toggle();
   };
@@ -110,4 +110,4 @@ class CreateNew extends React.Component {
   }
 }
 
-export default CreateNew;
+export default NewInventory;
