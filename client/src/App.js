@@ -19,6 +19,7 @@ class App extends React.Component {
     checked: true,
     newInventory: false,
     newLocation: false,
+    isNavActive: false,
   };
 
   inventoryTogglePop = () => {
@@ -39,6 +40,12 @@ class App extends React.Component {
     });
   };
 
+  clickNav = () => {
+    this.setState((prevState) => ({
+      isNavActive: !prevState.isNaveActive,
+    }));
+  };
+
   componentDidMount() {
     axios.get("/inventory").then((response) => {
       this.setState({
@@ -48,7 +55,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { inventoryList, warehouseList } = this.state;
+    const { inventoryList, isNavActive } = this.state;
     return (
       <Router>
         {this.state.newInventory ? (
@@ -62,7 +69,7 @@ class App extends React.Component {
         {this.state.newLocation ? (
           <NewWarehouse toggle={this.locationTogglePop} />
         ) : null}
-        <Header />
+        <Header isNavActive={isNavActive} clickNav={this.clickNav} />
         <Switch>
           <Redirect from="/" to="/inventory" exact />
           <Route
@@ -78,11 +85,7 @@ class App extends React.Component {
           <Route
             path="/locations"
             render={(props) => (
-              <Locations
-                togglePop={this.locationTogglePop}
-                warehouseList={warehouseList}
-                {...props}
-              />
+              <Locations togglePop={this.locationTogglePop} {...props} />
             )}
           />
           <Route path="/product/:id" component={Product} />
