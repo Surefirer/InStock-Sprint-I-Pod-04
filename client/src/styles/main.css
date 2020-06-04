@@ -592,6 +592,15 @@ textarea::placeholder {
   width: 13.88%;
 }
 
+.inventory__item {
+  width: 350px;
+  color: #323232;
+}
+
+.inventory__container--item {
+  color: #323232;
+}
+
 .locations {
   display: -webkit-box;
   display: -ms-flexbox;

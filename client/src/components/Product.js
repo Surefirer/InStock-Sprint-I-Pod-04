@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Icons from "./assets";
+import { NavLink } from "react-router-dom";
 
 export default class Product extends Component {
   state = {
@@ -10,16 +11,14 @@ export default class Product extends Component {
   componentDidMount() {
     const id = this.props.match.params.id;
     //const id = "1af0jruup5g0";
-    axios
-      .get(`http://localhost:5000/inventory/1af0jruup5g0`)
-      .then((response) => {
-        console.log(response);
-        this.setState({
-          product: response.data.filter((item) => {
-            return item.id === id;
-          }),
-        });
+    axios.get(`http://localhost:5000/inventory/${id}`).then((response) => {
+      console.log(response);
+      this.setState({
+        product: response.data.filter((item) => {
+          return item.id === id;
+        }),
       });
+    });
   }
 
   render() {
@@ -30,9 +29,12 @@ export default class Product extends Component {
             <>
               <div className="product-container1" id={item.id}>
                 <div className="product__name">
-                  <img src={Icons.backArrow} alt="" />
+                  <NavLink to={`/inventory`}>
+                    <img src={Icons.backArrow} alt="" />
+                  </NavLink>
                   <h2>{item.productName}</h2>
                 </div>
+
                 <div className="product__status">
                   <p>In Stock</p>
                 </div>
