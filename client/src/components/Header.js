@@ -6,17 +6,19 @@ function Header() {
   return (
     <header className="header">
       <div className="header__container">
-        <img
-          className="header__logo"
-          src={Logos.instockLogoSvg}
-          alt="instock logo"
-        />
+        <Link to="/inventory">
+          <img
+            className="header__logo"
+            src={Logos.instockLogoSvg}
+            alt="instock logo"
+          />
+        </Link>
         <nav className="header__nav">
-          <Link to="/inventory">
-            <span className="header__link header__link--active">Inventory</span>
+          <Link to="/inventory" className="header__link">
+            <span>Inventory</span>
           </Link>
-          <Link to="/locations">
-            <span className="header__link">Locations</span>
+          <Link to="/locations" className="header__link">
+            <span>Locations</span>
           </Link>
         </nav>
       </div>

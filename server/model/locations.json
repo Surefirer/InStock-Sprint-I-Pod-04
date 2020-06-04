@@ -1,101 +1,102 @@
-[{
-        "id": "w0",
-        "name": "Warehouse No. 1",
-        "address": "469 King St W, Toronto, ON",
-        "contactName": "Mara Weinberg",
-        "position": "Warehouse Manager",
-        "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com",
-        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
-    },
-    {
-        "id": "1a4kjruuedd1",
-        "name": "Warehouse No. 2",
-        "address": "469 King St W, Toronto, ON",
-        "contactName": "Mara Weinberg",
-        "position": "Warehouse Manager",
-        "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com",
-        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
-    },
-    {
-        "id": "1a4kjruuedd2",
-        "name": "Warehouse No. 3",
-        "address": "469 King St W, Toronto, ON",
-        "contactName": "Mara Weinberg",
-        "position": "Warehouse Manager",
-        "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com",
-        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
-    },
-    {
-        "id": "1a4kjruuedd3",
-        "name": "Warehouse No. 4",
-        "address": "469 King St W, Toronto, ON",
-        "contactName": "Mara Weinberg",
-        "position": "Warehouse Manager",
-        "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com",
-        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
-    },
-    {
-        "id": "1a4kjruuedd4",
-        "name": "Warehouse No. 5",
-        "address": "469 King St W, Toronto, ON",
-        "contactName": "Mara Weinberg",
-        "position": "Warehouse Manager",
-        "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com",
-        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
-    },
-    {
-        "id": "1a4kjruuedd5",
-        "name": "Warehouse No. 6",
-        "address": "469 King St W, Toronto, ON",
-        "contactName": "Mara Weinberg",
-        "position": "Warehouse Manager",
-        "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com",
-        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
-    },
-    {
-        "id": "1a4kjruuedd6",
-        "name": "Warehouse No. 7",
-        "address": "469 King St W, Toronto, ON",
-        "contactName": "Mara Weinberg",
-        "position": "Warehouse Manager",
-        "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com",
-        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
-    },
-    {
-        "id": "1a4kjruuedd7",
-        "name": "Warehouse No. 8",
-        "address": "469 King St W, Toronto, ON",
-        "contactName": "Mara Weinberg",
-        "position": "Warehouse Manager",
-        "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com",
-        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
-    },
-    {
-        "id": "1a4kjruuedd8",
-        "name": "Warehouse No. 9",
-        "address": "469 King St W, Toronto, ON",
-        "contactName": "Mara Weinberg",
-        "position": "Warehouse Manager",
-        "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com",
-        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
-    },
-    {
-        "id": "1a4kjruuedd9",
-        "name": "Warehouse No. 10",
-        "address": "469 King St W, Toronto, ON",
-        "contactName": "Mara Weinberg",
-        "position": "Warehouse Manager",
-        "phoneNumber": "+1 416 678 2345",
-        "email": "weinberg@instack.com",
-        "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
-    }
+[
+  {
+    "id": "w0",
+    "name": "Warehouse No. 1",
+    "address": "469 King St W, Toronto, ON",
+    "contactName": "Mara Weinberg",
+    "position": "Warehouse Manager",
+    "phoneNumber": "+1 416 678 2345",
+    "email": "weinberg@instack.com",
+    "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
+  },
+  {
+    "id": "1a4kjruuedd1",
+    "name": "Warehouse No. 2",
+    "address": "469 King St W, Toronto, ON",
+    "contactName": "Mara Weinberg",
+    "position": "Warehouse Manager",
+    "phoneNumber": "+1 416 678 2345",
+    "email": "weinberg@instack.com",
+    "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
+  },
+  {
+    "id": "1a4kjruuedd2",
+    "name": "Warehouse No. 3",
+    "address": "469 King St W, Toronto, ON",
+    "contactName": "Mara Weinberg",
+    "position": "Warehouse Manager",
+    "phoneNumber": "+1 416 678 2345",
+    "email": "weinberg@instack.com",
+    "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
+  },
+  {
+    "id": "1a4kjruuedd3",
+    "name": "Warehouse No. 4",
+    "address": "469 King St W, Toronto, ON",
+    "contactName": "Mara Weinberg",
+    "position": "Warehouse Manager",
+    "phoneNumber": "+1 416 678 2345",
+    "email": "weinberg@instack.com",
+    "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
+  },
+  {
+    "id": "1a4kjruuedd4",
+    "name": "Warehouse No. 5",
+    "address": "469 King St W, Toronto, ON",
+    "contactName": "Mara Weinberg",
+    "position": "Warehouse Manager",
+    "phoneNumber": "+1 416 678 2345",
+    "email": "weinberg@instack.com",
+    "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
+  },
+  {
+    "id": "1a4kjruuedd5",
+    "name": "Warehouse No. 6",
+    "address": "469 King St W, Toronto, ON",
+    "contactName": "Mara Weinberg",
+    "position": "Warehouse Manager",
+    "phoneNumber": "+1 416 678 2345",
+    "email": "weinberg@instack.com",
+    "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
+  },
+  {
+    "id": "1a4kjruuedd6",
+    "name": "Warehouse No. 7",
+    "address": "469 King St W, Toronto, ON",
+    "contactName": "Mara Weinberg",
+    "position": "Warehouse Manager",
+    "phoneNumber": "+1 416 678 2345",
+    "email": "weinberg@instack.com",
+    "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
+  },
+  {
+    "id": "1a4kjruuedd7",
+    "name": "Warehouse No. 8",
+    "address": "469 King St W, Toronto, ON",
+    "contactName": "Mara Weinberg",
+    "position": "Warehouse Manager",
+    "phoneNumber": "+1 416 678 2345",
+    "email": "weinberg@instack.com",
+    "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
+  },
+  {
+    "id": "1a4kjruuedd8",
+    "name": "Warehouse No. 9",
+    "address": "469 King St W, Toronto, ON",
+    "contactName": "Mara Weinberg",
+    "position": "Warehouse Manager",
+    "phoneNumber": "+1 416 678 2345",
+    "email": "weinberg@instack.com",
+    "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
+  },
+  {
+    "id": "1a4kjruuedd9",
+    "name": "Warehouse No. 10",
+    "address": "469 King St W, Toronto, ON",
+    "contactName": "Mara Weinberg",
+    "position": "Warehouse Manager",
+    "phoneNumber": "+1 416 678 2345",
+    "email": "weinberg@instack.com",
+    "categories": "Industrial,Automotive,Heavy,Mechanical,Engineering,Transportation"
+  }
 ]
