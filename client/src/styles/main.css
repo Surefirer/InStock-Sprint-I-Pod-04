@@ -586,6 +586,11 @@ textarea::placeholder {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-top: 3rem;
+    margin-bottom: 3rem;
+    height: 75px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 
@@ -603,6 +608,7 @@ textarea::placeholder {
     line-height: 2.75rem;
     margin: 0;
     margin-bottom: 3rem;
+    margin-bottom: 0;
   }
 }
 
@@ -615,6 +621,7 @@ textarea::placeholder {
 @media (min-width: 768px) {
   .locations__search {
     width: 15.75rem;
+    margin-bottom: 0;
   }
 }
 
@@ -684,7 +691,7 @@ textarea::placeholder {
   }
 }
 
-.locations__title1 {
+.locations__titleMobile {
   font-family: Avenir Bold Demi;
   font-size: 0.813rem;
   line-height: 1.125rem;
@@ -693,11 +700,32 @@ textarea::placeholder {
 }
 
 @media (min-width: 768px) {
-  .locations__title1 {
+  .locations__titleMobile {
     font-family: Avenir Bold Demi;
     font-size: 1rem;
     line-height: 1.35rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
+    margin-top: 48px;
+  }
+}
+
+.locations__titleTablet {
+  font-family: Avenir Bold Demi;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .locations__titleTablet {
+    font-family: Avenir Bold Demi;
+    font-size: 1rem;
+    line-height: 1.35rem;
+    margin-bottom: 0;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
 }
 
@@ -715,6 +743,9 @@ textarea::placeholder {
     font-size: 0.875rem;
     line-height: 1.375rem;
     margin-bottom: 0;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
 }
 
@@ -725,13 +756,39 @@ textarea::placeholder {
   }
 }
 
-.locations__kebabIcon {
+.locations__textTablet {
+  font-family: Avenir Regular;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .locations__textTablet {
+    font-family: Avenir Regular;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1080px) {
+  .locations__textTablet {
+    height: 22px;
+    overflow: hidden;
+  }
+}
+
+.locations__rightArrowIcon {
   margin-left: auto;
 }
 
 @media (min-width: 768px) {
-  .locations__kebabIcon {
+  .locations__rightArrowIcon {
     margin-right: 1.5rem;
+    margin-right: initial;
+    padding-top: 15px;
   }
 }
 
@@ -806,6 +863,40 @@ textarea::placeholder {
   }
 }
 
+.locations__contentWrapperTablet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e1e1e1;
+  height: 6.25rem;
+}
+
+@media (min-width: 768px) {
+  .locations__contentWrapperTablet {
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1080px) {
+  .locations__contentWrapperTablet {
+    height: 5rem;
+  }
+}
+
 .locations__item {
   width: 34.44%;
   padding-right: 1.5rem;
@@ -813,7 +904,12 @@ textarea::placeholder {
 
 @media (min-width: 768px) {
   .locations__item {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: initial;
+    padding-right: initial;
   }
 }
 
@@ -825,6 +921,8 @@ textarea::placeholder {
 
 .locations__order {
   width: 17.22%;
+  width: 25%;
+  margin-right: 50px;
 }
 
 .locations__location {
@@ -833,5 +931,32 @@ textarea::placeholder {
 
 .locations__quantity {
   width: 13.88%;
+  width: 25%;
+  margin-right: 50px;
+}
+
+.locations__textContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .locations__imageContainer {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 44.3rem;
+    margin-left: 74%;
+    margin-left: 69vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-items: flex-end;
+  }
 }
 /*# sourceMappingURL=main.css.map */

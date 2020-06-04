@@ -26,7 +26,7 @@ class Location extends React.Component {
           <div className="locations__bodyMobile">
             <div className="locations__container">
               <div className="locations__container--item">
-                <h3 className="locations__title1">Warehouse Number 1</h3>
+                <h3 className="locations__titleMobile">Warehouse Number 1</h3>
                 <p className="locations__text">469 King St W, Toronto, ON</p>
                 <p className="locations__text">
                   Mara Weinberg <br /> <i>Warehouse Manager</i>
@@ -41,10 +41,39 @@ class Location extends React.Component {
               </div>
             </div>
             <img
-              className="locations__kebabIcon"
+              className="locations__rightArrowIcon"
               src={Icons.rightArrow}
               alt="locations kebab icon"
             />
+          </div>
+          <div className="locations__bodyTablet">
+            <div className="locations__contentWrapperTablet">
+              <div className="locations__item">
+                <div className="locations__warehouseTitleContainer">
+                  <h2 className="locations__titleTablet">Warehouse Number 1</h2>
+                  <p className="locations__text">469 King St W, Toronto, ON</p>
+                </div>
+                <div className="locations__imageContainer">
+                  <img
+                    className="locations__rightArrowIcon"
+                    src={Icons.rightArrow}
+                    alt="locations right arrow icon"
+                  />
+                </div>
+              </div>
+              <div className="locations__textContainer">
+                <p className="locations__textTablet locations__quantity">
+                  Mara Weinberg <br /> <i>Warehouse Manager</i>
+                </p>
+                <p className="locations__textTablet locations__order">
+                  +1 416 678 2345 weinberg@instack.com
+                </p>
+                <p className="locations__textTablet locations__status">
+                  Industrial, Automotive, Heavy, <br /> Mechanical, Engineering,
+                  Transportation
+                </p>
+              </div>
+            </div>
           </div>
         </section>
         <button className="locations__button">
