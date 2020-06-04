@@ -27,28 +27,32 @@ export default class Product extends Component {
       <div className="product">
         {this.state.product.map((item) => {
           return (
-            <div className="product-container1" id={item.id}>
-              <div className="product__name">
-                <img src={Icons.backArrow} alt="" />
-                <h2>{item.productName}</h2>
-              </div>
-              <div className="product__status">
-                <p>In Stock</p>
+            <>
+              <div className="product-container1" id={item.id}>
+                <div className="product__name">
+                  <img src={Icons.backArrow} alt="" />
+                  <h2>{item.productName}</h2>
+                </div>
+                <div className="product__status">
+                  <p>In Stock</p>
+                </div>
               </div>
               <div className="product-container2">
                 <div className="product__itemDesc">
                   <h3 className="product__itemDesc-title">ITEM DESCRIPTION</h3>
                   <p>{item.detailDescription}</p>
                 </div>
-                <div className="product__lastOrder">
-                  <h3 className="product__lastOrder-title">LAST ORDERED</h3>
-                  <p>{item.lastOrder}</p>
-                </div>
-                <div className="product__location">
-                  <h3 className="product__location-title">LOCATION</h3>
-                  <p>
-                    {item.city},{item.country}
-                  </p>
+                <div className="product-wrapper">
+                  <div className="product__lastOrder">
+                    <h3 className="product__lastOrder-title">LAST ORDERED</h3>
+                    <p>{item.lastOrder}</p>
+                  </div>
+                  <div className="product__location">
+                    <h3 className="product__location-title">LOCATION</h3>
+                    <p>
+                      {item.city},{item.country}
+                    </p>
+                  </div>
                 </div>
                 <div className="product__quantity">
                   <h3 className="product__quantity-title">QUANTITY</h3>
@@ -59,10 +63,12 @@ export default class Product extends Component {
                   <p>{item.category}</p>
                 </div>
               </div>
-              <div className="product__btn">
-                <button>EDIT</button>
+              <div className="product__btn-container">
+                <div className="product__btn">
+                  <button>EDIT</button>
+                </div>
               </div>
-            </div>
+            </>
           );
         })}
       </div>
