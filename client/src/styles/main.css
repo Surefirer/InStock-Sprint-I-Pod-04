@@ -833,6 +833,12 @@ textarea::placeholder {
   }
 }
 
+@media (min-width: 1080px) {
+  .locations__bodyTablet {
+    display: none;
+  }
+}
+
 .locations__titleWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
