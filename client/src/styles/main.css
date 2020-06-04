@@ -1297,6 +1297,10 @@ textarea::placeholder {
   margin-bottom: 35px;
 }
 
+.product__status p {
+  padding-top: 2px;
+}
+
 .product__itemDesc P, .product__lastOrder P, .product__location P, .product__quantity P, .product__categories P {
   font-family: Avenir Regular;
   font-size: 0.813rem;
@@ -1427,7 +1431,6 @@ textarea::placeholder {
   }
   .product__status p {
     font-size: 12px;
-    padding-top: 4px;
   }
   .product__itemDesc-title {
     margin-top: 40px;

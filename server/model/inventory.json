@@ -9,7 +9,7 @@
     "city": "Toronto",
     "country": "CAN",
     "quantity": "12,000",
-    "inStock": true,
+    "inStock": false,
     "category": "Industrial, Automotive, Heavy, Mechanical, Engineering"
   },
   {
@@ -35,7 +35,7 @@
     "city": "Toronto",
     "country": "CAN",
     "quantity": "12,000",
-    "inStock": true,
+    "inStock": false,
     "category": "Industrial, Automotive, Heavy, Mechanical, Engineering"
   },
   {
@@ -61,7 +61,7 @@
     "city": "Toronto",
     "country": "CAN",
     "quantity": "12,000",
-    "inStock": true,
+    "inStock": false,
     "category": "Industrial, Automotive, Heavy, Mechanical, Engineering"
   },
   {
@@ -87,7 +87,7 @@
     "city": "Toronto",
     "country": "CAN",
     "quantity": "12,000",
-    "inStock": true,
+    "inStock": false,
     "category": "Industrial, Automotive, Heavy, Mechanical, Engineering"
   },
   {
