@@ -1,6 +1,7 @@
 import React from "react";
 import Icons from "../assets";
 import InventoryMobile from "./InventoryMobile";
+import { NavLink } from "react-router-dom";
 
 function Inventory(props) {
   return (
@@ -43,10 +44,16 @@ function Inventory(props) {
           </div>
           {props.inventoryList.map((inventory) => (
             <div className="inventory__contentWrapper" key={inventory.id}>
-              <div className="inventory__item">
-                <h2 className="inventory__product">{inventory.productName}</h2>
-                <p className="inventory__text">{inventory.briefDescription}</p>
-              </div>
+              <NavLink to={`/product/${inventory.id}`}>
+                <div className="inventory__item">
+                  <h2 className="inventory__product">
+                    {inventory.productName}
+                  </h2>
+                  <p className="inventory__text">
+                    {inventory.briefDescription}
+                  </p>
+                </div>
+              </NavLink>
               <p className="inventory__text inventory__order">
                 {inventory.lastOrder}
               </p>
