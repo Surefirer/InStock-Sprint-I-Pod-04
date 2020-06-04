@@ -2,7 +2,7 @@
   {
     "id": "1af0jruup5g0",
     "warehouseID": "w0",
-    "productName": "Product Name",
+    "productName": "Product Name 1",
     "briefDescription": "Here is a very brief description of the product",
     "detailDescription": "Here is a more detailed summary of the product name, it's uses, industries and possible attributes that could be used to describe the product.",
     "lastOrder": "05/24/2018",
@@ -15,7 +15,7 @@
   {
     "id": "1af0jruup5g1",
     "warehouseID": "w1",
-    "productName": "Product Name",
+    "productName": "Product Name 2",
     "briefDescription": "Here is a very brief description of the product",
     "detailDescription": "Here is a more detailed summary of the product name, it's uses, industries and possible attributes that could be used to describe the product.",
     "lastOrder": "05/24/2018",
@@ -28,7 +28,7 @@
   {
     "id": "1af0jruup5g2",
     "warehouseID": "w2",
-    "productName": "Product Name",
+    "productName": "Product Name 3",
     "briefDescription": "Here is a very brief description of the product",
     "detailDescription": "Here is a more detailed summary of the product name, it's uses, industries and possible attributes that could be used to describe the product.",
     "lastOrder": "05/24/2018",
@@ -41,7 +41,7 @@
   {
     "id": "1af0jruup5g3",
     "warehouseID": "w3",
-    "productName": "Product Name",
+    "productName": "Product Name 4",
     "briefDescription": "Here is a very brief description of the product",
     "detailDescription": "Here is a more detailed summary of the product name, it's uses, industries and possible attributes that could be used to describe the product.",
     "lastOrder": "05/24/2018",
@@ -54,7 +54,7 @@
   {
     "id": "1af0jruup5g4",
     "warehouseID": "w4",
-    "productName": "Product Name",
+    "productName": "Product Name 5",
     "briefDescription": "Here is a very brief description of the product",
     "detailDescription": "Here is a more detailed summary of the product name, it's uses, industries and possible attributes that could be used to describe the product.",
     "lastOrder": "05/24/2018",
@@ -67,7 +67,7 @@
   {
     "id": "1af0jruup5g5",
     "warehouseID": "w5",
-    "productName": "Product Name",
+    "productName": "Product Name 6",
     "briefDescription": "Here is a very brief description of the product",
     "detailDescription": "Here is a more detailed summary of the product name, it's uses, industries and possible attributes that could be used to describe the product.",
     "lastOrder": "05/24/2018",
@@ -80,7 +80,7 @@
   {
     "id": "1af0jruup5g6",
     "warehouseID": "w6",
-    "productName": "Product Name",
+    "productName": "Product Name 7",
     "briefDescription": "Here is a very brief description of the product",
     "detailDescription": "Here is a more detailed summary of the product name, it's uses, industries and possible attributes that could be used to describe the product.",
     "lastOrder": "05/24/2018",
@@ -93,7 +93,7 @@
   {
     "id": "1af0jruup5g7",
     "warehouseID": "w7",
-    "productName": "Product Name",
+    "productName": "Product Name 8",
     "briefDescription": "Here is a very brief description of the product",
     "detailDescription": "Here is a more detailed summary of the product name, it's uses, industries and possible attributes that could be used to describe the product.",
     "lastOrder": "05/24/2018",
@@ -106,7 +106,7 @@
   {
     "id": "1af0jruup5g8",
     "warehouseID": "w8",
-    "productName": "Product Name",
+    "productName": "Product Name 9",
     "briefDescription": "Here is a very brief description of the product",
     "detailDescription": "Here is a more detailed summary of the product name, it's uses, industries and possible attributes that could be used to describe the product.",
     "lastOrder": "05/24/2018",
@@ -119,7 +119,7 @@
   {
     "id": "1af0jruup5g9",
     "warehouseID": "w9",
-    "productName": "Product Name",
+    "productName": "Product Name 10",
     "briefDescription": "Here is a very brief description of the product",
     "detailDescription": "Here is a more detailed summary of the product name, it's uses, industries and possible attributes that could be used to describe the product.",
     "lastOrder": "05/24/2018",
