@@ -3,7 +3,6 @@ const cors = require("cors");
 const app = express();
 
 const getWarehouseList = require("./model/locations.json");
-const getItemList = require("./model/inventory.json");
 const getProduct = require("./controller/getProduct");
 const getInventoryList = require("./controller/getInventoryList");
 
@@ -22,7 +21,7 @@ app.get("/warehouse", (req, res) => {
 
 // api info endpoint for inventory item
 app.get("/inventory", (req, res) => {
-  res.json(getItemList);
+  res.json(getInventoryList());
 });
 
 // dynamic path using an id as a param
