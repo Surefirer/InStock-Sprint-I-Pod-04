@@ -100,12 +100,14 @@
     margin-left: auto;
     position: relative;
     display: inline-block;
+    margin-right: 0.5rem;
 
     @include tablet {
       margin-right: 1.5rem;
     }
 
-    &:hover .inventory__kebabIcon--hover {
+    &:hover .inventory__kebabIcon--hover,
+    &:hover .inventory__remove {
       display: inline;
     }
   }
@@ -115,7 +117,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 10;
   }
 
   &__button {
@@ -126,6 +128,8 @@
     position: fixed;
     bottom: 5rem;
     right: 2rem;
+    z-index: 99;
+
     @include tablet {
       width: 5rem;
       height: 5rem;
@@ -140,6 +144,7 @@
   }
   &__bodyTablet {
     display: none;
+
     @include tablet {
       display: flex;
       flex-direction: column;
@@ -174,6 +179,26 @@
   }
   &__quantity {
     width: 13.88%;
+  }
+
+  &__remove {
+    display: none;
+    position: absolute;
+    background-color: $white;
+    width: 10.063rem;
+    height: 2.75rem;
+    padding-right: 5rem;
+    border-radius: 0.25rem;
+    border: 1px solid $mercury;
+    transition: 0.2s ease-in-out;
+    top: 1.75rem;
+    right: -0.75rem;
+    z-index: 10;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+
+    &:focus {
+      border: 2px solid $black;
+    }
   }
 }
 

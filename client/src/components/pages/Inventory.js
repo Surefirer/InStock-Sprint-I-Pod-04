@@ -79,6 +79,7 @@ function Inventory(props) {
                   src={Icons.kebabActive}
                   alt="inventory kebab active icon"
                 />
+                <button className="inventory__remove">Remove</button>
               </div>
             </div>
           ))}
