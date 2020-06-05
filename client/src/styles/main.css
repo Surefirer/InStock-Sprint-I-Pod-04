@@ -497,14 +497,28 @@ textarea::placeholder {
   }
 }
 
-.inventory__kebabIcon {
+.inventory__iconWrapper {
   margin-left: auto;
+  position: relative;
+  display: inline-block;
 }
 
 @media (min-width: 768px) {
-  .inventory__kebabIcon {
+  .inventory__iconWrapper {
     margin-right: 1.5rem;
   }
+}
+
+.inventory__iconWrapper:hover .inventory__kebabIcon--hover {
+  display: inline;
+}
+
+.inventory__kebabIcon--hover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
 
 .inventory__button {

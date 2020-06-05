@@ -68,11 +68,18 @@ function Inventory(props) {
               ) : (
                 <p className="inventory__text">Out of Stock</p>
               )}
-              <img
-                className="inventory__kebabIcon"
-                src={Icons.kebabDefault}
-                alt="inventory kebab icon"
-              />
+              <div className="inventory__iconWrapper">
+                <img
+                  className="inventory__kebabIcon"
+                  src={Icons.kebabDefault}
+                  alt="inventory kebab default icon"
+                />
+                <img
+                  className="inventory__kebabIcon--hover"
+                  src={Icons.kebabActive}
+                  alt="inventory kebab active icon"
+                />
+              </div>
             </div>
           ))}
         </div>

@@ -36,11 +36,18 @@ function InventoryMobile(props) {
               )}
             </div>
           </div>
-          <img
-            className="inventory__kebabIcon"
-            src={Icons.kebabDefault}
-            alt="inventory kebab icon"
-          />
+          <div className="inventory__iconWrapper">
+            <img
+              className="inventory__kebabIcon"
+              src={Icons.kebabDefault}
+              alt="inventory kebab icon"
+            />
+            <img
+              className="inventory__kebabIcon--hover"
+              src={Icons.kebabActive}
+              alt="inventory kebab active icon"
+            />
+          </div>
         </div>
       ))}
     </div>
