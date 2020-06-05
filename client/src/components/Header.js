@@ -2,7 +2,7 @@ import React from "react";
 import { Logos } from "./assets";
 import { NavLink, Link } from "react-router-dom";
 
-function Header(props) {
+function Header() {
   return (
     <header className="header">
       <div className="header__container">
