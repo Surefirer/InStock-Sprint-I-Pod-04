@@ -79,7 +79,7 @@ class NewInventory extends React.Component {
                   uncheckedIcon={false}
                   checkedIcon={false}
                   offColor="#afafaf"
-                  onColor="#4fa72d"
+                  onColor="#69b02f"
                   height={24}
                   width={40}
                   handleDiameter={25}

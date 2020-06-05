@@ -1,190 +1,195 @@
 .product {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
+  &__name {
+    display: flex;
+    align-items: center;
+    h2 {
+      padding-left: 15px;
+      font-family: Avenir Bold;
+      padding-top: 5px;
+    }
+  }
+  &__status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Avenir Bold Demi;
+    margin-bottom: 35px;
+
+    &--in {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 88px;
+      height: 24px;
+      border-radius: 4px;
+      background-color: $green;
+    }
+    &--out {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 88px;
+      height: 24px;
+      border-radius: 4px;
+      background-color: $silver;
+    }
+  }
+  &__itemDesc,
+  &__lastOrder,
+  &__location,
+  &__quantity,
+  &__categories {
+    P {
+      @include paragraph;
+    }
+  }
+  &__itemDesc-title,
+  &__lastOrder-title,
+  &__location-title,
+  &__quantity-title,
+  &__categories-title {
+    @include subheader;
+    color: $silver;
+  }
+  &__btn {
+    @extend .button;
+    margin: 20px 0;
+
+    button {
+      outline: none;
+      border: none;
+      background-color: transparent;
+      color: $white;
+      font-size: 16px;
+    }
+  }
+}
+
+// tablet version
+@include tablet {
+  .product-container1 {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid $mercury;
+  }
+  .product {
     &__name {
-        display: flex;
-        align-items: center;
-        h2 {
-            padding-left: 15px;
-            font-family: Avenir Bold;
-            padding-top: 5px;
-        }
+      h2 {
+        @include headerOne-tablet;
+      }
     }
     &__status {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 110px;
-        height: 30px;
-        border-radius: 4px;
-        background-color: rgb(18, 184, 18);
-        color: white;
-        font-family: Avenir Bold Demi;
-        margin-bottom: 35px;
-        p {
-            padding-top: 2px;
-        }
+      margin-bottom: 0;
+      margin-left: 35px;
+    }
+    &__itemDesc-title {
+      @include subheader-tablet;
+    }
+    &__lastOrder-title,
+    &__location-title,
+    &__quantity-title,
+    &__categories-title {
+      @include subheader-tablet;
+      color: $silver;
+    }
+    .product-container2 {
+      width: 95%;
+      margin: 0 auto;
+      border-bottom: 2px solid $mercury;
+    }
+    &__itemDesc {
+      margin-top: 30px;
+      margin-bottom: 30px;
     }
     &__itemDesc,
     &__lastOrder,
     &__location,
     &__quantity,
     &__categories {
-        P {
-            @include paragraph;
-        }
+      P {
+        @include paragraph-tablet;
+      }
     }
-    &__itemDesc-title,
-    &__lastOrder-title,
-    &__location-title,
-    &__quantity-title,
-    &__categories-title {
-        @include subheader;
-        color: $silver;
+    .product-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+    }
+    &__categories {
+      padding-bottom: 30px;
     }
     &__btn {
-        width: 100%;
-        height: 50px;
-        margin: 20px 0;
-        border: 1px solid black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 4px;
-        background-color: $instock-blue-dark;
-        button {
-            outline: none;
-            border: none;
-            background-color: transparent;
-            color: $white;
-            font-size: 16px;
-            font-family: Avenir Bold Demi;
-        }
+      width: 160px;
+      height: 48px;
     }
-}
-
-// tablet version
-@include tablet {
-    .product-container1 {
-        display: flex;
-        align-items: center;
-        border-bottom: 2px solid $mercury;
+    &__btn-container {
+      width: 95%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
     }
-    .product {
-        &__name {
-            h2 {
-                @include headerOne-tablet;
-            }
-        }
-        &__status {
-            margin-bottom: 0;
-            margin-left: 35px;
-        }
-        &__itemDesc-title {
-            @include subheader-tablet;
-        }
-        &__lastOrder-title,
-        &__location-title,
-        &__quantity-title,
-        &__categories-title {
-            @include subheader-tablet;
-            color: $silver;
-        }
-        .product-container2 {
-            width: 95%;
-            margin: 0 auto;
-            border-bottom: 2px solid $mercury;
-        }
-        &__itemDesc {
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-        &__itemDesc,
-        &__lastOrder,
-        &__location,
-        &__quantity,
-        &__categories {
-            P {
-                @include paragraph-tablet;
-            }
-        }
-        .product-wrapper {
-            display: flex;
-            justify-content: space-between;
-            width: 70%;
-        }
-        &__categories {
-            padding-bottom: 30px;
-        }
-        &__btn {
-            width: 160px;
-            height: 48px;
-        }
-        &__btn-container {
-            width: 95%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: flex-end;
-        }
-    }
+  }
 }
 
 //desktop version
 @include desktop {
-    .product {
-        max-width: 1080px;
-        &__itemInfo-wrapper {
-            width: 100%;
-        }
-        &__name img {
-            width: 16px;
-            height: 24px;
-        }
-        &__status {
-            width: 88px;
-            height: 24px;
-            margin-left: 24px;
-            p {
-                font-size: 12px;
-            }
-        }
-        &__itemDesc-title {
-            margin-top: 40px;
-            margin-bottom: 24px;
-        }
-        &__itemDesc {
-            margin: 0;
-        }
-        &__lastOrder-title,
-        &__location-title {
-            margin: 0;
-        }
-        &__categories {
-            padding-top: 42px;
-            padding-bottom: 48px;
-        }
-        &__itemDesc,
-        &__lastOrder,
-        &__location,
-        &__quantity,
-        &__categories {
-            P {
-                margin: 24px 0;
-            }
-        }
-        &__itemInfo-wrapper {
-            padding-left: 40px;
-        }
-        &__btn {
-            margin: 40px 0;
-        }
+  .product {
+    max-width: 1080px;
+    &__itemInfo-wrapper {
+      width: 100%;
     }
-    .product-container2 {
-        display: flex;
-        border-bottom: 2px solid $mercury;
+    &__name img {
+      width: 16px;
+      height: 24px;
     }
-    .product-wrapper {
-        margin-top: 40px;
-        margin-bottom: 56px;
+    &__status {
+      width: 88px;
+      height: 24px;
+      margin-left: 24px;
+      p {
+        font-size: 12px;
+      }
     }
+    &__itemDesc-title {
+      margin-top: 40px;
+      margin-bottom: 24px;
+    }
+    &__itemDesc {
+      margin: 0;
+    }
+    &__lastOrder-title,
+    &__location-title {
+      margin: 0;
+    }
+    &__categories {
+      padding-top: 42px;
+      padding-bottom: 48px;
+    }
+    &__itemDesc,
+    &__lastOrder,
+    &__location,
+    &__quantity,
+    &__categories {
+      P {
+        margin: 24px 0;
+      }
+    }
+    &__itemInfo-wrapper {
+      padding-left: 40px;
+    }
+    &__btn {
+      margin: 40px 0;
+    }
+  }
+  .product-container2 {
+    display: flex;
+    border-bottom: 2px solid $mercury;
+  }
+  .product-wrapper {
+    margin-top: 40px;
+    margin-bottom: 56px;
+  }
 }

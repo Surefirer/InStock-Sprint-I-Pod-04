@@ -38,9 +38,9 @@ export default class Product extends Component {
                 <div className="product__status">
                   <p>
                     {item.inStock === true ? (
-                      <p>In Stock</p>
+                      <p className="product__status--in">In Stock</p>
                     ) : (
-                      <p>Out of Stock</p>
+                      <p className="product__status--out">Out of Stock</p>
                     )}
                   </p>
                 </div>
