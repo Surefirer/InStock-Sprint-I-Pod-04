@@ -231,6 +231,12 @@ textarea::placeholder {
   }
 }
 
+.header .active {
+  color: #ffffff;
+  font-family: Avenir Bold Demi;
+  border-bottom: 0.25rem solid #ffffff;
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
