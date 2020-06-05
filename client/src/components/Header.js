@@ -1,6 +1,6 @@
 import React from "react";
 import { Logos } from "./assets";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function Header(props) {
   return (
@@ -14,28 +14,20 @@ function Header(props) {
           />
         </Link>
         <nav className="header__nav">
-          <Link
+          <NavLink
             to="/inventory"
-            className={
-              props.isNavActive
-                ? "header__link header__link--active"
-                : "header__link"
-            }
-            onClick={props.clickNav}
+            className="header__link"
+            activeClassName="active"
           >
             <span>Inventory</span>
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/locations"
-            className={
-              props.isNavActive
-                ? "header__link header__link--active"
-                : "header__link"
-            }
-            onClick={props.clickNav}
+            className="header__link"
+            activeClassName="active"
           >
             <span>Locations</span>
-          </Link>
+          </NavLink>
         </nav>
       </div>
     </header>
