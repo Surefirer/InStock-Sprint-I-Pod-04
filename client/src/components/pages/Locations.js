@@ -70,16 +70,52 @@ function Locations(props) {
               </div>
             </div>
             <div className="locations__textContainer">
-              <p className="locations__textTablet locations__quantity">
+              <p className="locations__textTablet locations__category">
                 Mara Weinberg <br /> <i>Warehouse Manager</i>
               </p>
-              <p className="locations__textTablet locations__order">
+              <p className="locations__textTablet locations__contact">
                 +1 416 678 2345 weinberg@instack.com
               </p>
-              <p className="locations__textTablet locations__status">
+              <p className="locations__textTablet locations__categories">
                 Industrial, Automotive, Heavy, <br /> Mechanical, Engineering,
                 Transportation
               </p>
+            </div>
+          </div>
+        </div>
+        <div className="locations__bodyDesktop">
+          <div className="locations__titleWrapper">
+            <h3 className="locations__title locations__item">WAREHOUSE</h3>
+            <h3 className="locations__title locations__contact">CONTACT</h3>
+            <h3 className="locations__title  locations__contactinfo">
+              CONTACT INFORMATION
+            </h3>
+            <h3 className="locations__title locations__category">CATEGORIES</h3>
+          </div>
+          <div className="locations__contentWrapper">
+            <div className="locations__item">
+              <h2 className="locations__warehouse">Warehouse Number 1</h2>
+              <p className="locations__text locations__address">
+                469 King St W, Toronto, ON
+              </p>
+            </div>
+            <p className="locations__text locations__contact">
+              Mara Weinberg
+              <br /> <i>Warehouse Manager</i>
+            </p>
+            <p className="locations__text locations__contactinfo">
+              +1 416 678 2345 weinberg@instack.com
+            </p>
+            <p className="locations__text locations__category">
+              Industrial, Automotive, Heavy, <br /> Mechanical, Engineering,
+              Transportation
+            </p>
+            <div className="locations__iconWrapper">
+              <img
+                className="locations__rightArrowIcon"
+                src={Icons.rightArrow}
+                alt="locations right arrow icon"
+              />
             </div>
           </div>
         </div>
