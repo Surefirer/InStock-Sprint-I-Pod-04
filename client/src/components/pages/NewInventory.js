@@ -3,6 +3,7 @@ import Select from "react-select";
 import Switch from "react-switch";
 import axios from "axios";
 import { v4 as uuid } from "uuid";
+import DateUtil from "../DateUtil";
 
 // need to be replaced with list of all warehouses from the back-end
 const options = [
@@ -30,7 +31,7 @@ class NewInventory extends React.Component {
           id: uuid(),
           productName: product,
           briefDescription: description,
-          lastOrder: lastOrdered,
+          lastOrder: DateUtil.format(lastOrdered),
           quantity,
         })
         .then((response) => {
