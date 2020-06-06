@@ -73,7 +73,7 @@ export default class Product extends Component {
                   </div>
                   <div className="product__categories">
                     <h3 className="product__categories-title">CATEGORIES</h3>
-                    <p>{item.category}</p>
+                    <p className="product__categories--text">{item.category}</p>
                   </div>
                 </div>
               </div>
