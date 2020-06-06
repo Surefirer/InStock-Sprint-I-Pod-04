@@ -165,7 +165,8 @@
     }
   }
   &__item {
-    width: 34.44%;
+    width: 350px;
+    // width: 34.44%;
     padding-right: 1.5rem;
     @include desktop {
       margin-bottom: 0;
@@ -200,13 +201,4 @@
       border: 2px solid $black;
     }
   }
-}
-
-.inventory__item {
-  width: 350px;
-  color: $black;
-}
-
-.inventory__container--item {
-  color: $black;
 }

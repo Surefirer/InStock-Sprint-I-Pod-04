@@ -8,11 +8,6 @@
     flex-direction: row;
     justify-content: left;
   }
-  .active {
-    color: $white;
-    font-family: Avenir Bold Demi;
-    border-bottom: 0.25rem solid $white;
-  }
   // contains logo and navs
   &__container {
     display: flex;
@@ -46,6 +41,10 @@
     font-family: Avenir Regular;
     font-size: 0.875rem;
     color: $silver;
+
+    &--text {
+      color: $silver;
+    }
   }
   &__link {
     margin: 0;
@@ -55,7 +54,6 @@
     display: flex;
     justify-content: center;
 
-    &--active,
     &:hover {
       color: $white;
       font-family: Avenir Bold Demi;
@@ -67,5 +65,10 @@
       height: 3rem;
       width: 5rem;
     }
+  }
+  .active {
+    color: $white;
+    font-family: Avenir Bold Demi;
+    border-bottom: 0.25rem solid $white;
   }
 }

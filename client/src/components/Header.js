@@ -19,14 +19,14 @@ function Header() {
             className="header__link"
             activeClassName="active"
           >
-            <span>Inventory</span>
+            <span className="header__nav--text">Inventory</span>
           </NavLink>
           <NavLink
             to="/locations"
             className="header__link"
             activeClassName="active"
           >
-            <span>Locations</span>
+            <span className="header__nav--text">Locations</span>
           </NavLink>
         </nav>
       </div>

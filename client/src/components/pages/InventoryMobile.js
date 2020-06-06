@@ -12,7 +12,7 @@ function InventoryMobile(props) {
               <div className="inventory__container--item">
                 <h3 className="inventory__title">ITEM</h3>
                 <h2 className="inventory__product">{inventory.productName}</h2>
-                <p className="inventory__text">{inventory.description}</p>
+                <p className="inventory__text">{inventory.briefDescription}</p>
               </div>
             </NavLink>
             <div className="inventory__container--order">
