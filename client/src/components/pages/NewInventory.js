@@ -1,6 +1,9 @@
 import React from "react";
 import Select from "react-select";
 import Switch from "react-switch";
+import axios from "axios";
+import { v4 as uuid } from "uuid";
+import DateUtil from "../DateUtil";
 
 // need to be replaced with list of all warehouses from the back-end
 const options = [
@@ -14,10 +17,38 @@ class NewInventory extends React.Component {
     this.props.toggle();
   };
 
+  createNewInventory = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const product = event.target.product.value;
+    const lastOrdered = event.target.lastOrdered.value;
+    // const location = event.target.location.value;
+    const quantity = event.target.quantity.value;
+    const description = event.target.description.value;
+    if (product !== "" && lastOrdered !== "" && quantity !== "") {
+      axios
+        .post("/inventory", {
+          id: uuid(),
+          productName: product,
+          briefDescription: description,
+          lastOrder: DateUtil.format(lastOrdered),
+          quantity,
+        })
+        .then((response) => {
+          console.log(response);
+          console.log("New inventory created.");
+        })
+        .catch((err) => console.log(err));
+    } else {
+      alert("Please fill out the form.");
+    }
+    form.reset();
+  };
+
   render() {
     return (
       <div className="createNew">
-        <form className="createNew__form">
+        <form className="createNew__form" onSubmit={this.createNewInventory}>
           <h1 className="createNew__header">Create New</h1>
           <div className="createNew__wrapper">
             <div className="createNew__wrapper--input">

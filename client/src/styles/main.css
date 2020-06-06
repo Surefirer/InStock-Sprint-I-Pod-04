@@ -1324,18 +1324,20 @@ textarea::placeholder {
 }
 
 .product__status {
+  font-family: Avenir Bold Demi;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.25px;
+  color: #afafaf;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: white;
-  font-family: Avenir Bold Demi;
   margin-bottom: 35px;
+}
+
+.product__status p {
+  margin: 0;
 }
 
 .product__status--in {
@@ -1381,6 +1383,11 @@ textarea::placeholder {
   font-size: 1rem;
   line-height: 1.38rem;
   color: #afafaf;
+  margin-top: 2rem;
+}
+
+.product__categories--text {
+  margin-bottom: 40px;
 }
 
 .product__btn {
@@ -1448,12 +1455,10 @@ textarea::placeholder {
             justify-content: space-between;
     width: 70%;
   }
-  .product__categories {
-    padding-bottom: 30px;
-  }
   .product__btn {
     width: 160px;
     height: 48px;
+    margin-top: 40px;
   }
   .product__btn-container {
     width: 95%;
@@ -1497,11 +1502,13 @@ textarea::placeholder {
     margin: 0;
   }
   .product__categories {
-    padding-top: 42px;
-    padding-bottom: 48px;
+    margin-top: 56px;
+  }
+  .product__categories--text {
+    margin-bottom: 48px;
   }
   .product__itemDesc P, .product__lastOrder P, .product__location P, .product__quantity P, .product__categories P {
-    margin: 24px 0;
+    margin-top: 24px;
   }
   .product__itemInfo-wrapper {
     padding-left: 40px;

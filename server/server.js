@@ -5,6 +5,7 @@ const app = express();
 const getWarehouseList = require("./controller/getWarehouseList");
 const getInventoryList = require("./controller/getInventoryList");
 const getProduct = require("./controller/getProduct");
+const createNewInventory = require("./controller/createNewInventory");
 
 // Middleware
 app.use(express.json());
@@ -20,9 +21,13 @@ app.get("/locations", (req, res) => {
 });
 
 // api info endpoint for inventory item
-app.get("/inventory", (req, res) => {
-  res.json(getInventoryList());
-});
+app
+  .get("/inventory", (req, res) => {
+    res.json(getInventoryList());
+  })
+  .post("/inventory", (req, res) => {
+    res.json(createNewInventory(req.body));
+  });
 
 // dynamic path using an id as a param
 app.get("/inventory/:id", (req, res) => {
