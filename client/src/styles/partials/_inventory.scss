@@ -77,17 +77,21 @@
     @include paragraph-bold;
     margin-top: 0;
     margin-bottom: 1rem;
+    color: $black;
     @include tablet {
       @include subheader-tablet;
       margin-bottom: 0;
+      color: $black;
     }
   }
   &__text {
     @include paragraph;
+    color: $black;
     margin: 0;
     margin-bottom: 1.5rem;
     @include tablet {
       @include paragraph-tablet;
+      color: $black;
       margin-bottom: 0;
     }
     @include desktop {

@@ -115,7 +115,6 @@ a:visited {
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
-  color: #323232;
 }
 
 ul {
@@ -232,6 +231,12 @@ textarea::placeholder {
   }
 }
 
+.header .active {
+  color: #ffffff;
+  font-family: Avenir Bold Demi;
+  border-bottom: 0.25rem solid #ffffff;
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,10 +299,6 @@ textarea::placeholder {
   color: #afafaf;
 }
 
-.header__nav--text {
-  color: #afafaf;
-}
-
 .header__link {
   margin: 0;
   width: 50%;
@@ -311,7 +312,7 @@ textarea::placeholder {
           justify-content: center;
 }
 
-.header__link:hover {
+.header__link--active, .header__link:hover {
   color: #ffffff;
   font-family: Avenir Bold Demi;
   border-bottom: 0.25rem solid #ffffff;
@@ -324,12 +325,6 @@ textarea::placeholder {
     height: 3rem;
     width: 5rem;
   }
-}
-
-.header .active {
-  color: #ffffff;
-  font-family: Avenir Bold Demi;
-  border-bottom: 0.25rem solid #ffffff;
 }
 
 .inventory {
@@ -473,6 +468,7 @@ textarea::placeholder {
   line-height: 1.125rem;
   margin-top: 0;
   margin-bottom: 1rem;
+  color: #323232;
 }
 
 @media (min-width: 768px) {
@@ -481,6 +477,7 @@ textarea::placeholder {
     font-size: 1rem;
     line-height: 1.35rem;
     margin-bottom: 0;
+    color: #323232;
   }
 }
 
@@ -488,6 +485,7 @@ textarea::placeholder {
   font-family: Avenir Regular;
   font-size: 0.813rem;
   line-height: 1.125rem;
+  color: #323232;
   margin: 0;
   margin-bottom: 1.5rem;
 }
@@ -497,6 +495,7 @@ textarea::placeholder {
     font-family: Avenir Regular;
     font-size: 0.875rem;
     line-height: 1.375rem;
+    color: #323232;
     margin-bottom: 0;
   }
 }
