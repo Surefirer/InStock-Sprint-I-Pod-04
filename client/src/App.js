@@ -11,7 +11,7 @@ import Inventory from "./components/pages/Inventory";
 import Locations from "./components/pages/Locations";
 import NewInventory from "./components/pages/NewInventory";
 import NewWarehouse from "./components/pages/NewWarehouse";
-import ProductSummary from "./components/pages/ProductSummary";
+import productSummary from "./components/pages/productSummary";
 
 class App extends React.Component {
   state = {
@@ -79,7 +79,7 @@ class App extends React.Component {
               <Locations togglePop={this.locationTogglePop} {...props} />
             )}
           />
-          <Route path="/product/:id" component={ProductSummary} />
+          <Route path="/product/:id" component={productSummary} />
           <Redirect from="/product" to="/inventory" exact />
         </Switch>
       </Router>
