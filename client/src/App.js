@@ -16,6 +16,8 @@ import productSummary from "./components/pages/productSummary";
 class App extends React.Component {
   state = {
     inventoryList: [],
+    warehouseList: [],
+    locationOptions: [],
     checked: true,
     newInventory: false,
     newLocation: false,
@@ -48,7 +50,12 @@ class App extends React.Component {
   }
 
   render() {
-    const { inventoryList, newInventory, newLocation } = this.state;
+    const {
+      inventoryList,
+      newInventory,
+      newLocation,
+      warehouseList,
+    } = this.state;
     return (
       <Router>
         {newInventory ? (
@@ -56,7 +63,7 @@ class App extends React.Component {
             toggle={this.inventoryTogglePop}
             onChange={this.handleChange}
             checked={this.state.checked}
-            inventoryList={inventoryList}
+            warehouseList={warehouseList}
           />
         ) : null}
         {newLocation ? <NewWarehouse toggle={this.locationTogglePop} /> : null}

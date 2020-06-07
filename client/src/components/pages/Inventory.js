@@ -44,16 +44,15 @@ function Inventory(props) {
           </div>
           {props.inventoryList.map((inventory) => (
             <div className="inventory__contentWrapper" key={inventory.id}>
-              <NavLink to={`/product/${inventory.id}`}>
-                <div className="inventory__item">
+              <div className="inventory__itemWrapper">
+                <NavLink to={`/product/${inventory.id}`}>
                   <h2 className="inventory__product">
                     {inventory.productName}
-                  </h2>
-                  <p className="inventory__text">
-                    {inventory.briefDescription}
-                  </p>
-                </div>
-              </NavLink>
+                  </h2>{" "}
+                </NavLink>
+                <p className="inventory__text">{inventory.briefDescription}</p>
+              </div>
+
               <p className="inventory__text inventory__order">
                 {inventory.lastOrder}
               </p>
@@ -63,23 +62,25 @@ function Inventory(props) {
               <p className="inventory__text inventory__quantity">
                 {inventory.quantity}
               </p>
-              {inventory.inStock === true ? (
-                <p className="inventory__text">In Stock</p>
-              ) : (
-                <p className="inventory__text">Out of Stock</p>
-              )}
-              <div className="inventory__iconWrapper">
-                <img
-                  className="inventory__kebabIcon"
-                  src={Icons.kebabDefault}
-                  alt="inventory kebab default icon"
-                />
-                <img
-                  className="inventory__kebabIcon--hover"
-                  src={Icons.kebabActive}
-                  alt="inventory kebab active icon"
-                />
-                <button className="inventory__remove">Remove</button>
+              <div className="inventory__statusWrapper">
+                {inventory.inStock === true ? (
+                  <p className="inventory__text">In Stock</p>
+                ) : (
+                  <p className="inventory__text">Out of Stock</p>
+                )}
+                <div className="inventory__iconWrapper">
+                  <img
+                    className="inventory__kebabIcon"
+                    src={Icons.kebabDefault}
+                    alt="inventory kebab default icon"
+                  />
+                  <img
+                    className="inventory__kebabIcon--hover"
+                    src={Icons.kebabActive}
+                    alt="inventory kebab active icon"
+                  />
+                  <button className="inventory__remove">Remove</button>
+                </div>
               </div>
             </div>
           ))}

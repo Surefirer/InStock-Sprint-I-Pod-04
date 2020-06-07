@@ -7,7 +7,7 @@ import DateUtil from "../DateUtil";
 
 // need to be replaced with list of all warehouses from the back-end
 const options = [
-  { value: "Toronto, CAN", label: "Toronto, CAN" },
+  { value: "Toronto", label: "Toronto" },
   { value: "Toronto, CAN", label: "Toronto, CAN" },
   { value: "Toronto, CAN", label: "Toronto, CAN" },
 ];
