@@ -1645,22 +1645,11 @@ textarea::placeholder {
   background-color: #fafafa;
 }
 
-.editProduct .product__btn {
+.product__btn {
   font-size: 1.1rem;
 }
 
-.editProduct .product_btn-cancel {
-  font-family: Avenir Bold Demi;
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-  color: #004892;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin: 0;
-}
-
-.editProduct .product__btn-container--ep {
+.product__btn-container--ep {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1670,12 +1659,27 @@ textarea::placeholder {
           flex-direction: column;
 }
 
-.editProduct .product__btn-cancel {
+.product__btn-cancel {
   text-align: center;
 }
 
-.editProduct .product__btn-cancel {
+.product__btn-cancel {
   font-family: Avenir Bold Demi;
   color: #004892;
+}
+
+.product__itemDesc-title--ep {
+  margin-top: 12px;
+}
+
+.product_btn-cancel {
+  font-family: Avenir Bold Demi;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  color: #004892;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */

@@ -74,7 +74,7 @@ export default class editProduct extends Component {
                 <div className="product-container2">
                   <div className="product__itemDesc-wrapper">
                     <div className="product__itemDesc">
-                      <h3 className="product__itemDesc-title">
+                      <h3 className="product__itemDesc-title product__itemDesc-title--ep">
                         ITEM DESCRIPTION
                       </h3>
                       <textarea
