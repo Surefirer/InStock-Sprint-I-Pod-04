@@ -20,7 +20,7 @@
 
 .product {
     &__btn {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     &__btn-container--ep {
         display: flex;
@@ -35,6 +35,21 @@
     }
     &__itemDesc-title--ep {
         margin-top: 12px;
+    }
+    &__editPageStatus-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__editPageStatus-title {
+        @include label;
+        margin-top: 2rem;
+    }
+    &__editPageStatus-toggle {
+        padding-right: 20px;
+    }
+    &__categories--textEp {
+        margin-bottom: 20px;
     }
 }
 

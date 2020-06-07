@@ -105,10 +105,31 @@ export default class editProduct extends Component {
                       <input name="quantity" placeholder={item.quantity} />
                     </div>
 
+                    <div className="product__editPageStatus">
+                      <h3 className="product__editPageStatus-title">STATUS</h3>
+                      <div className="product__editPageStatus-wrapper">
+                        <p>In Stock</p>
+                        <Switch
+                          className="product__editPageStatus-toggle"
+                          onChange={this.props.onChange}
+                          checked={this.props.checked}
+                          uncheckedIcon={false}
+                          checkedIcon={false}
+                          offColor="#afafaf"
+                          onColor="#69b02f"
+                          height={24}
+                          width={40}
+                          handleDiameter={25}
+                          boxShadow="0 0 2px 2px #e1e1e1"
+                          activeBoxShadow="0 0 2px 2px #e1e1e1"
+                        />
+                      </div>
+                    </div>
+
                     <div className="product__categories">
                       <h3 className="product__categories-title">CATEGORIES</h3>
                       <textarea
-                        className="product__categories--text"
+                        className="product__categories--text product__categories--textEp"
                         placeholder={item.category}
                       ></textarea>
                     </div>

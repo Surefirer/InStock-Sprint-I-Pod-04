@@ -1646,7 +1646,7 @@ textarea::placeholder {
 }
 
 .product__btn {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .product__btn-container--ep {
@@ -1670,6 +1670,35 @@ textarea::placeholder {
 
 .product__itemDesc-title--ep {
   margin-top: 12px;
+}
+
+.product__editPageStatus-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product__editPageStatus-title {
+  font-family: Avenir Bold Demi;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.25px;
+  color: #afafaf;
+  margin-top: 2rem;
+}
+
+.product__editPageStatus-toggle {
+  padding-right: 20px;
+}
+
+.product__categories--textEp {
+  margin-bottom: 20px;
 }
 
 .product_btn-cancel {
