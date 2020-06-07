@@ -1,5 +1,6 @@
 import React from "react";
 import Icons from "../assets";
+import { Link } from "react-router-dom";
 
 function Locations(props) {
   return (
@@ -111,11 +112,13 @@ function Locations(props) {
               Transportation
             </p>
             <div className="locations__iconWrapper">
-              <img
-                className="locations__rightArrowIcon"
-                src={Icons.rightArrow}
-                alt="locations right arrow icon"
-              />
+              <Link to="/locationdetails">
+                <img
+                  className="locations__rightArrowIcon"
+                  src={Icons.rightArrow}
+                  alt="locations right arrow icon"
+                />
+              </Link>
             </div>
           </div>
         </div>
