@@ -92,3 +92,39 @@
         display: flex;
     }
 }
+
+// desktop version
+@include desktop {
+    .editProduct {
+        textarea {
+            width: 30vw;
+            height: 150px;
+        }
+        input {
+            width: 15vw;
+            height: 5vh;
+        }
+    }
+    .product {
+        &__itemDesc-title--ep {
+            margin-bottom: 0;
+            margin-top: 40px;
+        }
+        &__editPageStatus-title,
+        &__quantity-title {
+            margin-top: 0;
+        }
+        &__categories--ep {
+            margin-top: 0;
+        }
+        &__categories-title--ep {
+            margin-top: 24px;
+        }
+        &__btn-cancel {
+            padding-top: 0;
+        }
+    }
+    .product-wrapper__ep {
+        margin-bottom: 24px;
+    }
+}

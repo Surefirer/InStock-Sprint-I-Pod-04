@@ -1748,4 +1748,34 @@ textarea::placeholder {
     display: flex;
   }
 }
+
+@media (min-width: 1080px) {
+  .editProduct textarea {
+    width: 30vw;
+    height: 150px;
+  }
+  .editProduct input {
+    width: 15vw;
+    height: 5vh;
+  }
+  .product__itemDesc-title--ep {
+    margin-bottom: 0;
+    margin-top: 40px;
+  }
+  .product__editPageStatus-title, .product__quantity-title {
+    margin-top: 0;
+  }
+  .product__categories--ep {
+    margin-top: 0;
+  }
+  .product__categories-title--ep {
+    margin-top: 24px;
+  }
+  .product__btn-cancel {
+    padding-top: 0;
+  }
+  .product-wrapper__ep {
+    margin-bottom: 24px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

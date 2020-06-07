@@ -84,7 +84,7 @@ export default class editProduct extends Component {
                     </div>
                   </div>
                   <div className="product__itemInfo-wrapper">
-                    <div className="product-wrapper">
+                    <div className="product-wrapper product-wrapper__ep">
                       <div className="product__lastOrder">
                         <h3 className="product__lastOrder-title">
                           LAST ORDERED
@@ -132,8 +132,10 @@ export default class editProduct extends Component {
                       </div>
                     </div>
 
-                    <div className="product__categories">
-                      <h3 className="product__categories-title">CATEGORIES</h3>
+                    <div className="product__categories product__categories--ep">
+                      <h3 className="product__categories-title product__categories-title--ep">
+                        CATEGORIES
+                      </h3>
                       <textarea
                         className="product__categories--text product__categories--textEp"
                         placeholder={item.category}
