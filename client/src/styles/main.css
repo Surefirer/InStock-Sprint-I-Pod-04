@@ -1612,4 +1612,36 @@ textarea::placeholder {
     margin-bottom: 56px;
   }
 }
+
+.editProduct textarea {
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  height: 20vh;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+.editProduct ::-webkit-input-placeholder {
+  padding: 15px;
+}
+
+.editProduct :-ms-input-placeholder {
+  padding: 15px;
+}
+
+.editProduct ::-ms-input-placeholder {
+  padding: 15px;
+}
+
+.editProduct ::placeholder {
+  padding: 15px;
+}
+
+.editProduct input {
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  height: 10vh;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
 /*# sourceMappingURL=main.css.map */
