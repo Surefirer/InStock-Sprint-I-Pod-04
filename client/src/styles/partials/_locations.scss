@@ -82,7 +82,7 @@
     }
   }
 
-  &__product {
+  &__warehouse {
     @include paragraph-bold;
     margin-top: 0;
     margin-bottom: 1rem;
@@ -90,6 +90,10 @@
     @include tablet {
       @include subheader-tablet;
       margin-bottom: 0.5rem;
+    }
+    @include desktop {
+      width: fit-content;
+      margin: 0;
     }
   }
 
@@ -158,6 +162,9 @@
       margin-right: initial;
       padding-top: 15px;
     }
+    @include desktop {
+      padding-top: 0;
+    }
   }
 
   &__button {
@@ -196,10 +203,6 @@
 
   &__titleWrapper {
     display: flex;
-
-    @include desktop {
-      margin-bottom: 1.5rem;
-    }
   }
 
   &__contentWrapper {
@@ -210,7 +213,9 @@
     height: 6.25rem;
 
     @include desktop {
-      height: 5rem;
+      height: fit-content;
+      padding-top: 32px;
+      padding-bottom: 24px;
     }
   }
 
@@ -244,23 +249,46 @@
 
     @include desktop {
       margin-bottom: 0;
+      width: 25%;
+      display: initial;
     }
   }
 
-  &__order {
-    width: 17.22%;
+  &__contact {
     width: 25%;
     margin-right: 50px;
+    @include desktop {
+      margin-right: 0;
+      height: fit-content;
+      width: 22%;
+    }
   }
 
-  &__location {
+  &__contactinfo {
     width: 17.22%;
+    @include desktop {
+      margin-right: 0;
+      height: fit-content;
+      width: 22%;
+    }
   }
 
-  &__quantity {
-    width: 13.88%;
+  &__category {
     width: 25%;
     margin-right: 50px;
+    @include desktop {
+      margin-right: 0;
+      height: fit-content;
+      width: 24%;
+    }
+  }
+
+  &__address {
+    @include desktop {
+      width: fit-content;
+      margin-right: 0;
+      height: fit-content;
+    }
   }
 
   &__textContainer {
@@ -277,6 +305,27 @@
       width: 100%;
       display: flex;
       justify-items: flex-end;
+    }
+  }
+
+  &__bodyDesktop {
+    display: none;
+
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__iconWrapper {
+    @include desktop {
+      margin-left: auto;
+      position: relative;
+      display: inline-block;
+      margin-right: 1.5rem;
     }
   }
 }
