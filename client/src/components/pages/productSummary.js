@@ -3,7 +3,7 @@ import axios from "axios";
 import Icons from "../assets";
 import { NavLink } from "react-router-dom";
 
-export default class ProductSummary extends Component {
+export default class Product extends Component {
   state = {
     product: [],
   };
@@ -78,9 +78,7 @@ export default class ProductSummary extends Component {
                 </div>
               </div>
               <div className="product__btn-container">
-                <div className="product__btn">
-                  <button>EDIT</button>
-                </div>
+                <button className="product__btn">EDIT</button>
               </div>
             </>
           );

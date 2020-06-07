@@ -127,8 +127,9 @@ class NewWarehouse extends React.Component {
               </label>
               <input
                 className="createNew__input"
-                type="number"
+                type="tel"
                 name="phoneNumber"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 placeholder="(000) 000-0000"
               />
             </div>

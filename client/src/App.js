@@ -48,10 +48,10 @@ class App extends React.Component {
   }
 
   render() {
-    const { inventoryList } = this.state;
+    const { inventoryList, newInventory, newLocation } = this.state;
     return (
       <Router>
-        {this.state.newInventory ? (
+        {newInventory ? (
           <NewInventory
             toggle={this.inventoryTogglePop}
             onChange={this.handleChange}
@@ -59,9 +59,7 @@ class App extends React.Component {
             inventoryList={inventoryList}
           />
         ) : null}
-        {this.state.newLocation ? (
-          <NewWarehouse toggle={this.locationTogglePop} />
-        ) : null}
+        {newLocation ? <NewWarehouse toggle={this.locationTogglePop} /> : null}
         <Header />
         <Switch>
           <Redirect from="/" to="/inventory" exact />
