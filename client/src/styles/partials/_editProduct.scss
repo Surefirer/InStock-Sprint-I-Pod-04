@@ -1,0 +1,130 @@
+.editProduct {
+    textarea {
+        border: 1px solid $mercury;
+        width: 100%;
+        height: 20vh;
+        border-radius: 4px;
+        background-color: $alabaster;
+    }
+     ::placeholder {
+        padding: 15px;
+    }
+    input {
+        border: 1px solid $mercury;
+        width: 100%;
+        height: 10vh;
+        border-radius: 4px;
+        background-color: $alabaster;
+    }
+}
+
+.product {
+    &__btn {
+        font-size: 1rem;
+    }
+    &__btn-container--ep {
+        display: flex;
+        flex-direction: column;
+    }
+    &__btn-cancel {
+        text-align: center;
+    }
+    &__btn-cancel {
+        font-family: Avenir Bold Demi;
+        color: $instock-blue;
+    }
+    &__itemDesc-title--ep {
+        margin-top: 12px;
+    }
+    &__editPageStatus-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__editPageStatus-title {
+        @include label;
+        margin-top: 2rem;
+    }
+    &__editPageStatus-toggle {
+        padding-right: 20px;
+    }
+    &__categories--textEp {
+        margin-bottom: 20px;
+    }
+}
+
+.product_btn-cancel {
+    @include paragraph-bold;
+    color: $instock-blue;
+    align-self: center;
+    margin: 0;
+}
+
+// tablet version
+@include tablet {
+    .product-container2--ep {
+        padding-right: 150px;
+    }
+    .product {
+        &__itemDesc--ep {
+            margin-bottom: 0;
+        }
+        &__editPageStatus-toggle {
+            margin-left: 100px;
+        }
+        &__btn-container--ep {
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        &__btn-cancel {
+            margin-right: 40px;
+            padding-top: 15px;
+        }
+    }
+    .editProduct {
+        input {
+            width: 31vw;
+            margin-right: 30px;
+        }
+    }
+    .editproduct-wrapper {
+        display: flex;
+    }
+}
+
+// desktop version
+@include desktop {
+    .editProduct {
+        textarea {
+            width: 30vw;
+            height: 150px;
+        }
+        input {
+            width: 15vw;
+            height: 5vh;
+        }
+    }
+    .product {
+        &__itemDesc-title--ep {
+            margin-bottom: 0;
+            margin-top: 40px;
+        }
+        &__editPageStatus-title,
+        &__quantity-title {
+            margin-top: 0;
+        }
+        &__categories--ep {
+            margin-top: 0;
+        }
+        &__categories-title--ep {
+            margin-top: 24px;
+        }
+        &__btn-cancel {
+            padding-top: 0;
+        }
+    }
+    .product-wrapper__ep {
+        margin-bottom: 24px;
+    }
+}
