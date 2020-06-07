@@ -71,9 +71,9 @@ export default class editProduct extends Component {
                 </div>
               </div>
               <form className="editProduct" onSubmit={this.updateProduct}>
-                <div className="product-container2">
+                <div className="product-container2 product-container2--ep">
                   <div className="product__itemDesc-wrapper">
-                    <div className="product__itemDesc">
+                    <div className="product__itemDesc product__itemDesc--ep">
                       <h3 className="product__itemDesc-title product__itemDesc-title--ep">
                         ITEM DESCRIPTION
                       </h3>
@@ -100,29 +100,35 @@ export default class editProduct extends Component {
                         <input name="location" placeholder={item.city} />
                       </div>
                     </div>
-                    <div className="product__quantity">
-                      <h3 className="product__quantity-title">QUANTITY</h3>
-                      <input name="quantity" placeholder={item.quantity} />
-                    </div>
+                    <div className="editproduct-wrapper">
+                      <div className="product__quantity">
+                        <h3 className="product__quantity-title">QUANTITY</h3>
+                        <input name="quantity" placeholder={item.quantity} />
+                      </div>
 
-                    <div className="product__editPageStatus">
-                      <h3 className="product__editPageStatus-title">STATUS</h3>
-                      <div className="product__editPageStatus-wrapper">
-                        <p>In Stock</p>
-                        <Switch
-                          className="product__editPageStatus-toggle"
-                          onChange={this.props.onChange}
-                          checked={this.props.checked}
-                          uncheckedIcon={false}
-                          checkedIcon={false}
-                          offColor="#afafaf"
-                          onColor="#69b02f"
-                          height={24}
-                          width={40}
-                          handleDiameter={25}
-                          boxShadow="0 0 2px 2px #e1e1e1"
-                          activeBoxShadow="0 0 2px 2px #e1e1e1"
-                        />
+                      <div className="product__editPageStatus">
+                        <h3 className="product__editPageStatus-title">
+                          STATUS
+                        </h3>
+                        <div className="product__editPageStatus-wrapper">
+                          <div className="product__editPageStatus-show">
+                            <p>In Stock</p>
+                          </div>
+                          <Switch
+                            className="product__editPageStatus-toggle"
+                            onChange={this.props.onChange}
+                            checked={this.props.checked}
+                            uncheckedIcon={false}
+                            checkedIcon={false}
+                            offColor="#afafaf"
+                            onColor="#69b02f"
+                            height={24}
+                            width={40}
+                            handleDiameter={25}
+                            boxShadow="0 0 2px 2px #e1e1e1"
+                            activeBoxShadow="0 0 2px 2px #e1e1e1"
+                          />
+                        </div>
                       </div>
                     </div>
 

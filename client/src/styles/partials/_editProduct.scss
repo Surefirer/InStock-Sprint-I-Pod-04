@@ -59,3 +59,36 @@
     align-self: center;
     margin: 0;
 }
+
+// tablet version
+@include tablet {
+    .product-container2--ep {
+        padding-right: 150px;
+    }
+    .product {
+        &__itemDesc--ep {
+            margin-bottom: 0;
+        }
+        &__editPageStatus-toggle {
+            margin-left: 100px;
+        }
+        &__btn-container--ep {
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        &__btn-cancel {
+            margin-right: 40px;
+            padding-top: 15px;
+        }
+    }
+    .editProduct {
+        input {
+            width: 31vw;
+            margin-right: 30px;
+        }
+    }
+    .editproduct-wrapper {
+        display: flex;
+    }
+}

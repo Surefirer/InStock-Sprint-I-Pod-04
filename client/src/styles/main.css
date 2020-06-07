@@ -1711,4 +1711,41 @@ textarea::placeholder {
       align-self: center;
   margin: 0;
 }
+
+@media (min-width: 768px) {
+  .product-container2--ep {
+    padding-right: 150px;
+  }
+  .product__itemDesc--ep {
+    margin-bottom: 0;
+  }
+  .product__editPageStatus-toggle {
+    margin-left: 100px;
+  }
+  .product__btn-container--ep {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .product__btn-cancel {
+    margin-right: 40px;
+    padding-top: 15px;
+  }
+  .editProduct input {
+    width: 31vw;
+    margin-right: 30px;
+  }
+  .editproduct-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 /*# sourceMappingURL=main.css.map */
