@@ -1,5 +1,7 @@
 import React from "react";
 import Select from "react-select";
+import axios from "axios";
+import { v4 as uuid } from "uuid";
 
 // need to be replaced with list of all warehouses from the back-end
 const options = [
@@ -11,6 +13,46 @@ const options = [
 class NewWarehouse extends React.Component {
   handleClick = () => {
     this.props.toggle();
+  };
+
+  addNewLocation = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const warehouse = event.target.warehouse.value;
+    const address = event.target.address.value;
+    const contactName = event.target.name.value;
+    const position = event.target.position.value;
+    const phoneNumber = event.target.phoneNumber.value;
+    const email = event.target.email.value;
+    const description = event.target.description.value;
+    if (
+      warehouse !== "" &&
+      address !== "" &&
+      contactName !== "" &&
+      position !== "" &&
+      phoneNumber !== "" &&
+      email !== ""
+    ) {
+      axios
+        .post("/locations", {
+          id: uuid(),
+          name: warehouse,
+          address,
+          contactName,
+          position,
+          phoneNumber,
+          email,
+          categories: description,
+        })
+        .then((response) => {
+          console.log(response);
+          console.log("New location added.");
+        })
+        .catch((err) => console.log(err));
+    } else {
+      alert("Please fill out the form.");
+    }
+    form.reset();
   };
 
   render() {
@@ -85,8 +127,9 @@ class NewWarehouse extends React.Component {
               </label>
               <input
                 className="createNew__input"
-                type="number"
+                type="tel"
                 name="phoneNumber"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 placeholder="(000) 000-0000"
               />
             </div>

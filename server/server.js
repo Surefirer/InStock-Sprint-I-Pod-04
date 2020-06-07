@@ -6,6 +6,7 @@ const getWarehouseList = require("./controller/getWarehouseList");
 const getInventoryList = require("./controller/getInventoryList");
 const getProduct = require("./controller/getProduct");
 const createNewInventory = require("./controller/createNewInventory");
+const addNewLocation = require("./controller/addNewLocation");
 
 // Middleware
 app.use(express.json());
@@ -16,9 +17,13 @@ app.get("/", (req, res) => {
 });
 
 // api info endpoint for warehouse
-app.get("/locations", (req, res) => {
-  res.json(getWarehouseList());
-});
+app
+  .get("/locations", (req, res) => {
+    res.json(getWarehouseList());
+  })
+  .post("/locations", (req, res) => {
+    res.json(addNewLocation(req.body));
+  });
 
 // api info endpoint for inventory item
 app

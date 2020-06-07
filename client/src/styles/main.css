@@ -92,6 +92,21 @@
   background-color: #002f5f;
 }
 
+.status-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 5.5rem;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+}
+
 html,
 body {
   margin: 0;
@@ -468,6 +483,7 @@ textarea::placeholder {
   line-height: 1.125rem;
   margin-top: 0;
   margin-bottom: 1rem;
+  color: #323232;
 }
 
 @media (min-width: 768px) {
@@ -476,6 +492,7 @@ textarea::placeholder {
     font-size: 1rem;
     line-height: 1.35rem;
     margin-bottom: 0;
+    color: #323232;
   }
 }
 
@@ -483,6 +500,7 @@ textarea::placeholder {
   font-family: Avenir Regular;
   font-size: 0.813rem;
   line-height: 1.125rem;
+  color: #323232;
   margin: 0;
   margin-bottom: 1.5rem;
 }
@@ -492,6 +510,7 @@ textarea::placeholder {
     font-family: Avenir Regular;
     font-size: 0.875rem;
     line-height: 1.375rem;
+    color: #323232;
     margin-bottom: 0;
   }
 }
@@ -598,7 +617,7 @@ textarea::placeholder {
 }
 
 .inventory__item {
-  width: 34.44%;
+  width: 350px;
   padding-right: 1.5rem;
 }
 
@@ -640,15 +659,6 @@ textarea::placeholder {
 
 .inventory__remove:focus {
   border: 2px solid #323232;
-}
-
-.inventory__item {
-  width: 350px;
-  color: #323232;
-}
-
-.inventory__container--item {
-  color: #323232;
 }
 
 .locations {
@@ -1406,7 +1416,6 @@ textarea::placeholder {
 .product__name h2 {
   padding-left: 15px;
   font-family: Avenir Bold;
-  padding-top: 5px;
 }
 
 .product__status {
@@ -1466,8 +1475,9 @@ textarea::placeholder {
 
 .product__itemDesc-title, .product__lastOrder-title, .product__location-title, .product__quantity-title, .product__categories-title {
   font-family: Avenir Bold Demi;
-  font-size: 1rem;
-  line-height: 1.38rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.25px;
   color: #afafaf;
   margin-top: 2rem;
 }
@@ -1496,7 +1506,7 @@ textarea::placeholder {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border-bottom: 2px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
   }
   .product__name h2 {
     font-family: Avenir Bold;
@@ -1507,21 +1517,10 @@ textarea::placeholder {
     margin-bottom: 0;
     margin-left: 35px;
   }
-  .product__itemDesc-title {
-    font-family: Avenir Bold Demi;
-    font-size: 1rem;
-    line-height: 1.35rem;
-  }
-  .product__lastOrder-title, .product__location-title, .product__quantity-title, .product__categories-title {
-    font-family: Avenir Bold Demi;
-    font-size: 1rem;
-    line-height: 1.35rem;
-    color: #afafaf;
-  }
   .product .product-container2 {
     width: 95%;
     margin: 0 auto;
-    border-bottom: 2px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
   }
   .product__itemDesc {
     margin-top: 30px;
@@ -1606,7 +1605,7 @@ textarea::placeholder {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    border-bottom: 2px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
   }
   .product-wrapper {
     margin-top: 40px;

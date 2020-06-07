@@ -1,6 +1,5 @@
 const fs = require("fs");
 const getInventoryList = require("./getInventoryList");
-const { uuid } = require("uuid");
 
 // saving newly created inventory to the existing data
 const createNewInventory = (data) => {
