@@ -114,10 +114,13 @@ export default class editProduct extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="product__btn-container">
+                <div className="product__btn-container product__btn-container--ep">
                   <button className="product__btn" type="submit">
                     SAVE
                   </button>
+                  <p className="product__btn-cancel" onClick={this.handleClick}>
+                    CANCEL
+                  </p>
                 </div>
               </form>
             </>

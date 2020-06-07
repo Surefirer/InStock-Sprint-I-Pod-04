@@ -16,4 +16,24 @@
         border-radius: 4px;
         background-color: $alabaster;
     }
+    .product__btn {
+        font-size: 1.1rem;
+    }
+    .product_btn-cancel {
+        @include paragraph-bold;
+        color: $instock-blue;
+        align-self: center;
+        margin: 0;
+    }
+    .product__btn-container--ep {
+        display: flex;
+        flex-direction: column;
+    }
+    .product__btn-cancel {
+        text-align: center;
+    }
+    .product__btn-cancel {
+        font-family: Avenir Bold Demi;
+        color: $instock-blue;
+    }
 }
