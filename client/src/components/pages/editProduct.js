@@ -5,12 +5,6 @@ import { NavLink } from "react-router-dom";
 import Switch from "react-switch";
 import DateUtil from "../DateUtil";
 
-const options = [
-  { value: "Toronto, CAN", label: "Toronto, CAN" },
-  { value: "Toronto, CAN", label: "Toronto, CAN" },
-  { value: "Toronto, CAN", label: "Toronto, CAN" },
-];
-
 export default class EditProduct extends Component {
   state = {
     product: [],
@@ -18,9 +12,7 @@ export default class EditProduct extends Component {
 
   componentDidMount() {
     const id = this.props.match.params.id;
-    //const id = "1af0jruup5g0";
     axios.get(`http://localhost:5000/inventory/${id}`).then((response) => {
-      //console.log(response);
       this.setState({
         product: response.data.filter((item) => {
           return item.id === id;
@@ -32,9 +24,7 @@ export default class EditProduct extends Component {
   updateProduct = (event) => {
     event.preventDefault();
     const form = event.target;
-    // const product = event.target.product.value;
     const lastOrdered = event.target.lastOrdered.value;
-    const location = event.target.location.value;
     const quantity = event.target.quantity.value;
     const description = event.target.description.value;
     if (lastOrdered !== "" && quantity !== "") {

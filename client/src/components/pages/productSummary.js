@@ -27,10 +27,14 @@ export default class productSummary extends Component {
         {this.state.product.map((item) => {
           return (
             <>
-              <div className="product-container1" id={item.id}>
+              <div className="product-container1" key={item.id}>
                 <div className="product__name">
                   <NavLink to={`/inventory`}>
-                    <img src={Icons.backArrow} alt="" />
+                    <img
+                      src={Icons.backArrow}
+                      alt="back arrow"
+                      className="product__backArrow"
+                    />
                   </NavLink>
                   <h2>{item.productName}</h2>
                 </div>

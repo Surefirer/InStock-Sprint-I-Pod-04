@@ -62,7 +62,6 @@ class App extends React.Component {
       inventoryList,
       newInventory,
       newLocation,
-      warehouseList,
       locationsList,
     } = this.state;
     return (
@@ -72,10 +71,15 @@ class App extends React.Component {
             toggle={this.inventoryTogglePop}
             onChange={this.handleChange}
             checked={this.state.checked}
-            warehouseList={warehouseList}
+            inventoryList={inventoryList} // testing for dropdown, need to be changed to warehouseList
           />
         ) : null}
-        {newLocation ? <NewWarehouse toggle={this.locationTogglePop} /> : null}
+        {newLocation ? (
+          <NewWarehouse
+            toggle={this.locationTogglePop}
+            inventoryList={inventoryList} // testing for dropdown, need to be changed to warehouseList
+          />
+        ) : null}
         <Header />
         <Switch>
           <Redirect from="/" to="/inventory" exact />
@@ -100,9 +104,7 @@ class App extends React.Component {
             )}
           />
           <Route path="/locationdetails" component={LocationDetails} />
-          <Route path="/product/:id" component={productSummary} />
           <Redirect from="/product" to="/inventory" exact />
-          {/* <Route path="/product/edit/:id" component={EditProduct} /> */}
           <Route
             path="/product/edit/:id"
             render={(props) => (
