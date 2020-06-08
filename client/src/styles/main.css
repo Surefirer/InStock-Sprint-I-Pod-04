@@ -31,7 +31,7 @@
 /* ==========================================================================
        utility classes
     ========================================================================== */
-.input, .inventory__search--input, .locations__search--input, .createNew__input, .createNew__location, .createNew__descInput, .locationdetails-bottom__search--input {
+.input, .inventory__search--input, .locations__search--input, .createNew__input, .createNew__descInput, .locationdetails-bottom__search--input {
   background-color: rgba(225, 225, 225, 0.5);
   width: 100%;
   border-radius: 0.25rem;
@@ -40,7 +40,7 @@
   transition: 0.2s ease-in-out;
 }
 
-.input:focus, .inventory__search--input:focus, .locations__search--input:focus, .createNew__input:focus, .createNew__location:focus, .createNew__descInput:focus, .locationdetails-bottom__search--input:focus {
+.input:focus, .inventory__search--input:focus, .locations__search--input:focus, .createNew__input:focus, .createNew__descInput:focus, .locationdetails-bottom__search--input:focus {
   border: 2px solid #323232;
 }
 
@@ -1230,26 +1230,28 @@ textarea::placeholder {
   .createNew__form {
     padding: 0 3rem;
     border-radius: 0.25rem;
-    width: 36rem;
-    height: 39rem;
     background-color: #ffffff;
     margin: 0;
+    width: 36rem;
+    height: 41rem;
   }
 }
 
 .createNew__form--warehouse {
   margin: 0 1rem;
-  overflow-y: auto;
+  height: 100vh;
+  overflow: scroll;
 }
 
 @media (min-width: 768px) {
   .createNew__form--warehouse {
     padding: 0 3rem;
     border-radius: 0.25rem;
-    width: 36rem;
-    height: 45rem;
     background-color: #ffffff;
     margin: 0;
+    width: 36rem;
+    height: 45rem;
+    overflow: hidden;
   }
 }
 
@@ -1265,7 +1267,7 @@ textarea::placeholder {
     font-family: Avenir Bold;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    margin: 3rem 0;
+    margin: 3.5rem 0 3rem 0;
   }
 }
 
@@ -1281,7 +1283,7 @@ textarea::placeholder {
     font-family: Avenir Bold;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    margin: 3rem 0 2rem 0;
+    margin: 2.5rem 0;
   }
 }
 
@@ -1370,27 +1372,6 @@ textarea::placeholder {
   }
 }
 
-.createNew__location {
-  height: 3rem;
-  margin-bottom: 1.5rem;
-  padding-left: 0.75rem;
-}
-
-.createNew__location--option {
-  font-family: Avenir Regular;
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-  color: #323232;
-}
-
-@media (min-width: 768px) {
-  .createNew__location--option {
-    font-family: Avenir Regular;
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-}
-
 .createNew__status {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1432,7 +1413,7 @@ textarea::placeholder {
 }
 
 .createNew__btn {
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 }
 
 @media (min-width: 768px) {
@@ -1457,6 +1438,11 @@ textarea::placeholder {
   .createNew__cancel {
     margin-right: 3rem;
   }
+}
+
+.Select__control {
+  height: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .product {

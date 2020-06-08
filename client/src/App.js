@@ -13,7 +13,7 @@ import NewInventory from "./components/pages/NewInventory";
 import NewWarehouse from "./components/pages/NewWarehouse";
 import productSummary from "./components/pages/productSummary";
 import LocationDetails from "./components/pages/LocationDetails";
-import editProduct from "./components/pages/editProduct";
+import EditProduct from "./components/pages/editProduct";
 
 class App extends React.Component {
   state = {
@@ -93,7 +93,7 @@ class App extends React.Component {
           <Route
             path="/product/edit/:id"
             render={(props) => (
-              <editProduct
+              <EditProduct
                 checked={this.state.checked}
                 onChange={this.handleChange}
                 {...props}

@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import Switch from "react-switch";
 import DateUtil from "../DateUtil";
 
-export default class editProduct extends Component {
+export default class EditProduct extends Component {
   state = {
     product: [],
   };
@@ -55,7 +55,7 @@ export default class editProduct extends Component {
         {this.state.product.map((item) => {
           return (
             <>
-              <div className="editProduct-container1" id={item.id}>
+              <div className="editProduct-container1" key={item.id}>
                 <div className="editProduct__name">
                   <NavLink to={`/inventory`}>
                     <img src={Icons.backArrow} alt="" />

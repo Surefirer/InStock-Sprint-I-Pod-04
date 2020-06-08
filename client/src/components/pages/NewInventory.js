@@ -1,12 +1,31 @@
 import React from "react";
-// import Select from "react-select";
+import Select from "react-select";
 import Switch from "react-switch";
 import axios from "axios";
 import { v4 as uuid } from "uuid";
 import DateUtil from "../DateUtil";
-import SelectInput from "../SelectInput";
+// import SelectInput from "../SelectInput";
 
 class NewInventory extends React.Component {
+  state = {
+    options: [], // options for location dropdown
+  };
+
+  // need to be swapped to warehouseList
+  componentDidMount() {
+    this.props.inventoryList.map((inventory, index) => {
+      const city = inventory.city;
+      const country = inventory.country;
+      const option = {
+        id: index,
+        value: `${city}, ${country}`,
+        label: `${city}, ${country}`,
+      };
+      this.state.options.push(option);
+      return option;
+    }, console.log(this.state.options));
+  }
+
   handleClick = () => {
     this.props.toggle();
   };
@@ -71,13 +90,13 @@ class NewInventory extends React.Component {
           <label className="createNew__label" htmlFor="location">
             LOCATION
           </label>
-          {/* <Select
+          <Select
             className="createNew__location"
             classNamePrefix="Select"
             name="location"
-            options={options}
-          /> */}
-          <SelectInput inventoryList={this.props.inventoryList} />
+            options={this.state.options}
+          />
+          {/* <SelectInput inventoryList={this.props.inventoryList} /> */}
           <div className="createNew__wrapper">
             <div className="createNew__wrapper--input">
               <label className="createNew__label" htmlFor="quantity">

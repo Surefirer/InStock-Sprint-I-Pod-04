@@ -13,30 +13,25 @@
   &__form {
     margin: 0 1rem;
     @include tablet {
-      // margin: auto;
-      // position: absolute;
       padding: 0 3rem;
       border-radius: 0.25rem;
-      // top: 20%;
-      // left: 30%;
-      width: 36rem;
-      height: 39rem;
       background-color: $white;
       margin: 0;
+      width: 36rem;
+      height: 41rem;
     }
     &--warehouse {
       margin: 0 1rem;
-      overflow-y: auto; // not working
+      height: 100vh;
+      overflow: scroll;
       @include tablet {
-        // position: absolute;
         padding: 0 3rem;
         border-radius: 0.25rem;
-        // top: 20%;
-        // left: 30%;
-        width: 36rem;
-        height: 45rem;
         background-color: $white;
         margin: 0;
+        width: 36rem;
+        height: 45rem;
+        overflow: hidden;
       }
     }
   }
@@ -45,14 +40,14 @@
     margin: 2rem 0;
     @include tablet {
       @include headerOne-tablet;
-      margin: 3rem 0;
+      margin: 3.5rem 0 3rem 0;
     }
     &--warehouse {
       @include header;
       margin: 2rem 0;
       @include tablet {
         @include headerOne-tablet;
-        margin: 3rem 0 2rem 0;
+        margin: 2.5rem 0;
       }
     }
   }
@@ -94,20 +89,20 @@
       padding-left: 1rem;
     }
   }
-  &__location {
-    @extend .input;
-    height: 3rem;
-    margin-bottom: 1.5rem;
-    padding-left: 0.75rem;
+  // &__location {
+  //   @extend .input;
+  //   height: 3rem;
+  //   margin-bottom: 1.5rem;
+  //   padding-left: 0.75rem;
 
-    &--option {
-      @include paragraph;
-      color: $black;
-      @include tablet {
-        @include paragraph-tablet;
-      }
-    }
-  }
+  //   &--option {
+  //     @include paragraph;
+  //     color: $black;
+  //     @include tablet {
+  //       @include paragraph-tablet;
+  //     }
+  //   }
+  // }
   &__status {
     display: flex;
     align-items: center;
@@ -132,7 +127,7 @@
   }
   &__btn {
     @extend .button;
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     @include tablet {
       width: 10rem;
       height: 3rem;
@@ -147,4 +142,9 @@
       margin-right: 3rem;
     }
   }
+}
+
+.Select__control {
+  height: 3rem;
+  margin-bottom: 1.5rem;
 }
