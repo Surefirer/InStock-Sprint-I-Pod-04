@@ -20,6 +20,7 @@ class App extends React.Component {
     inventoryList: [],
     warehouseList: [],
     locationOptions: [],
+    locationsList: [],
     checked: true,
     newInventory: false,
     newLocation: false,
@@ -49,6 +50,11 @@ class App extends React.Component {
         inventoryList: response.data,
       });
     });
+    axios.get("/locations").then((response) => {
+      this.setState({
+        locationsList: response.data,
+      });
+    });
   }
 
   render() {
@@ -57,6 +63,7 @@ class App extends React.Component {
       newInventory,
       newLocation,
       warehouseList,
+      locationsList,
     } = this.state;
     return (
       <Router>
@@ -85,7 +92,11 @@ class App extends React.Component {
           <Route
             path="/locations"
             render={(props) => (
-              <Locations togglePop={this.locationTogglePop} {...props} />
+              <Locations
+                togglePop={this.locationTogglePop}
+                {...props}
+                locationsList={locationsList}
+              />
             )}
           />
           <Route path="/locationdetails" component={LocationDetails} />

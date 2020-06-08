@@ -34,20 +34,19 @@ function Locations(props) {
         </div>
         <div className="locations__bodyMobile">
           <div className="locations__container">
-            <div className="locations__container--item">
-              <h3 className="locations__titleMobile">Warehouse Number 1</h3>
-              <p className="locations__text">469 King St W, Toronto, ON</p>
-              <p className="locations__text">
-                Mara Weinberg <br /> <i>Warehouse Manager</i>
-              </p>
-              <p className="locations__text">
-                +1 416 678 2345 <br /> weinberg@instack.com
-              </p>
-              <p className="locations__text">
-                Industrial, Automotive, Heavy, Mechanical, Engineering,
-                Transportation
-              </p>
-            </div>
+            {props.locationsList.map((locations) => (
+              <div className="locations__container--item" key={locations.id}>
+                <h3 className="locations__titleMobile">{locations.name}</h3>
+                <p className="locations__text">{locations.address}</p>
+                <p className="locations__text">
+                  {locations.contactName} <br /> <i>{locations.position}</i>
+                </p>
+                <p className="locations__text">
+                  {locations.phoneNumber} <br /> {locations.email}
+                </p>
+                <p className="locations__text">{locations.categories}</p>
+              </div>
+            ))}
           </div>
           <Link to="/locationdetails">
             <img
@@ -60,10 +59,12 @@ function Locations(props) {
         <div className="locations__bodyTablet">
           <div className="locations__contentWrapperTablet">
             <div className="locations__item">
-              <div className="locations__warehouseTitleContainer">
-                <h2 className="locations__titleTablet">Warehouse Number 1</h2>
-                <p className="locations__text">469 King St W, Toronto, ON</p>
-              </div>
+              {props.locationsList.map((l) => (
+                <div className="locations__warehouseTitleContainer">
+                  <h2 className="locations__titleTablet">{l.name}</h2>
+                  <p className="locations__text">{l.address}</p>
+                </div>
+              ))}
               <div className="locations__imageContainer">
                 <Link to="/locationdetails">
                   <img
@@ -74,18 +75,19 @@ function Locations(props) {
                 </Link>
               </div>
             </div>
-            <div className="locations__textContainer">
-              <p className="locations__textTablet locations__category">
-                Mara Weinberg <br /> <i>Warehouse Manager</i>
-              </p>
-              <p className="locations__textTablet locations__contact">
-                +1 416 678 2345 weinberg@instack.com
-              </p>
-              <p className="locations__textTablet locations__categories">
-                Industrial, Automotive, Heavy, <br /> Mechanical, Engineering,
-                Transportation
-              </p>
-            </div>
+            {props.locationsList.map((l) => (
+              <div className="locations__textContainer">
+                <p className="locations__textTablet locations__category">
+                  {l.contactName} <br /> <i>{l.position}</i>
+                </p>
+                <p className="locations__textTablet locations__contact">
+                  {l.phoneNumber} {l.email}
+                </p>
+                <p className="locations__textTablet locations__categories">
+                  {l.categories}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
         <div className="locations__bodyDesktop">
@@ -97,34 +99,35 @@ function Locations(props) {
             </h3>
             <h3 className="locations__title locations__category">CATEGORIES</h3>
           </div>
-          <div className="locations__contentWrapper">
-            <div className="locations__item">
-              <h2 className="locations__warehouse">Warehouse Number 1</h2>
-              <p className="locations__text locations__address">
-                469 King St W, Toronto, ON
+          {props.locationsList.map((l) => (
+            <div className="locations__contentWrapper">
+              <div className="locations__item">
+                <h2 className="locations__warehouse">{l.name}</h2>
+                <p className="locations__text locations__address">
+                  {l.address}
+                </p>
+              </div>
+              <p className="locations__text locations__contact">
+                {l.contactName}
+                <br /> <i>{l.position}</i>
               </p>
+              <p className="locations__text locations__contactinfo">
+                {l.phoneNumber} {l.email}
+              </p>
+              <p className="locations__text locations__category">
+                {l.categories}
+              </p>
+              <div className="locations__iconWrapper">
+                <Link to="/locationdetails">
+                  <img
+                    className="locations__rightArrowIcon"
+                    src={Icons.rightArrow}
+                    alt="locations right arrow icon"
+                  />
+                </Link>
+              </div>
             </div>
-            <p className="locations__text locations__contact">
-              Mara Weinberg
-              <br /> <i>Warehouse Manager</i>
-            </p>
-            <p className="locations__text locations__contactinfo">
-              +1 416 678 2345 weinberg@instack.com
-            </p>
-            <p className="locations__text locations__category">
-              Industrial, Automotive, Heavy, <br /> Mechanical, Engineering,
-              Transportation
-            </p>
-            <div className="locations__iconWrapper">
-              <Link to="/locationdetails">
-                <img
-                  className="locations__rightArrowIcon"
-                  src={Icons.rightArrow}
-                  alt="locations right arrow icon"
-                />
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </>
