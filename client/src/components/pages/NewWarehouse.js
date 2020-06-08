@@ -1,14 +1,15 @@
 import React from "react";
-import Select from "react-select";
+// import Select from "react-select";
 import axios from "axios";
 import { v4 as uuid } from "uuid";
+import SelectInput from "../SelectInput";
 
 // need to be replaced with list of all warehouses from the back-end
-const options = [
-  { value: "Toronto, CAN", label: "Toronto, CAN" },
-  { value: "Toronto, CAN", label: "Toronto, CAN" },
-  { value: "Toronto, CAN", label: "Toronto, CAN" },
-];
+// const options = [
+//   { value: "Toronto, CAN", label: "Toronto, CAN" },
+//   { value: "Toronto, CAN", label: "Toronto, CAN" },
+//   { value: "Toronto, CAN", label: "Toronto, CAN" },
+// ];
 
 class NewWarehouse extends React.Component {
   handleClick = () => {
@@ -88,12 +89,13 @@ class NewWarehouse extends React.Component {
               <label className="createNew__label" htmlFor="location">
                 LOCATION
               </label>
-              <Select
+              {/* <Select
                 className="createNew__location"
                 classNamePrefix="Select"
                 name="location"
                 options={options}
-              />
+              /> */}
+              <SelectInput inventoryList={this.props.inventoryList} />
             </div>
           </div>
           <div className="createNew__wrapper">

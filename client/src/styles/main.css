@@ -570,7 +570,7 @@ textarea::placeholder {
   position: fixed;
   bottom: 5rem;
   right: 2rem;
-  z-index: 99;
+  z-index: 90;
 }
 
 @media (min-width: 768px) {
@@ -1233,6 +1233,7 @@ textarea::placeholder {
 
 .createNew__form--warehouse {
   margin: 0 1rem;
+  overflow-y: scroll;
 }
 
 @media (min-width: 768px) {
@@ -1367,7 +1368,24 @@ textarea::placeholder {
 }
 
 .createNew__location {
+  height: 3rem;
   margin-bottom: 1.5rem;
+  padding-left: 0.75rem;
+}
+
+.createNew__location--option {
+  font-family: Avenir Regular;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  color: #323232;
+}
+
+@media (min-width: 768px) {
+  .createNew__location--option {
+    font-family: Avenir Regular;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 
 .createNew__status {
@@ -1459,6 +1477,11 @@ textarea::placeholder {
   font-family: Avenir Bold;
 }
 
+.product__backArrow {
+  width: 1rem;
+  height: 1.5rem;
+}
+
 .product__status {
   font-family: Avenir Bold Demi;
   font-size: 0.75rem;
@@ -1548,9 +1571,9 @@ textarea::placeholder {
         -ms-flex-align: center;
             align-items: center;
     border-bottom: 1px solid #e1e1e1;
+    width: 100%;
   }
   .product {
-    width: 100%;
     margin: 0 1.5rem;
   }
   .product__name {
@@ -1562,13 +1585,15 @@ textarea::placeholder {
     line-height: 2.75rem;
     margin: 48px 0 40px 0;
   }
+  .product__backArrow {
+    margin-top: 0.5rem;
+  }
   .product__status {
     margin-bottom: 0;
     margin-left: 24px;
     margin-top: 0.75rem;
   }
   .product .product-container2 {
-    margin: 0 auto;
     border-bottom: 1px solid #e1e1e1;
   }
   .product__itemDesc {
@@ -1595,8 +1620,7 @@ textarea::placeholder {
     margin-top: 40px;
   }
   .product__btn-container {
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1608,11 +1632,12 @@ textarea::placeholder {
 
 @media (min-width: 1080px) {
   .product {
-    max-width: 1080px;
+    width: 1080px;
     margin: 0 auto;
   }
   .product__itemInfo-wrapper {
-    width: 100%;
+    width: 528px;
+    padding-left: 0;
   }
   .product__name img {
     width: 16px;
@@ -1626,6 +1651,10 @@ textarea::placeholder {
   .product__status p {
     font-size: 12px;
   }
+  .product__itemDesc-wrapper {
+    width: 512px;
+    margin-right: 40px;
+  }
   .product__itemDesc-title {
     margin-top: 40px;
     margin-bottom: 24px;
@@ -1633,8 +1662,15 @@ textarea::placeholder {
   .product__itemDesc {
     margin: 0;
   }
+  .product__lastOrder {
+    width: 236px;
+    margin-right: 40px;
+  }
   .product__lastOrder-title, .product__location-title {
     margin: 0;
+  }
+  .product__location {
+    margin-right: auto;
   }
   .product__categories {
     margin-top: 56px;
@@ -1644,9 +1680,6 @@ textarea::placeholder {
   }
   .product__itemDesc P, .product__lastOrder P, .product__location P, .product__quantity P, .product__categories P {
     margin-top: 24px;
-  }
-  .product__itemInfo-wrapper {
-    padding-left: 40px;
   }
   .product__btn-container {
     margin-right: 0;
@@ -1663,6 +1696,7 @@ textarea::placeholder {
   .product-wrapper {
     margin-top: 40px;
     margin-bottom: 56px;
+    margin-right: 0;
   }
 }
 
