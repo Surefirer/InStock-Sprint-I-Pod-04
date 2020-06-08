@@ -5,6 +5,7 @@ const app = express();
 const getWarehouseList = require("./controller/getWarehouseList");
 const getInventoryList = require("./controller/getInventoryList");
 const getProduct = require("./controller/getProduct");
+const updateProduct = require("./controller/updateProduct");
 const createNewInventory = require("./controller/createNewInventory");
 const addNewLocation = require("./controller/addNewLocation");
 
@@ -38,6 +39,11 @@ app
 app.get("/inventory/:id", (req, res) => {
   const productId = req.params.id;
   res.json(getProduct(productId));
+});
+
+// update existing product
+app.put("/inventory/:id", (req, res) => {
+  res.json(updateProduct(req.params.id, req.body));
 });
 
 const PORT = process.env.PORT || 5000;

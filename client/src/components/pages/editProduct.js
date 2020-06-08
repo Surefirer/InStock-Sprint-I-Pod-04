@@ -32,7 +32,7 @@ export default class EditProduct extends Component {
         .put(`/inventory/${this.props.match.params.id}`, {
           briefDescription: description,
           lastOrder: DateUtil.format(lastOrdered),
-          quantity,
+          quantity: quantity,
         })
         .then((response) => {
           console.log(response);
