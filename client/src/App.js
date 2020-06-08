@@ -89,7 +89,6 @@ class App extends React.Component {
             )}
           />
           <Route path="/locationdetails" component={LocationDetails} />
-          <Route path="/product/:id" component={productSummary} />
           <Redirect from="/product" to="/inventory" exact />
           <Route
             path="/product/edit/:id"
