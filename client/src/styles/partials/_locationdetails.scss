@@ -1,0 +1,422 @@
+.locationdetails-top {
+  width: 90%;
+  margin: 0 auto;
+  &__name {
+    display: flex;
+    align-items: center;
+    h2 {
+      padding-left: 15px;
+      font-family: Avenir Bold;
+    }
+  }
+  &__status {
+    @include label;
+    display: flex;
+    color: white;
+    margin-bottom: 35px;
+    p {
+      margin: 0;
+    }
+    &--in {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 88px;
+      height: 24px;
+      border-radius: 4px;
+      background-color: $green;
+    }
+    &--out {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 88px;
+      height: 24px;
+      border-radius: 4px;
+      background-color: $silver;
+    }
+  }
+  &__itemDesc,
+  &__lastOrder,
+  &__location,
+  &__quantity,
+  &__categories {
+    P {
+      @include paragraph;
+    }
+  }
+  &__itemDesc-title,
+  &__lastOrder-title,
+  &__location-title,
+  &__quantity-title,
+  &__categories-title {
+    @include label;
+    margin-top: 2rem;
+  }
+
+  &__categories--text {
+    margin-bottom: 40px;
+  }
+  &__btn {
+    @extend .button;
+    margin: 20px 0;
+
+    button {
+      outline: none;
+      border: none;
+      background-color: transparent;
+      color: $white;
+      font-size: 16px;
+    }
+  }
+}
+
+// tablet version
+@include tablet {
+  .locationdetails-top-container1 {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $mercury;
+  }
+  .locationdetails-top {
+    &__name {
+      h2 {
+        @include headerOne-tablet;
+      }
+    }
+    &__status {
+      margin-bottom: 0;
+      margin-left: 35px;
+    }
+
+    .locationdetails-top-container2 {
+      width: 95%;
+      margin: 0 auto;
+      border-bottom: 1px solid $mercury;
+      @include tablet {
+        display: flex;
+        border-bottom: initial;
+        margin-left: 0;
+      }
+    }
+    &__itemDesc {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      @include tablet {
+        margin-right: 230px;
+      }
+    }
+    &__itemDesc,
+    &__lastOrder,
+    &__location,
+    &__quantity,
+    &__categories {
+      P {
+        @include paragraph-tablet;
+      }
+    }
+    .locationdetails-top-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+      @include desktop {
+        margin-bottom: 20px;
+      }
+    }
+    &__btn {
+      width: 160px;
+      height: 48px;
+      margin-top: 40px;
+    }
+    &__btn-container {
+      width: 95%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+//desktop version
+@include desktop {
+  .locationdetails-top {
+    max-width: 1080px;
+    &__itemInfo-wrapper {
+      width: 100%;
+    }
+    &__name img {
+      width: 16px;
+      height: 24px;
+    }
+    &__status {
+      width: 88px;
+      height: 24px;
+      margin-left: 24px;
+      p {
+        font-size: 12px;
+      }
+    }
+    &__itemDesc-title {
+      margin-top: 40px;
+      margin-bottom: 24px;
+    }
+    &__itemDesc {
+      margin: 0;
+    }
+    &__lastOrder-title,
+    &__location-title {
+      margin: 0;
+    }
+    &__categories {
+      margin-top: 56px;
+      &--text {
+        margin-bottom: 48px;
+      }
+    }
+    &__itemDesc,
+    &__lastOrder,
+    &__location,
+    &__quantity,
+    &__categories {
+      P {
+        margin-top: 24px;
+      }
+    }
+    &__itemInfo-wrapper {
+      padding-left: 40px;
+    }
+    &__btn {
+      margin: 40px 0;
+    }
+
+    &__itemDesc-wrapper {
+      @include desktop {
+        margin-right: 315px;
+        width: 350px;
+      }
+    }
+  }
+  .locationdetails-top-container2 {
+    display: flex;
+    border-bottom: 1px solid $mercury;
+  }
+  .locationdetails-top-wrapper {
+    margin-top: 40px;
+    margin-bottom: 56px;
+  }
+}
+
+.locationdetails-bottom {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem 3rem 1rem;
+  @include tablet {
+    margin: 0 1.5rem 3rem 1.5rem;
+  }
+  @include desktop {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    width: 67.5rem;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 8rem;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 3rem;
+      height: 6rem;
+    }
+  }
+  &__header {
+    @include header;
+    margin: 2rem 0 1rem 0;
+    @include tablet {
+      @include headerOne-tablet;
+      margin: 0;
+      // margin-bottom: 3rem;
+    }
+  }
+  &__search {
+    position: relative;
+    margin-bottom: 2rem;
+    width: 90%;
+    @include tablet {
+      width: 15.75rem;
+    }
+    &--input {
+      @extend .input;
+      padding: 0 0.75rem 0 2.5rem;
+      height: 3rem;
+    }
+    &--icon {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+  }
+  &__bodyMobile {
+    @include tablet {
+      display: none;
+    }
+  }
+  &__wrapperMobile {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid $mercury;
+    margin-top: 2rem;
+  }
+  &__container {
+    flex-direction: column;
+  }
+  &__title {
+    @include label;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    @include tablet {
+      margin-bottom: 0.5rem;
+    }
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+  &__product {
+    @include paragraph-bold;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: $black;
+    @include tablet {
+      @include subheader-tablet;
+      margin-bottom: 0;
+      color: $black;
+    }
+  }
+  &__text {
+    @include paragraph;
+    color: $black;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    @include tablet {
+      @include paragraph-tablet;
+      color: $black;
+      margin-bottom: 0;
+    }
+    @include desktop {
+      height: 22px;
+      overflow: hidden;
+    }
+  }
+
+  &__iconWrapper {
+    margin-left: auto;
+    position: relative;
+    display: inline-block;
+    margin-right: 0.5rem;
+
+    @include tablet {
+      margin-right: 1.5rem;
+    }
+
+    &:hover .locationdetails-bottom__kebabIcon--hover,
+    &:hover .locationdetails-bottom__remove {
+      display: inline;
+    }
+  }
+
+  &__kebabIcon--hover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  &__button {
+    @extend .round-button;
+    width: 3.75rem;
+    height: 3.75rem;
+    position: absolute;
+    position: fixed;
+    bottom: 5rem;
+    right: 2rem;
+    z-index: 99;
+
+    @include tablet {
+      width: 5rem;
+      height: 5rem;
+      right: 3rem;
+    }
+    &--addIcon {
+      width: 1.25rem;
+      @include tablet {
+        width: 1.5rem;
+      }
+    }
+  }
+  &__bodyTablet {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__titleWrapper {
+    display: flex;
+    margin-top: 24px;
+  }
+  &__contentWrapper {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid $mercury;
+    height: 6.25rem;
+
+    @include desktop {
+      height: 5rem;
+    }
+  }
+  &__item {
+    width: 350px;
+    padding-right: 1.5rem;
+    @include tablet {
+      width: 230px;
+    }
+    @include desktop {
+      margin-bottom: 0;
+      width: 300px;
+      padding-right: 0;
+      margin-right: 50px;
+    }
+  }
+  &__order {
+    width: 17.22%;
+  }
+  &__location {
+    width: 17.22%;
+  }
+  &__quantity {
+    width: 13.88%;
+  }
+
+  &__remove {
+    display: none;
+    position: absolute;
+    background-color: $white;
+    width: 10.063rem;
+    height: 2.75rem;
+    padding-right: 5rem;
+    border-radius: 0.25rem;
+    border: 1px solid $mercury;
+    transition: 0.2s ease-in-out;
+    top: 1.75rem;
+    right: -0.75rem;
+    z-index: 10;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+
+    &:focus {
+      border: 2px solid $black;
+    }
+  }
+}
