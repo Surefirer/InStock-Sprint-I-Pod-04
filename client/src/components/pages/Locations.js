@@ -1,5 +1,6 @@
 import React from "react";
 import Icons from "../assets";
+import { Link } from "react-router-dom";
 
 function Locations(props) {
   return (
@@ -48,11 +49,13 @@ function Locations(props) {
               </p>
             </div>
           </div>
-          <img
-            className="locations__rightArrowIcon"
-            src={Icons.rightArrow}
-            alt="locations kebab icon"
-          />
+          <Link to="/locationdetails">
+            <img
+              className="locations__rightArrowIcon"
+              src={Icons.rightArrow}
+              alt="locations kebab icon"
+            />
+          </Link>
         </div>
         <div className="locations__bodyTablet">
           <div className="locations__contentWrapperTablet">
@@ -62,11 +65,13 @@ function Locations(props) {
                 <p className="locations__text">469 King St W, Toronto, ON</p>
               </div>
               <div className="locations__imageContainer">
-                <img
-                  className="locations__rightArrowIcon"
-                  src={Icons.rightArrow}
-                  alt="locations right arrow icon"
-                />
+                <Link to="/locationdetails">
+                  <img
+                    className="locations__rightArrowIcon"
+                    src={Icons.rightArrow}
+                    alt="locations right arrow icon"
+                  />
+                </Link>
               </div>
             </div>
             <div className="locations__textContainer">
@@ -111,11 +116,13 @@ function Locations(props) {
               Transportation
             </p>
             <div className="locations__iconWrapper">
-              <img
-                className="locations__rightArrowIcon"
-                src={Icons.rightArrow}
-                alt="locations right arrow icon"
-              />
+              <Link to="/locationdetails">
+                <img
+                  className="locations__rightArrowIcon"
+                  src={Icons.rightArrow}
+                  alt="locations right arrow icon"
+                />
+              </Link>
             </div>
           </div>
         </div>

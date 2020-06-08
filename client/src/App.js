@@ -12,7 +12,8 @@ import Locations from "./components/pages/Locations";
 import NewInventory from "./components/pages/NewInventory";
 import NewWarehouse from "./components/pages/NewWarehouse";
 import productSummary from "./components/pages/productSummary";
-import EditProduct from "./components/pages/EditProduct";
+import LocationDetails from "./components/pages/LocationDetails";
+import EditProduct from "./components/pages/editProduct";
 
 class App extends React.Component {
   state = {
@@ -87,6 +88,8 @@ class App extends React.Component {
               <Locations togglePop={this.locationTogglePop} {...props} />
             )}
           />
+          <Route path="/locationdetails" component={LocationDetails} />
+          <Route path="/product/:id" component={productSummary} />
           <Redirect from="/product" to="/inventory" exact />
           {/* <Route path="/product/edit/:id" component={EditProduct} /> */}
           <Route
