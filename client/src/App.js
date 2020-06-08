@@ -12,7 +12,7 @@ import Locations from "./components/pages/Locations";
 import NewInventory from "./components/pages/NewInventory";
 import NewWarehouse from "./components/pages/NewWarehouse";
 import productSummary from "./components/pages/productSummary";
-import editProduct from "./components/pages/editProduct";
+import EditProduct from "./components/pages/EditProduct";
 
 class App extends React.Component {
   state = {
@@ -88,7 +88,17 @@ class App extends React.Component {
             )}
           />
           <Redirect from="/product" to="/inventory" exact />
-          <Route path="/product/edit/:id" component={editProduct} />
+          {/* <Route path="/product/edit/:id" component={EditProduct} /> */}
+          <Route
+            path="/product/edit/:id"
+            render={(props) => (
+              <EditProduct
+                checked={this.state.checked}
+                onChange={this.handleChange}
+                {...props}
+              />
+            )}
+          />
           <Route path="/product/:id" component={productSummary} />
         </Switch>
       </Router>

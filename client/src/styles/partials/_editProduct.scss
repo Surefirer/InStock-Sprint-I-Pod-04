@@ -1,130 +1,208 @@
+.editProduct__form {
+  textarea {
+    border: 1px solid $mercury;
+    width: 100%;
+    height: 8rem;
+    border-radius: 4px;
+    background-color: $alabaster;
+    padding: 1rem 0 0 1rem;
+  }
+  //   ::placeholder {
+  //     padding: 1rem;
+  //   }
+  input {
+    border: 1px solid $mercury;
+    padding-left: 1rem;
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.25rem;
+    background-color: $alabaster;
+  }
+}
+
 .editProduct {
-    textarea {
-        border: 1px solid $mercury;
-        width: 100%;
-        height: 20vh;
-        border-radius: 4px;
-        background-color: $alabaster;
-    }
-     ::placeholder {
-        padding: 15px;
-    }
-    input {
-        border: 1px solid $mercury;
-        width: 100%;
-        height: 10vh;
-        border-radius: 4px;
-        background-color: $alabaster;
-    }
-}
-
-.product {
-    &__btn {
-        font-size: 1rem;
-    }
-    &__btn-container--ep {
-        display: flex;
-        flex-direction: column;
-    }
-    &__btn-cancel {
-        text-align: center;
-    }
-    &__btn-cancel {
-        font-family: Avenir Bold Demi;
-        color: $instock-blue;
-    }
-    &__itemDesc-title--ep {
-        margin-top: 12px;
-    }
-    &__editPageStatus-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__editPageStatus-title {
-        @include label;
-        margin-top: 2rem;
-    }
-    &__editPageStatus-toggle {
-        padding-right: 20px;
-    }
-    &__categories--textEp {
-        margin-bottom: 20px;
-    }
-}
-
-.product_btn-cancel {
-    @include paragraph-bold;
-    color: $instock-blue;
-    align-self: center;
+  margin: 0 1rem;
+  &__title {
     margin: 0;
+    margin-top: 1rem;
+    @include label;
+  }
+  &__name {
+    display: flex;
+    align-items: center;
+    margin: 32px 0;
+    h2 {
+      padding-left: 15px;
+      font-family: Avenir Bold;
+    }
+    &--text {
+      margin: 0;
+      padding-left: 1rem;
+      @include tablet {
+        @include headerOne-tablet;
+      }
+    }
+  }
+  &__btn {
+    @extend .button;
+  }
+  &__btn-container--ep {
+    display: flex;
+    flex-direction: column;
+  }
+  &__btn-cancel {
+    text-align: center;
+  }
+  &__btn-cancel {
+    font-family: Avenir Bold Demi;
+    color: $instock-blue;
+  }
+  &__itemDesc-title--ep {
+    margin-top: 12px;
+  }
+  &__editPageStatus-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__editPageStatus-title {
+    @include label;
+    margin-top: 2rem;
+  }
+  &__editPageStatus-show {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    @include tablet {
+      margin-top: 0.75rem;
+    }
+  }
+  &__editPageStatus-toggle {
+    padding-right: 20px;
+    margin-left: auto;
+  }
+  &__editPageStatus-text {
+    @include paragraph;
+    color: $black;
+    margin: 0;
+    @include tablet {
+      @include paragraph-tablet;
+      width: 6rem;
+    }
+  }
+  &__categories--textEp {
+    margin-bottom: 20px;
+    @include tablet {
+      height: 4rem;
+    }
+  }
+}
+
+.editProduct__btn-cancel {
+  @include paragraph-bold;
+  color: $instock-blue;
+  align-self: center;
+  margin: 0;
 }
 
 // tablet version
 @include tablet {
-    .product-container2--ep {
-        padding-right: 150px;
+  .editProduct-container2--ep {
+    padding-right: 150px;
+  }
+  .editProduct-container2 {
+    margin: 0;
+  }
+  .editProduct {
+    margin: 0 1.5rem;
+    &__categories--text {
+      margin-bottom: 40px;
     }
-    .product {
-        &__itemDesc--ep {
-            margin-bottom: 0;
-        }
-        &__editPageStatus-toggle {
-            margin-left: 100px;
-        }
-        &__btn-container--ep {
-            flex-direction: row-reverse;
-            align-items: center;
-            justify-content: flex-start;
-        }
-        &__btn-cancel {
-            margin-right: 40px;
-            padding-top: 15px;
-        }
+    &__name {
+      margin: 0;
+      padding: 48px 0 40px 0;
+      border-bottom: 1px solid $mercury;
     }
-    .editProduct {
-        input {
-            width: 31vw;
-            margin-right: 30px;
-        }
+    &__itemDesc--ep {
+      margin-bottom: 0;
     }
-    .editproduct-wrapper {
-        display: flex;
+    &__itemDesc-title--ep {
+      margin-top: 32px;
     }
+    &__editPageStatus-toggle {
+      margin-left: 100px;
+    }
+    &__btn-container--ep {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: flex-start;
+      border-top: 1px solid $mercury;
+    }
+    &__btn-cancel {
+      margin-right: 40px;
+      padding-top: 15px;
+    }
+  }
+  .editProduct__form {
+    input {
+      width: 265px;
+      margin-right: 40px;
+    }
+  }
+  .editProduct-wrapper {
+    display: flex;
+  }
 }
 
 // desktop version
 @include desktop {
-    .editProduct {
-        textarea {
-            width: 30vw;
-            height: 150px;
-        }
-        input {
-            width: 15vw;
-            height: 5vh;
-        }
+  .editProduct__form {
+    width: 1080px;
+    textarea {
+      width: 512px;
+      height: 140px;
     }
-    .product {
-        &__itemDesc-title--ep {
-            margin-bottom: 0;
-            margin-top: 40px;
-        }
-        &__editPageStatus-title,
-        &__quantity-title {
-            margin-top: 0;
-        }
-        &__categories--ep {
-            margin-top: 0;
-        }
-        &__categories-title--ep {
-            margin-top: 24px;
-        }
-        &__btn-cancel {
-            padding-top: 0;
-        }
+    input {
+      width: 236px;
+      height: 48px;
     }
-    .product-wrapper__ep {
-        margin-bottom: 24px;
+  }
+  .editProduct {
+    width: 1080px;
+    margin: 0 auto;
+    &__itemDesc-title--ep {
+      margin-bottom: 0;
+      margin-top: 0;
     }
+    &__itemDesc-wrapper {
+      width: 512px;
+      margin-right: 40px;
+    }
+    &__lastOrder-title,
+    &__location-title {
+      margin-top: 0;
+    }
+    &__editPageStatus-title,
+    &__quantity-title {
+      margin-top: 0;
+    }
+    &__categories--ep {
+      margin-top: 0;
+    }
+    &__categories-title--ep {
+      margin-top: 24px;
+    }
+    &__btn-cancel {
+      padding-top: 0;
+    }
+  }
+  .editProduct-wrapper__ep {
+    margin-bottom: 24px;
+  }
+
+  .editProduct-container2 {
+    display: flex;
+    padding: 0;
+    margin-top: 40px;
+  }
 }
