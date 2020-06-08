@@ -12,7 +12,7 @@ export default class productSummary extends Component {
     const id = this.props.match.params.id;
     //const id = "1af0jruup5g0";
     axios.get(`http://localhost:5000/inventory/${id}`).then((response) => {
-      console.log(response);
+      //console.log(response);
       this.setState({
         product: response.data.filter((item) => {
           return item.id === id;
@@ -78,7 +78,9 @@ export default class productSummary extends Component {
                 </div>
               </div>
               <div className="product__btn-container">
-                <button className="product__btn">EDIT</button>
+                <NavLink to={`/product/edit/${this.props.match.params.id}`}>
+                  <button className="product__btn">EDIT</button>
+                </NavLink>
               </div>
             </>
           );

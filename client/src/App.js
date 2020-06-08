@@ -13,10 +13,13 @@ import NewInventory from "./components/pages/NewInventory";
 import NewWarehouse from "./components/pages/NewWarehouse";
 import productSummary from "./components/pages/productSummary";
 import LocationDetails from "./components/pages/LocationDetails";
+import EditProduct from "./components/pages/editProduct";
 
 class App extends React.Component {
   state = {
     inventoryList: [],
+    warehouseList: [],
+    locationOptions: [],
     checked: true,
     newInventory: false,
     newLocation: false,
@@ -49,7 +52,12 @@ class App extends React.Component {
   }
 
   render() {
-    const { inventoryList, newInventory, newLocation } = this.state;
+    const {
+      inventoryList,
+      newInventory,
+      newLocation,
+      warehouseList,
+    } = this.state;
     return (
       <Router>
         {newInventory ? (
@@ -57,7 +65,7 @@ class App extends React.Component {
             toggle={this.inventoryTogglePop}
             onChange={this.handleChange}
             checked={this.state.checked}
-            inventoryList={inventoryList}
+            warehouseList={warehouseList}
           />
         ) : null}
         {newLocation ? <NewWarehouse toggle={this.locationTogglePop} /> : null}
@@ -83,6 +91,18 @@ class App extends React.Component {
           <Route path="/locationdetails" component={LocationDetails} />
           <Route path="/product/:id" component={productSummary} />
           <Redirect from="/product" to="/inventory" exact />
+          {/* <Route path="/product/edit/:id" component={EditProduct} /> */}
+          <Route
+            path="/product/edit/:id"
+            render={(props) => (
+              <EditProduct
+                checked={this.state.checked}
+                onChange={this.handleChange}
+                {...props}
+              />
+            )}
+          />
+          <Route path="/product/:id" component={productSummary} />
         </Switch>
       </Router>
     );
