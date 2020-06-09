@@ -27,12 +27,22 @@ export default class EditProduct extends Component {
     const lastOrdered = event.target.lastOrdered.value;
     const quantity = event.target.quantity.value;
     const description = event.target.description.value;
+    // const stockStatus = event.target.stockStatus.value;
+    const category = event.target.category.value;
     if (lastOrdered !== "" && quantity !== "") {
       axios
-        .put(`/inventory/${this.props.match.params.id}`, {
+        .patch(`/inventory/${this.props.match.params.id}`, {
+          id: this.state.product[0].id,
+          warehouseID: this.state.product[0].warehouseID,
+          productName: this.state.product[0].productName,
           briefDescription: description,
+          detailDescription: this.state.product[0].detailDescription,
           lastOrder: DateUtil.format(lastOrdered),
-          quantity,
+          city: this.state.product[0].city,
+          country: this.state.product[0].country,
+          quantity: quantity,
+          inStock: this.props.checked,
+          category: category,
         })
         .then((response) => {
           console.log(response);
@@ -60,7 +70,7 @@ export default class EditProduct extends Component {
                   <NavLink to={`/inventory`}>
                     <img src={Icons.backArrow} alt="" />
                   </NavLink>
-                  <h2 className="editProduct__name--text">
+                  <h2 name="productName" className="editProduct__name--text">
                     {item.productName}
                   </h2>
                 </div>
@@ -126,6 +136,7 @@ export default class EditProduct extends Component {
                             )}
                             <Switch
                               className="editProduct__editPageStatus-toggle"
+                              name="stockStatus"
                               onChange={this.props.onChange}
                               checked={this.props.checked}
                               uncheckedIcon={false}
@@ -148,6 +159,7 @@ export default class EditProduct extends Component {
                         CATEGORIES
                       </h3>
                       <textarea
+                        name="category"
                         className="editProduct__categories--text editProduct__categories--textEp"
                         placeholder={item.category}
                       ></textarea>
