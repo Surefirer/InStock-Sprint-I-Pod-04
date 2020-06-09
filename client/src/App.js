@@ -75,7 +75,7 @@ class App extends React.Component {
         {newLocation ? (
           <NewWarehouse
             toggle={this.locationTogglePop}
-            inventoryList={inventoryList} // testing for dropdown, need to be changed to warehouseList
+            inventoryList={inventoryList}
           />
         ) : null}
         <Header />

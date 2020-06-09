@@ -4,14 +4,12 @@ import Switch from "react-switch";
 import axios from "axios";
 import { v4 as uuid } from "uuid";
 import DateUtil from "../DateUtil";
-// import SelectInput from "../SelectInput";
 
 class NewInventory extends React.Component {
   state = {
     options: [], // options for location dropdown
   };
 
-  // need to be swapped to warehouseList
   componentDidMount() {
     this.props.locationsList.map((location) => {
       const name = location.name;
@@ -96,7 +94,6 @@ class NewInventory extends React.Component {
             name="location"
             options={this.state.options}
           />
-          {/* <SelectInput inventoryList={this.props.inventoryList} /> */}
           <div className="createNew__wrapper">
             <div className="createNew__wrapper--input">
               <label className="createNew__label" htmlFor="quantity">

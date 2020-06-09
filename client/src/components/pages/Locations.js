@@ -60,7 +60,7 @@ function Locations(props) {
           <div className="locations__contentWrapperTablet">
             <div className="locations__item">
               {props.locationsList.map((l) => (
-                <div className="locations__warehouseTitleContainer">
+                <div className="locations__warehouseTitleContainer" key={l.id}>
                   <h2 className="locations__titleTablet">{l.name}</h2>
                   <p className="locations__text">{l.address}</p>
                 </div>
@@ -100,7 +100,7 @@ function Locations(props) {
             <h3 className="locations__title locations__category">CATEGORIES</h3>
           </div>
           {props.locationsList.map((l) => (
-            <div className="locations__contentWrapper">
+            <div className="locations__contentWrapper" key={l.id}>
               <div className="locations__item">
                 <h2 className="locations__warehouse">{l.name}</h2>
                 <p className="locations__text locations__address">

@@ -8,11 +8,10 @@ export default class productSummary extends Component {
     product: [],
   };
 
+  // grabbing single product detail
   componentDidMount() {
     const id = this.props.match.params.id;
-    //const id = "1af0jruup5g0";
     axios.get(`http://localhost:5000/inventory/${id}`).then((response) => {
-      //console.log(response);
       this.setState({
         product: response.data.filter((item) => {
           return item.id === id;
@@ -40,13 +39,11 @@ export default class productSummary extends Component {
                 </div>
 
                 <div className="product__status">
-                  <p>
-                    {item.inStock === true ? (
-                      <p className="product__status--in">In Stock</p>
-                    ) : (
-                      <p className="product__status--out">Out of Stock</p>
-                    )}
-                  </p>
+                  {item.inStock === true ? (
+                    <p className="product__status--in">In Stock</p>
+                  ) : (
+                    <p className="product__status--out">Out of Stock</p>
+                  )}
                 </div>
               </div>
               <div className="product-container2">

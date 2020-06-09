@@ -2,14 +2,12 @@ import React from "react";
 import Select from "react-select";
 import axios from "axios";
 import { v4 as uuid } from "uuid";
-// import SelectInput from "../SelectInput";
 
 class NewWarehouse extends React.Component {
   state = {
     options: [], // options for location dropdown
   };
 
-  // need to be swapped to warehouseList
   componentDidMount() {
     this.props.inventoryList.map((inventory) => {
       const id = inventory.id;
@@ -108,7 +106,6 @@ class NewWarehouse extends React.Component {
                 name="location"
                 options={this.state.options}
               />
-              {/* <SelectInput inventoryList={this.props.inventoryList} /> */}
             </div>
           </div>
           <div className="createNew__wrapper">
