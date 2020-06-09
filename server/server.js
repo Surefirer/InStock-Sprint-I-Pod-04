@@ -42,7 +42,7 @@ app.get("/inventory/:id", (req, res) => {
 });
 
 // update existing product
-app.put("/inventory/:id", (req, res) => {
+app.patch("/inventory/:id", (req, res) => {
   res.json(updateProduct(req.params.id, req.body));
 });
 
