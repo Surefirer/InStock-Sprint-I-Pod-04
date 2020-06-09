@@ -1,12 +1,29 @@
 import React from "react";
-// import Select from "react-select";
+import Select from "react-select";
 import Switch from "react-switch";
 import axios from "axios";
 import { v4 as uuid } from "uuid";
 import DateUtil from "../DateUtil";
-import SelectInput from "../SelectInput";
 
 class NewInventory extends React.Component {
+  state = {
+    options: [], // options for location dropdown
+  };
+
+  componentDidMount() {
+    this.props.locationsList.map((location) => {
+      const name = location.name;
+      const id = location.id;
+      const option = {
+        id,
+        value: name,
+        label: name,
+      };
+      this.state.options.push(option);
+      return option;
+    }, console.log(this.state.options));
+  }
+
   handleClick = () => {
     this.props.toggle();
   };
@@ -71,13 +88,12 @@ class NewInventory extends React.Component {
           <label className="createNew__label" htmlFor="location">
             LOCATION
           </label>
-          {/* <Select
+          <Select
             className="createNew__location"
             classNamePrefix="Select"
             name="location"
-            options={options}
-          /> */}
-          <SelectInput inventoryList={this.props.inventoryList} />
+            options={this.state.options}
+          />
           <div className="createNew__wrapper">
             <div className="createNew__wrapper--input">
               <label className="createNew__label" htmlFor="quantity">

@@ -18,8 +18,6 @@ import EditProduct from "./components/pages/editProduct";
 class App extends React.Component {
   state = {
     inventoryList: [],
-    warehouseList: [],
-    locationOptions: [],
     locationsList: [],
     checked: true,
     newInventory: false,
@@ -71,13 +69,13 @@ class App extends React.Component {
             toggle={this.inventoryTogglePop}
             onChange={this.handleChange}
             checked={this.state.checked}
-            inventoryList={inventoryList} // testing for dropdown, need to be changed to warehouseList
+            locationsList={locationsList}
           />
         ) : null}
         {newLocation ? (
           <NewWarehouse
             toggle={this.locationTogglePop}
-            inventoryList={inventoryList} // testing for dropdown, need to be changed to warehouseList
+            inventoryList={inventoryList}
           />
         ) : null}
         <Header />

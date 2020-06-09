@@ -7,9 +7,6 @@
     background-color: $alabaster;
     padding: 1rem 0 0 1rem;
   }
-  //   ::placeholder {
-  //     padding: 1rem;
-  //   }
   input {
     border: 1px solid $mercury;
     padding-left: 1rem;
@@ -24,7 +21,7 @@
   margin: 0 1rem;
   &__title {
     margin: 0;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     @include label;
   }
   &__name {
@@ -65,10 +62,6 @@
     justify-content: space-between;
     align-items: center;
   }
-  &__editPageStatus-title {
-    @include label;
-    margin-top: 2rem;
-  }
   &__editPageStatus-show {
     display: flex;
     align-items: center;
@@ -91,7 +84,7 @@
     }
   }
   &__categories--textEp {
-    margin-bottom: 20px;
+    margin-bottom: 2.5rem;
     @include tablet {
       height: 4rem;
     }
@@ -103,6 +96,7 @@
   color: $instock-blue;
   align-self: center;
   margin: 0;
+  margin-top: 1.5rem;
 }
 
 // tablet version
@@ -194,6 +188,7 @@
     }
     &__btn-cancel {
       padding-top: 0;
+      margin-top: 0;
     }
   }
   .editProduct-wrapper__ep {
