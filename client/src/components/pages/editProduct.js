@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import Switch from "react-switch";
 import DateUtil from "../DateUtil";
 
-export default class EditProduct extends Component {
+class EditProduct extends Component {
   state = {
     product: [],
   };
@@ -185,3 +185,5 @@ export default class EditProduct extends Component {
     );
   }
 }
+
+export default EditProduct;

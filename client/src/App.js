@@ -11,8 +11,8 @@ import Inventory from "./components/pages/Inventory";
 import Locations from "./components/pages/Locations";
 import NewInventory from "./components/pages/NewInventory";
 import NewWarehouse from "./components/pages/NewWarehouse";
-import ProductSummary from "./components/pages/ProductSummary";
 import LocationDetails from "./components/pages/LocationDetails";
+import ProductSummary from "./components/pages/productSummary";
 import EditProduct from "./components/pages/EditProduct";
 
 class App extends React.Component {
