@@ -45,7 +45,10 @@ function Inventory(props) {
           {props.inventoryList.map((inventory) => (
             <div className="inventory__contentWrapper" key={inventory.id}>
               <div className="inventory__itemWrapper">
-                <NavLink to={`/product/${inventory.id}`}>
+                <NavLink
+                  to={`/product/${inventory.id}`}
+                  activeClassName="active"
+                >
                   <h2 className="inventory__product">
                     {inventory.productName}
                   </h2>{" "}
