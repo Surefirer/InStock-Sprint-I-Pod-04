@@ -11,11 +11,12 @@ class NewWarehouse extends React.Component {
 
   // need to be swapped to warehouseList
   componentDidMount() {
-    this.props.inventoryList.map((inventory, index) => {
+    this.props.inventoryList.map((inventory) => {
+      const id = inventory.id;
       const city = inventory.city;
       const country = inventory.country;
       const option = {
-        id: index,
+        id,
         value: `${city}, ${country}`,
         label: `${city}, ${country}`,
       };
