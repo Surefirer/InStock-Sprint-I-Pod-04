@@ -6,7 +6,7 @@ function Header({ currentTab, changeCurrentTab }) {
   return (
     <header className="header">
       <div className="header__container">
-        <Link to="/inventory">
+        <Link to="/inventory" onClick={() => changeCurrentTab("inventory")}>
           <img
             className="header__logo"
             src={Logos.instockLogoSvg}

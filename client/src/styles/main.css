@@ -1076,6 +1076,11 @@ textarea::placeholder {
 
 @media (min-width: 768px) {
   .locations__contentWrapperTablet {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: initial;
         -ms-flex-align: initial;
             align-items: initial;
@@ -1090,6 +1095,11 @@ textarea::placeholder {
   .locations__contentWrapperTablet {
     height: 5rem;
   }
+}
+
+.locations__contentWrapperTablet--text {
+  width: 100%;
+  margin-right: auto;
 }
 
 .locations__item {
@@ -1202,15 +1212,10 @@ textarea::placeholder {
 
 @media (min-width: 768px) {
   .locations__imageContainer {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin-left: 90%;
-    margin-left: 69vw;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    width: 100%;
+    margin-right: 0.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
