@@ -12,7 +12,7 @@ import Locations from "./components/pages/Locations";
 import NewInventory from "./components/pages/NewInventory";
 import NewWarehouse from "./components/pages/NewWarehouse";
 import LocationDetails from "./components/pages/LocationDetails";
-import ProductSummary from "./components/pages/productSummary";
+import ProductSummary from "./components/pages/ProductSummary";
 import EditProduct from "./components/pages/EditProduct";
 
 class App extends React.Component {
