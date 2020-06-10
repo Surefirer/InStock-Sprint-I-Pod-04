@@ -1,8 +1,11 @@
 .createNew {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 99;
+  z-index: 99; // so it shows on top of header and modal
   background-color: $white;
   @include tablet {
     background-color: rgba(0, 0, 0, 0.6);
@@ -10,45 +13,41 @@
   &__form {
     margin: 0 1rem;
     @include tablet {
-      position: absolute;
       padding: 0 3rem;
       border-radius: 0.25rem;
-      top: 20%;
-      left: 30%;
-      width: 36rem;
-      height: 39rem;
       background-color: $white;
       margin: 0;
+      width: 36rem;
+      height: 41rem;
     }
     &--warehouse {
       margin: 0 1rem;
-      overflow-y: scroll; // not working
+      height: 100vh;
+      overflow: scroll;
       @include tablet {
-        position: absolute;
         padding: 0 3rem;
         border-radius: 0.25rem;
-        top: 20%;
-        left: 30%;
-        width: 36rem;
-        height: 45rem;
         background-color: $white;
         margin: 0;
+        width: 36rem;
+        height: 45rem;
+        overflow: hidden;
       }
     }
   }
   &__header {
     @include header;
-    margin: 2rem 0;
+    margin: 0 0 2rem 0;
     @include tablet {
       @include headerOne-tablet;
-      margin: 3rem 0;
+      margin: 3.5rem 0 3rem 0;
     }
     &--warehouse {
       @include header;
       margin: 2rem 0;
       @include tablet {
         @include headerOne-tablet;
-        margin: 3rem 0 2rem 0;
+        margin: 2.5rem 0;
       }
     }
   }
@@ -83,25 +82,11 @@
   &__input {
     @extend .input;
     height: 3rem;
-    padding: 0 0.75rem;
+    padding: 0 1rem;
     margin-bottom: 1.5rem;
     @include tablet {
       width: 13.75rem;
       padding-left: 1rem;
-    }
-  }
-  &__location {
-    @extend .input;
-    height: 3rem;
-    margin-bottom: 1.5rem;
-    padding-left: 0.75rem;
-
-    &--option {
-      @include paragraph;
-      color: $black;
-      @include tablet {
-        @include paragraph-tablet;
-      }
     }
   }
   &__status {
@@ -128,7 +113,7 @@
   }
   &__btn {
     @extend .button;
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     @include tablet {
       width: 10rem;
       height: 3rem;
@@ -143,4 +128,9 @@
       margin-right: 3rem;
     }
   }
+}
+
+.Select__control {
+  height: 3rem;
+  margin-bottom: 1.5rem;
 }

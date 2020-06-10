@@ -31,7 +31,7 @@
 /* ==========================================================================
        utility classes
     ========================================================================== */
-.input, .inventory__search--input, .locations__search--input, .createNew__input, .createNew__location, .createNew__descInput, .locationdetails-bottom__search--input {
+.input, .inventory__search--input, .locations__search--input, .createNew__input, .createNew__descInput, .locationdetails-bottom__search--input {
   background-color: rgba(225, 225, 225, 0.5);
   width: 100%;
   border-radius: 0.25rem;
@@ -40,7 +40,7 @@
   transition: 0.2s ease-in-out;
 }
 
-.input:focus, .inventory__search--input:focus, .locations__search--input:focus, .createNew__input:focus, .createNew__location:focus, .createNew__descInput:focus, .locationdetails-bottom__search--input:focus {
+.input:focus, .inventory__search--input:focus, .locations__search--input:focus, .createNew__input:focus, .createNew__descInput:focus, .locationdetails-bottom__search--input:focus {
   border: 2px solid #323232;
 }
 
@@ -327,7 +327,7 @@ textarea::placeholder {
           justify-content: center;
 }
 
-.header__link--active, .header__link:hover {
+.header__link:hover {
   color: #ffffff;
   font-family: Avenir Bold Demi;
   border-bottom: 0.25rem solid #ffffff;
@@ -724,6 +724,10 @@ textarea::placeholder {
   }
 }
 
+.locations__wrapper {
+  height: 136px;
+}
+
 @media (min-width: 768px) {
   .locations__wrapper {
     display: -webkit-box;
@@ -733,11 +737,17 @@ textarea::placeholder {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     height: 75px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+  }
+}
+
+@media (min-width: 1080px) {
+  .locations__wrapper {
+    margin-bottom: 3rem;
   }
 }
 
@@ -787,16 +797,29 @@ textarea::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  border-bottom: 1px solid #e1e1e1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .locations__bodyMobile {
     display: none;
   }
+}
+
+.locations__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-bottom: 1px solid #e1e1e1;
+  margin-top: 1.5rem;
 }
 
 .locations__title {
@@ -936,7 +959,7 @@ textarea::placeholder {
   }
 }
 
-.locations__rightArrowIcon {
+.locations__arrowWrapper {
   margin-left: auto;
 }
 
@@ -944,7 +967,7 @@ textarea::placeholder {
   .locations__rightArrowIcon {
     margin-right: 1.5rem;
     margin-right: initial;
-    padding-top: 15px;
+    margin-left: auto;
   }
 }
 
@@ -992,6 +1015,7 @@ textarea::placeholder {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1005,6 +1029,12 @@ textarea::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (min-width: 1080px) {
+  .locations__titleWrapper {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .locations__contentWrapper {
@@ -1024,8 +1054,7 @@ textarea::placeholder {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding-top: 32px;
-    padding-bottom: 24px;
+    padding: 1.5rem 0;
   }
 }
 
@@ -1047,13 +1076,18 @@ textarea::placeholder {
 
 @media (min-width: 768px) {
   .locations__contentWrapperTablet {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: initial;
         -ms-flex-align: initial;
             align-items: initial;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding-top: 0;
+    padding-top: 1.5rem;
   }
 }
 
@@ -1061,6 +1095,11 @@ textarea::placeholder {
   .locations__contentWrapperTablet {
     height: 5rem;
   }
+}
+
+.locations__contentWrapperTablet--text {
+  width: 100%;
+  margin-right: auto;
 }
 
 .locations__item {
@@ -1092,6 +1131,14 @@ textarea::placeholder {
   margin-right: 50px;
 }
 
+@media (min-width: 768px) {
+  .locations__contact {
+    width: 34.44%;
+    margin-right: 0;
+    padding-right: 4rem;
+  }
+}
+
 @media (min-width: 1080px) {
   .locations__contact {
     margin-right: 0;
@@ -1121,6 +1168,13 @@ textarea::placeholder {
   margin-right: 50px;
 }
 
+@media (min-width: 768px) {
+  .locations__category {
+    width: 34.44%;
+    margin-right: 0;
+  }
+}
+
 @media (min-width: 1080px) {
   .locations__category {
     margin-right: 0;
@@ -1128,6 +1182,13 @@ textarea::placeholder {
     height: -moz-fit-content;
     height: fit-content;
     width: 24%;
+  }
+}
+
+@media (min-width: 768px) {
+  .locations__categories {
+    width: 31.11%;
+    padding-right: 1rem;
   }
 }
 
@@ -1151,16 +1212,10 @@ textarea::placeholder {
 
 @media (min-width: 768px) {
   .locations__imageContainer {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin-left: 44.3rem;
-    margin-left: 74%;
-    margin-left: 69vw;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    width: 100%;
+    margin-right: 0.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1187,6 +1242,7 @@ textarea::placeholder {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1200,6 +1256,15 @@ textarea::placeholder {
 }
 
 .createNew {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -1219,34 +1284,30 @@ textarea::placeholder {
 
 @media (min-width: 768px) {
   .createNew__form {
-    position: absolute;
     padding: 0 3rem;
     border-radius: 0.25rem;
-    top: 20%;
-    left: 30%;
-    width: 36rem;
-    height: 39rem;
     background-color: #ffffff;
     margin: 0;
+    width: 36rem;
+    height: 41rem;
   }
 }
 
 .createNew__form--warehouse {
   margin: 0 1rem;
-  overflow-y: scroll;
+  height: 100vh;
+  overflow: scroll;
 }
 
 @media (min-width: 768px) {
   .createNew__form--warehouse {
-    position: absolute;
     padding: 0 3rem;
     border-radius: 0.25rem;
-    top: 20%;
-    left: 30%;
-    width: 36rem;
-    height: 45rem;
     background-color: #ffffff;
     margin: 0;
+    width: 36rem;
+    height: 45rem;
+    overflow: hidden;
   }
 }
 
@@ -1254,7 +1315,7 @@ textarea::placeholder {
   font-family: Avenir Bold;
   font-size: 1.5rem;
   line-height: 2rem;
-  margin: 2rem 0;
+  margin: 0 0 2rem 0;
 }
 
 @media (min-width: 768px) {
@@ -1262,7 +1323,7 @@ textarea::placeholder {
     font-family: Avenir Bold;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    margin: 3rem 0;
+    margin: 3.5rem 0 3rem 0;
   }
 }
 
@@ -1278,7 +1339,7 @@ textarea::placeholder {
     font-family: Avenir Bold;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    margin: 3rem 0 2rem 0;
+    margin: 2.5rem 0;
   }
 }
 
@@ -1356,7 +1417,7 @@ textarea::placeholder {
 
 .createNew__input {
   height: 3rem;
-  padding: 0 0.75rem;
+  padding: 0 1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -1364,27 +1425,6 @@ textarea::placeholder {
   .createNew__input {
     width: 13.75rem;
     padding-left: 1rem;
-  }
-}
-
-.createNew__location {
-  height: 3rem;
-  margin-bottom: 1.5rem;
-  padding-left: 0.75rem;
-}
-
-.createNew__location--option {
-  font-family: Avenir Regular;
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-  color: #323232;
-}
-
-@media (min-width: 768px) {
-  .createNew__location--option {
-    font-family: Avenir Regular;
-    font-size: 0.875rem;
-    line-height: 1.375rem;
   }
 }
 
@@ -1429,7 +1469,7 @@ textarea::placeholder {
 }
 
 .createNew__btn {
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 }
 
 @media (min-width: 768px) {
@@ -1456,9 +1496,13 @@ textarea::placeholder {
   }
 }
 
+.Select__control {
+  height: 3rem;
+  margin-bottom: 1.5rem;
+}
+
 .product {
-  width: 90%;
-  margin: 0 auto;
+  margin: 0 1rem;
 }
 
 .product__name {
@@ -1473,7 +1517,7 @@ textarea::placeholder {
 
 .product__name h2 {
   margin: 0;
-  padding-left: 15px;
+  padding-left: 1rem;
   font-family: Avenir Bold;
 }
 
@@ -1537,21 +1581,26 @@ textarea::placeholder {
   line-height: 1.125rem;
 }
 
-.product__itemDesc-title, .product__lastOrder-title, .product__location-title, .product__quantity-title, .product__categories-title {
+.product__itemDesc-title, .product__lastOrder-title {
   font-family: Avenir Bold Demi;
   font-size: 0.75rem;
   line-height: 1.25rem;
   letter-spacing: 0.25px;
   color: #afafaf;
-  margin-top: 2rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.product__location-title, .product__quantity-title, .product__categories-title {
+  font-family: Avenir Bold Demi;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.25px;
+  color: #afafaf;
+  margin: 1.5rem 0 1rem 0;
 }
 
 .product__categories--text {
-  margin-bottom: 40px;
-}
-
-.product__btn {
-  margin: 20px 0;
+  margin-bottom: 2.5rem;
 }
 
 .product__btn button {
@@ -1559,7 +1608,7 @@ textarea::placeholder {
   border: none;
   background-color: transparent;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -1576,6 +1625,9 @@ textarea::placeholder {
   .product {
     margin: 0 1.5rem;
   }
+  .product p {
+    margin-bottom: 0;
+  }
   .product__name {
     margin: 0;
   }
@@ -1583,14 +1635,20 @@ textarea::placeholder {
     font-family: Avenir Bold;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    margin: 48px 0 40px 0;
+    margin: 3rem 0 2.5rem 0;
+  }
+  .product__quantity-title, .product__categories-title {
+    margin-top: 2rem;
+  }
+  .product__categories {
+    margin-bottom: 2.5rem;
   }
   .product__backArrow {
     margin-top: 0.5rem;
   }
   .product__status {
     margin-bottom: 0;
-    margin-left: 24px;
+    margin-left: 1.5rem;
     margin-top: 0.75rem;
   }
   .product .product-container2 {
@@ -1598,7 +1656,6 @@ textarea::placeholder {
   }
   .product__itemDesc {
     margin-top: 30px;
-    margin-bottom: 30px;
   }
   .product__itemDesc P, .product__lastOrder P, .product__location P, .product__quantity P, .product__categories P {
     font-family: Avenir Regular;
@@ -1669,13 +1726,14 @@ textarea::placeholder {
   .product__lastOrder-title, .product__location-title {
     margin: 0;
   }
+  .product__quantity-title, .product__categories-title {
+    margin-top: 56px;
+  }
   .product__location {
     margin-right: auto;
   }
   .product__categories {
     margin-top: 56px;
-  }
-  .product__categories--text {
     margin-bottom: 48px;
   }
   .product__itemDesc P, .product__lastOrder P, .product__location P, .product__quantity P, .product__categories P {
@@ -2308,7 +2366,7 @@ textarea::placeholder {
 
 .editProduct__title {
   margin: 0;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-family: Avenir Bold Demi;
   font-size: 0.75rem;
   line-height: 1.25rem;
@@ -2379,15 +2437,6 @@ textarea::placeholder {
           align-items: center;
 }
 
-.editProduct__editPageStatus-title {
-  font-family: Avenir Bold Demi;
-  font-size: 0.75rem;
-  line-height: 1.25rem;
-  letter-spacing: 0.25px;
-  color: #afafaf;
-  margin-top: 2rem;
-}
-
 .editProduct__editPageStatus-show {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2427,7 +2476,7 @@ textarea::placeholder {
 }
 
 .editProduct__categories--textEp {
-  margin-bottom: 20px;
+  margin-bottom: 2.5rem;
 }
 
 @media (min-width: 768px) {
@@ -2445,6 +2494,7 @@ textarea::placeholder {
       -ms-grid-row-align: center;
       align-self: center;
   margin: 0;
+  margin-top: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -2540,6 +2590,7 @@ textarea::placeholder {
   }
   .editProduct__btn-cancel {
     padding-top: 0;
+    margin-top: 0;
   }
   .editProduct-wrapper__ep {
     margin-bottom: 24px;

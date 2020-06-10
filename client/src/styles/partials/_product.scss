@@ -1,6 +1,5 @@
 .product {
-  width: 90%;
-  margin: 0 auto;
+  margin: 0 1rem;
   &__name {
     display: flex;
     align-items: center;
@@ -8,7 +7,7 @@
 
     h2 {
       margin: 0;
-      padding-left: 15px;
+      padding-left: 1rem;
       font-family: Avenir Bold;
     }
   }
@@ -53,25 +52,27 @@
     }
   }
   &__itemDesc-title,
-  &__lastOrder-title,
+  &__lastOrder-title {
+    @include label;
+    margin: 2rem 0 1rem 0;
+  }
   &__location-title,
   &__quantity-title,
   &__categories-title {
     @include label;
-    margin-top: 2rem;
+    margin: 1.5rem 0 1rem 0;
   }
   &__categories--text {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
   &__btn {
     @extend .button;
-    margin: 20px 0;
     button {
       outline: none;
       border: none;
       background-color: transparent;
       color: $white;
-      font-size: 16px;
+      font-size: 1rem;
     }
   }
 }
@@ -85,31 +86,37 @@
     width: 100%;
   }
   .product {
-    // width: 100%;
     margin: 0 1.5rem;
+    p {
+      margin-bottom: 0;
+    }
     &__name {
       margin: 0;
       h2 {
         @include headerOne-tablet;
-        margin: 48px 0 40px 0;
+        margin: 3rem 0 2.5rem 0;
       }
+    }
+    &__quantity-title,
+    &__categories-title {
+      margin-top: 2rem;
+    }
+    &__categories {
+      margin-bottom: 2.5rem;
     }
     &__backArrow {
       margin-top: 0.5rem;
     }
     &__status {
       margin-bottom: 0;
-      margin-left: 24px;
+      margin-left: 1.5rem;
       margin-top: 0.75rem;
     }
     .product-container2 {
-      // width: 95%;
-      // margin: 0 auto;
       border-bottom: 1px solid $mercury;
     }
     &__itemDesc {
       margin-top: 30px;
-      margin-bottom: 30px;
     }
     &__itemDesc,
     &__lastOrder,
@@ -178,14 +185,16 @@
     &__location-title {
       margin: 0;
     }
+    &__quantity-title,
+    &__categories-title {
+      margin-top: 56px;
+    }
     &__location {
       margin-right: auto;
     }
     &__categories {
       margin-top: 56px;
-      &--text {
-        margin-bottom: 48px;
-      }
+      margin-bottom: 48px;
     }
     &__itemDesc,
     &__lastOrder,
