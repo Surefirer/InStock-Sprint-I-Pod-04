@@ -1,11 +1,13 @@
 .locationdetails-top {
-  width: 90%;
-  margin: 0 auto;
+  p {
+    margin-bottom: 32px;
+  }
   &__name {
     display: flex;
     align-items: center;
     h2 {
-      padding-left: 15px;
+      margin: 2rem 0;
+      padding-left: 1rem;
       font-family: Avenir Bold;
     }
   }
@@ -45,7 +47,10 @@
       @include paragraph;
     }
   }
-  &__itemDesc-title,
+  &__itemDesc-title {
+    @include label;
+    margin-top: 0;
+  }
   &__lastOrder-title,
   &__location-title,
   &__quantity-title,
@@ -71,16 +76,38 @@
   }
 }
 
+.locationdetails-top-container1,
+.locationdetails-top-container2 {
+  margin: 0 1rem;
+}
+
 // tablet version
 @include tablet {
+  p {
+    margin-bottom: 0;
+  }
   .locationdetails-top-container1 {
     display: flex;
     align-items: center;
+    margin: 0 1.5rem;
+    padding: 3rem 0 2.5rem 0;
     border-bottom: 1px solid $mercury;
+    @include desktop {
+      margin: 0;
+    }
+  }
+  .locationdetails-top-container2 {
+    margin: 0 1.5rem;
+    display: flex;
+    border-bottom: initial;
+    @include desktop {
+      margin: 0;
+    }
   }
   .locationdetails-top {
     &__name {
       h2 {
+        margin: 0;
         @include headerOne-tablet;
       }
     }
@@ -89,22 +116,17 @@
       margin-left: 35px;
     }
 
-    .locationdetails-top-container2 {
-      width: 95%;
-      margin: 0 auto;
-      border-bottom: 1px solid $mercury;
-      @include tablet {
-        display: flex;
-        border-bottom: initial;
-        margin-left: 0;
-      }
-    }
     &__itemDesc {
-      margin-top: 30px;
+      margin-top: 40px;
       margin-bottom: 30px;
       @include tablet {
         margin-right: 230px;
       }
+    }
+    &__lastOrder {
+    }
+    &__lastOrder-title {
+      margin-top: 40px;
     }
     &__itemDesc,
     &__lastOrder,
@@ -119,9 +141,7 @@
       display: flex;
       justify-content: space-between;
       width: 70%;
-      @include desktop {
-        margin-bottom: 20px;
-      }
+      margin-bottom: 0;
     }
     &__btn {
       width: 160px;
@@ -135,12 +155,16 @@
       justify-content: flex-end;
     }
   }
+  .locationdetails-bottom__titleWrapper {
+    padding-top: 1rem;
+  }
 }
 
 //desktop version
 @include desktop {
   .locationdetails-top {
     max-width: 1080px;
+    margin: 0 auto;
     &__itemInfo-wrapper {
       width: 100%;
     }
@@ -190,19 +214,20 @@
     }
 
     &__itemDesc-wrapper {
-      @include desktop {
-        margin-right: 315px;
-        width: 350px;
-      }
+      margin-right: 315px;
+      width: 350px;
     }
   }
   .locationdetails-top-container2 {
     display: flex;
-    border-bottom: 1px solid $mercury;
   }
   .locationdetails-top-wrapper {
     margin-top: 40px;
     margin-bottom: 56px;
+  }
+  .locationdetails-bottom__wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
   }
 }
 
@@ -227,6 +252,10 @@
       justify-content: space-between;
       margin-top: 3rem;
       height: 6rem;
+    }
+    @include desktop {
+      width: 1080px;
+      margin: 0 auto;
     }
   }
   &__header {
@@ -257,15 +286,17 @@
     }
   }
   &__bodyMobile {
+    background-color: $alabaster;
     @include tablet {
       display: none;
     }
   }
   &__wrapperMobile {
+    margin: 0 1rem;
     display: flex;
     align-items: flex-start;
     border-bottom: 1px solid $mercury;
-    margin-top: 2rem;
+    padding-top: 2rem;
   }
   &__container {
     flex-direction: column;
@@ -307,7 +338,6 @@
       overflow: hidden;
     }
   }
-
   &__iconWrapper {
     margin-left: auto;
     position: relative;
@@ -360,6 +390,15 @@
     @include tablet {
       display: flex;
       flex-direction: column;
+      background-color: $alabaster;
+      height: 50vh;
+    }
+  }
+  &__wrapper {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      margin: 0 1.5rem;
     }
   }
   &__titleWrapper {
