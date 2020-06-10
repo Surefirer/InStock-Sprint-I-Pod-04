@@ -80,7 +80,14 @@ class App extends React.Component {
             inventoryList={inventoryList} // testing for dropdown, need to be changed to warehouseList
           />
         ) : null}
-        <Header />
+        <Header
+          currentTab={this.state.currentTab}
+          changeCurrentTab={(currentTab) => {
+            this.setState({
+              currentTab: currentTab,
+            });
+          }}
+        />
         <Switch>
           <Redirect from="/" to="/inventory" exact />
           <Route
