@@ -9,6 +9,7 @@ const updateProduct = require("./controller/updateProduct");
 const createNewInventory = require("./controller/createNewInventory");
 const addNewLocation = require("./controller/addNewLocation");
 const getWarehouse = require("./controller/getWarehouse");
+const getWarehouseProduct = require("./controller/getWarehouseProduct");
 
 // Middleware
 app.use(express.json());
@@ -30,6 +31,11 @@ app
 app.get("/locations/:id", (req, res) => {
   const locationId = req.params.id;
   res.json(getWarehouse(locationId));
+});
+
+app.get("/locationsinventory/:id", (req, res) => {
+  const productId = req.params.id;
+  res.json(getWarehouseProduct(productId));
 });
 
 // api info endpoint for inventory item
