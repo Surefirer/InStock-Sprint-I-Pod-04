@@ -11,8 +11,8 @@ import Inventory from "./components/pages/Inventory";
 import Locations from "./components/pages/Locations";
 import NewInventory from "./components/pages/NewInventory";
 import NewWarehouse from "./components/pages/NewWarehouse";
-import productSummary from "./components/pages/ProductSummary";
 import LocationDetails from "./components/pages/LocationDetails";
+import ProductSummary from "./components/pages/ProductSummary";
 import EditProduct from "./components/pages/EditProduct";
 
 class App extends React.Component {
@@ -72,13 +72,13 @@ class App extends React.Component {
             toggle={this.inventoryTogglePop}
             onChange={this.handleChange}
             checked={this.state.checked}
-            inventoryList={inventoryList} // testing for dropdown, need to be changed to warehouseList
+            locationsList={locationsList}
           />
         ) : null}
         {newLocation ? (
           <NewWarehouse
             toggle={this.locationTogglePop}
-            inventoryList={inventoryList} // testing for dropdown, need to be changed to warehouseList
+            inventoryList={inventoryList}
           />
         ) : null}
         <Header
@@ -116,7 +116,6 @@ class App extends React.Component {
             path="/locationdetails/:id"
             render={(props) => <LocationDetails {...props} />}
           />
-
           <Redirect from="/product" to="/inventory" exact />
           <Route
             path="/product/edit/:id"
@@ -128,7 +127,7 @@ class App extends React.Component {
               />
             )}
           />
-          <Route path="/product/:id" component={productSummary} />
+          <Route path="/product/:id" component={ProductSummary} />
         </Switch>
       </Router>
     );
