@@ -8,6 +8,7 @@ const getProduct = require("./controller/getProduct");
 const updateProduct = require("./controller/updateProduct");
 const createNewInventory = require("./controller/createNewInventory");
 const addNewLocation = require("./controller/addNewLocation");
+const getWarehouse = require("./controller/getWarehouse");
 
 // Middleware
 app.use(express.json());
@@ -25,6 +26,11 @@ app
   .post("/locations", (req, res) => {
     res.json(addNewLocation(req.body));
   });
+
+app.get("/locations/:id", (req, res) => {
+  const locationId = req.params.id;
+  res.json(getWarehouse(locationId));
+});
 
 // api info endpoint for inventory item
 app

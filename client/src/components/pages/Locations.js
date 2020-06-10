@@ -1,6 +1,6 @@
 import React from "react";
 import Icons from "../assets";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Locations(props) {
   return (
@@ -33,28 +33,28 @@ function Locations(props) {
           </div>
         </div>
         <div className="locations__bodyMobile">
-          {props.locationsList.map((locations) => (
+          {props.locationsList.map((l) => (
             <>
               <div className="locations__container">
-                <div className="locations__container--item" key={locations.id}>
-                  <h3 className="locations__titleMobile">{locations.name}</h3>
-                  <p className="locations__text">{locations.address}</p>
+                <div className="locations__container--item" key={l.id}>
+                  <h3 className="locations__titleMobile">{l.name}</h3>
+                  <p className="locations__text">{l.address}</p>
                   <p className="locations__text">
-                    {locations.contactName} <br /> <i>{locations.position}</i>
+                    {l.contactName} <br /> <i>{l.position}</i>
                   </p>
                   <p className="locations__text">
-                    {locations.phoneNumber} <br /> {locations.email}
+                    {l.phoneNumber} <br /> {l.email}
                   </p>
-                  <p className="locations__text">{locations.categories}</p>
+                  <p className="locations__text">{l.categories}</p>
                 </div>
                 <div className="locations__arrowWrapper">
-                  <Link to="/locationdetails">
+                  <NavLink to={`/locationdetails/${l.id}`}>
                     <img
                       className="locations__rightArrowIcon"
                       src={Icons.rightArrow}
                       alt="locations kebab icon"
                     />
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </>
@@ -86,13 +86,13 @@ function Locations(props) {
                 </div>
               </div>
               <div className="locations__imageContainer">
-                <Link to="/locationdetails">
+                <NavLink to={`/locationdetails/${l.id}`}>
                   <img
                     className="locations__rightArrowIcon"
                     src={Icons.rightArrow}
                     alt="locations right arrow icon"
                   />
-                </Link>
+                </NavLink>
               </div>
             </div>
           ))}
@@ -125,13 +125,13 @@ function Locations(props) {
                 {l.categories}
               </p>
               <div className="locations__iconWrapper">
-                <Link to="/locationdetails">
+                <NavLink to={`/locationdetails/${l.id}`}>
                   <img
                     className="locations__rightArrowIcon"
                     src={Icons.rightArrow}
                     alt="locations right arrow icon"
                   />
-                </Link>
+                </NavLink>
               </div>
             </div>
           ))}
