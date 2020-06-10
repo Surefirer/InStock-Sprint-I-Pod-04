@@ -21,7 +21,7 @@ class NewInventory extends React.Component {
       };
       this.state.options.push(option);
       return option;
-    }, console.log(this.state.options));
+    });
   }
 
   handleClick = () => {

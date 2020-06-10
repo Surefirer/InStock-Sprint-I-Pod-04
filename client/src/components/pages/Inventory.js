@@ -91,11 +91,7 @@ function Inventory(props) {
                     src={Icons.kebabActive}
                     alt="inventory kebab active icon"
                   />
-                  <button
-                    type="click"
-                    className="inventory__remove"
-                    // onClick={deleteInventory(inventory.id)}
-                  >
+                  <button type="click" className="inventory__remove">
                     Remove
                   </button>
                 </div>
