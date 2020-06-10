@@ -4,6 +4,15 @@ import InventoryMobile from "./InventoryMobile";
 import { NavLink } from "react-router-dom";
 
 function Inventory(props) {
+  const deleteInventory = (id) => {
+    const inventoryIndex = props.inventoryList.findIndex(
+      (inventory) => inventory.id === id
+    );
+    const newInventoryArr = props.inventoryList.splice(inventoryIndex, 1);
+    console.log(newInventoryArr);
+    return newInventoryArr;
+  };
+
   return (
     <>
       <div onClick={props.togglePop}>
@@ -82,7 +91,9 @@ function Inventory(props) {
                     src={Icons.kebabActive}
                     alt="inventory kebab active icon"
                   />
-                  <button className="inventory__remove">Remove</button>
+                  <button type="click" className="inventory__remove">
+                    Remove
+                  </button>
                 </div>
               </div>
             </div>
