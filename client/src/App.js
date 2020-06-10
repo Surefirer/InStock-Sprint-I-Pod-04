@@ -24,6 +24,7 @@ class App extends React.Component {
     checked: true,
     newInventory: false,
     newLocation: false,
+    currentTab: "inventory",
   };
 
   inventoryTogglePop = () => {
