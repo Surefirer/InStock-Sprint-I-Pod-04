@@ -11,18 +11,19 @@ import Inventory from "./components/pages/Inventory";
 import Locations from "./components/pages/Locations";
 import NewInventory from "./components/pages/NewInventory";
 import NewWarehouse from "./components/pages/NewWarehouse";
+import productSummary from "./components/pages/ProductSummary";
 import LocationDetails from "./components/pages/LocationDetails";
-import ProductSummary from "./components/pages/ProductSummary";
 import EditProduct from "./components/pages/EditProduct";
 
 class App extends React.Component {
   state = {
     inventoryList: [],
+    warehouseList: [],
+    locationOptions: [],
     locationsList: [],
     checked: true,
     newInventory: false,
     newLocation: false,
-    currentTab: "inventory",
   };
 
   inventoryTogglePop = () => {
@@ -70,23 +71,16 @@ class App extends React.Component {
             toggle={this.inventoryTogglePop}
             onChange={this.handleChange}
             checked={this.state.checked}
-            locationsList={locationsList}
+            inventoryList={inventoryList} // testing for dropdown, need to be changed to warehouseList
           />
         ) : null}
         {newLocation ? (
           <NewWarehouse
             toggle={this.locationTogglePop}
-            inventoryList={inventoryList}
+            inventoryList={inventoryList} // testing for dropdown, need to be changed to warehouseList
           />
         ) : null}
-        <Header
-          currentTab={this.state.currentTab}
-          changeCurrentTab={(currentTab) => {
-            this.setState({
-              currentTab: currentTab,
-            });
-          }}
-        />
+        <Header />
         <Switch>
           <Redirect from="/" to="/inventory" exact />
           <Route
@@ -109,7 +103,12 @@ class App extends React.Component {
               />
             )}
           />
-          <Route path="/locationdetails" component={LocationDetails} />
+
+          <Route
+            path="/locationdetails/:id"
+            render={(props) => <LocationDetails {...props} />}
+          />
+
           <Redirect from="/product" to="/inventory" exact />
           <Route
             path="/product/edit/:id"
@@ -121,7 +120,7 @@ class App extends React.Component {
               />
             )}
           />
-          <Route path="/product/:id" component={ProductSummary} />
+          <Route path="/product/:id" component={productSummary} />
         </Switch>
       </Router>
     );
