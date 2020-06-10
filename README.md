@@ -2,17 +2,17 @@
 
 Norman:
 
-- 2.0 Locations - make axios.get call to retrieve all warehouse list from the server.
-- 2.1 Location Details Component.
-- 2.0 Locations - make get request for getting all warehouse list
-- 2.1.0 Instock Desk - Location Details - Mock Up
-- 2.1.1 Instock Tablet - Location Details - Mock Up
-- 2.1.2 Instock Mobile - Location Details - Mock Up
 - 2.0 Locations Component
 - 2.0.0 Instock Desk - Locations - Mock Up
 - 2.0.1 Instock Tablet - Locations - Mock Up
 - 2.0.2 Instock Mobile - Locations - Mock Up
-- 2.2 Add New Warehouse - POST request to add new location
+- 2.0 Locations - setup front and back end to retrieve list of all warehouse from the server
+- 2.1 Location Details Component
+- 2.1.0 Instock Desk - Location Details - Mock Up
+- 2.1.1 Instock Tablet - Location Details - Mock Up
+- 2.1.2 Instock Mobile - Location Details - Mock Up
+- Location Details - setup front and back end to retrieve warehouse details from the server
+- Location Details - setup front and back end to retrieve warehouse product details from the server
 
 YJ:
 
